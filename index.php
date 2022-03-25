@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,7 +16,7 @@
     <link rel="preload " href="fonts/AleoBold.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload " href="css/style.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
@@ -390,6 +390,35 @@
                     </div>
                 </div>
             </div>
+
+            
+<?php
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "ekonline";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+// echo "Connected successfully";
+
+$s_name = $_POST["name"]; 
+$s_surname = $_POST["surname"]; 
+$s_phoneno = $_POST["phoneno"]; 
+$s_email = $_POST["email"]; 
+
+$sql = "INSERT INTO `students`(`s_name`, `s_surname`, `s_phoneno`, `s_email`) VALUES ('$s_name','$s_surname','$s_phoneno','$s_email')";
+$result = mysqli_query($conn,$sql);
+}
+?>
             <div class="section-consultation">
                 <div class="section-consultation__bg js-lazy" data-src="img/bg/bg-2.svg"></div>
                 <div class="wrapper">
@@ -401,19 +430,19 @@
                                 <p>Dolor duis voluptate enim exercitation consequat ex. Voluptate in sunt commodo aute dolor enim dolor labore velit nul.</p>
                             </div>
                             <div class="consultation-form__form">
-                                <form onsubmit="successSubmit();return false;">
+                                <form onsubmit="successSubmit();return false;" method="POST">
                                     <div class="box-fileds">
                                         <div class="box-filed">
-                                            <input type="text" placeholder="First name">
+                                            <input type="text" placeholder="First name" name="name">
                                         </div>
                                         <div class="box-filed">
-                                            <input type="text" placeholder="Second name">
+                                            <input type="text" placeholder="Second name" name="surname">
                                         </div>
                                         <div class="box-filed">
-                                            <input type="tel" placeholder="Enter your phone">
+                                            <input type="tel" placeholder="Enter your phone" name="phoneno">
                                         </div>
                                         <div class="box-filed">
-                                            <input type="email" placeholder="Enter your email">
+                                            <input type="email" placeholder="Enter your email" name="email">
                                         </div>
                                         <div class="box-filed box-filed_btn">
                                             <input type="submit" class="btn" value="Submit">
@@ -706,7 +735,7 @@
             </Section>
 
 
-            <div class="section-main-blog" id="blog">
+            <!-- <div class="section-main-blog" id="blog">
                 <div class="wrapper">
                     <div class="section-heading h-center"><span>news</span></div>
                     <h2 class="h2 h-center">read our blog</h2>
@@ -749,7 +778,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </main>
         <header class="header" id="header">
             <div class="header-top">
@@ -778,7 +807,7 @@
             </div>
             <div class="wrapper">
                 <div class="nav-logo">
-                    <a href="index.html" class="logo">
+                    <a href="index.php" class="logo">
                         <img src="img/uploaded/elogo.png" alt="Numerio">
                     </a>
                 </div>
@@ -786,7 +815,7 @@
                     <div id="mainNav" class="menu-box">
                         <div class="footer-menu">
                             <ul class="js-menu-footer">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <li>
                                         Home
                                     </li>
@@ -803,11 +832,14 @@
                                 <li>
                                     <a href="blog.php">Our Blog</a>
                                 </li>
+                                <li>
+                                    <a href="blog_post.php">Post Blog</a>
+                                </li>
                             </ul>
                         </div>
                         <!-- <nav class="nav-inner">
                             <ul class="main-menu js-menu" id="mainMenu">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <li>
                                         Home
                                     </li>
@@ -884,7 +916,7 @@
         <footer id="footer" class="footer footer-2">
             <div class="footer__bg js-lazy" data-src="img/bg/footer-2.svg"></div>
             <div class="wrapper">
-                <a href="index.html" class="logo-footer">
+                <a href="index.php" class="logo-footer">
                     <img src="img/uploaded/elogo.png" alt="Numerio">
                 </a>
                 <div class="socials-item footer-social">
@@ -914,7 +946,7 @@
                     <div class="copyrights">©All rights reserved. Ekwik Online 2022</div>
                     <div class="footer-menu">
                         <ul class="js-menu-footer">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <li>
                                     Home
                                 </li>

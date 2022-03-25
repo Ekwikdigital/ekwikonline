@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "ekonline_blog";
+$database = "ekonline";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -61,30 +61,37 @@ if ($conn->connect_error) {
                 <div class="wrapper">
                     <div class="columns">
                         <div class="columns_center">
-
                             <div class="news news-page">
-                                <div class="news__item">
-                                    <a href="article.php" class="news__img">
+                            <?php
+                            $sql = "SELECT * FROM `blogs`";
+                            $result = mysqli_query($conn , $sql);
+                            while($row = mysqli_fetch_assoc($result)){
+                            echo "
+                                <div class='news__item'>
+                                    <a href='article.php?id=".$row['blog_id']."' class='news__img'>
 
                                         <picture>
-                                            <source type="image/jpeg" srcset="img/examples/blog_1.jpg" media="(min-width: 768px)" />
-                                            <source type="image/jpeg" srcset="img/examples/blog_1_mob.jpg" />
-                                            <img src="img/examples/blog_1_mob.jpg" alt="" />
+                                            <source type='image/jpeg' srcset='img/examples/blog_1.jpg' media='(min-width: 768px)' />
+                                            <source type='image/jpeg' srcset='img/examples/blog_1_mob.jpg' />
+                                            <img src='img/examples/blog_1_mob.jpg' alt='' />
                                         </picture>
                                     </a>
-                                    <div class="news__content">
-                                        <div class="news-header">
-                                            <div class="news__date">Jun 25, 2021</div>
-                                            <div class="news__author">
-                                                <img data-src="img/examples/avatar_2.jpg" alt="" class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
-                                                <span class="news__author-title">Annette Black</span>
-                                            </div>
-                                            <a href="#" class="news__category">Community</a>
+                                    <div class='news__content'>
+                                        <div class='news-header'>
+                                            <div class='news__date'>". $row['timestamp']."</div>
                                         </div>
-                                        <div class="news__title"><a href="article.php">Dolor duis voluptate enim exercitation consequat ex.</a></div>
-                                        <div class="news__text">Dolor duis voluptate enim exercitation consequat ex. Voluptate in sunt commodo aute do. Dolor enim dolor labore velit nulla sit exercitation irure esse proident velit commodo. Est non officia proident esse...</div>
+                                        <div class='news__title'><a href='article.php?id=".$row['blog_id']."'>
+                                        ". $row['blog_heading']."
+                                        </a></div>
+                                        <div class='news__text'>". $row['blog_desc']."...</div>
                                     </div>
                                 </div>
+                                    ";
+                            }
+                        
+
+                                ?>
+
                                 <!-- <div class="news__item">
                                     <a href="article.php" class="news__img">
                                         <picture>
@@ -128,9 +135,9 @@ if ($conn->connect_error) {
                                         <div class="news__text">Dolor duis voluptate enim exercitation consequat ex. Voluptate in sunt commodo aute do. Dolor enim dolor labore velit nulla sit exercitation irure esse proident velit commodo. Est non officia proident esse...</div>
                                     </div>
                                 </div> -->
-                                <div class="blog-more blog-more-inner">
+                                <!-- <div class="blog-more blog-more-inner">
                                     <a href="#" class="btn">Load more</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <aside class="columns_sidebar sidebar">
@@ -239,7 +246,7 @@ if ($conn->connect_error) {
             </div>
             <div class="wrapper">
                 <div class="nav-logo">
-                    <a href="index.html" class="logo">
+                    <a href="index.php" class="logo">
                         <img src="img/uploaded/elogo.png" alt="Numerio">
                     </a>
                 </div>
@@ -247,7 +254,7 @@ if ($conn->connect_error) {
                     <div id="mainNav" class="menu-box">
                         <div class="footer-menu">
                             <ul class="js-menu-footer">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <li>
                                         Home
                                     </li>
@@ -302,7 +309,7 @@ if ($conn->connect_error) {
         <footer id="footer" class="footer">
             <div class="footer__bg js-lazy" data-src="img/bg/footer.svg"></div>
             <div class="wrapper">
-                <a href="index.html" class="logo-footer">
+                <a href="index.php" class="logo-footer">
                     <img src="img/uploaded/elogo.png" alt="Numerio">
                 </a>
                 <div class="socials-item footer-social">
@@ -332,7 +339,7 @@ if ($conn->connect_error) {
                     <div class="copyrights">©All rights reserved. Numerio 2021</div>
                     <div class="footer-menu">
                         <ul class="js-menu-footer">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <li>
                                     Home
                                 </li>

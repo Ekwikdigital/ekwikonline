@@ -1,3 +1,32 @@
+
+<?php
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "ekonline";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+// echo "Connected successfully";
+
+$blog_heading = $_POST["blog_heading"]; 
+$blog_desc = $_POST["blog_desc"]; 
+$blog_date = $_POST["blog_date"]; 
+$blog_summary = $_POST["blog_summary"]; 
+
+$sql = "INSERT INTO `blogs`(`blog_heading`, `blog_desc`,`timestamp`,`blog_summary`) VALUES ('$blog_heading','$blog_desc','$blog_date','$blog_summary')";
+$result = mysqli_query($conn,$sql);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -12,13 +41,11 @@
     <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
     <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
     <link rel="stylesheet" type="text/css" href="css/first-screen.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="css/first-screen-inner.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/first-screen-inner.css" />
     <link rel="preload " href="fonts/AleoBold.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
     <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
 
 
 </head>
@@ -30,56 +57,48 @@
                 <div class="section-screen-main__bg" style="background-image: url(img/main.svg);"></div>
                 <div class="wrapper">
                     <div class="screen-main">
-                        <div class="section-heading"><span>Be sure</span></div>
+
+    <form action="blog_post.php" method="post">
+        <label for="">Blog heading</label>
+        <input type="text" name="blog_heading">
+        <label for="">Blog summary</label>
+        <input type="text" name="blog_summary">
+        <label for="">Blog Description</label>
+        <input type="text" name="blog_desc">
+        <label for="">Blog Date</label>
+        <input type="date" name="blog_date">
+        <button type="submit">Post</button>
+    </form>
+
+
+
+                        <!-- <div class="section-heading"><span>Be sure</span></div>
                         <h1 class="h1 h1-main">your success is in&nbsp;our&nbsp;hands</h1>
                         <div class="screen-main__text">Agency with 12&nbsp;years of history, 15&nbsp;employees, Fortune 5000&nbsp;clients and proven results.</div>
-                        <a href="#" class="btn btn_learn">Learn more</a>
+                        <a href="#" class="btn btn_learn">Learn more</a> -->
+                        <!-- <form method="POST" action="blog_post.php">
+                    <div class="mb-3">
+                        <label for="blog_heading" class="form-label"> Blog Heading </label>
+                        <input type="text" class="form-control" id="blog_heading" name="blog_heading">
                     </div>
-                </div>
-            </div>
-            <div class="section-services-main" id="course">
-                <div class="wrapper">
-                    <div id="courses" class="services">
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-1.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/digital-marketing.html">
-                                <div class="services__title"><abbr title="Any marketing that uses electronic devices and can be used by marketing specialists to convey promotional messaging and measure its impact through your customer journey. In practice, digital marketing typically refers to marketing campaigns that appear on a computer, phone, tablet, or other device. It can take many forms, including online video, display ads, search engine marketing, paid social ads and social media posts. Digital marketing is often compared to “traditional marketing” such as magazine ads, billboards, and direct mail. Oddly, television is usually lumped in with traditional marketing."> Digital Marketing </abbr></div>
-                                <div class="services__text">Any marketing that uses electronic devices and can be used by marketing specialists</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-2.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/web-designing.html">
-                                <div class="services__title"><abbr title="Web design is the art of planning and arranging content on a website so that it can be shared and accessed online with the world. A combination of aesthetic and functional elements, web design is what determines the look of a website—such as its colors, fonts, and graphics—as well as shaping the site’s structure and the users’ experience of it."> Web Designing  </abbr></div>
-                                <div class="services__text">Web design is the art of planning and arranging content on a website</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-3.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/web-development.html">
-                                <div class="services__title"><abbr title="Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript. Responsive Web Design is used in all types of modern web development."> Web Development  </abbr></div>
-                                <div class="services__text">Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript.</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-4.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/wordpress-development.html">
-                                <div class="services__title"><abbr title="What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog. In fact, WordPress powers over 43.3% of all the websites on the Internet. Yes – more than one in four websites that you visit are likely powered by WordPress."> Wordpress Development </abbr></div>
-                                <div class="services__text">What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog.</div>
-                            </a>
-                        </div>
+                    <div class="mb-3">
+                        <label for="blog_summary" class="form-label"> Blog summary </label>
+                        <input type="text" class="form-control" id="blog_summary" name="blog_summary"> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="blog_desc" class="form-label"> Blog Description </label>
+                        <input type="text" class="form-control" id="blog_desc" name="blog_desc"> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="blog_date" class="form-label"> Blog Date </label>
+                        <input type="date" class="form-control" id="blog_date" name="blog_date"> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="blog_image" class="form-label"> Blog Feature Image </label>
+                        <input type="file" class="form-control" id="blog_image" name="blog_image">
+                    </div>
+                    <button type="submit" class="btn-submit btn btn-primary"> Submit </button>
+                </form> -->
                     </div>
                 </div>
             </div>
@@ -108,6 +127,10 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
                 <div class="wrapper">
                     <div class="nav-logo">
                         <a href="index.php" class="logo">
@@ -274,9 +297,9 @@
                             </div>
                             <div class="box-filed box-field__accept">
                                 <label class="checkbox-element">
-                                    <input type="checkbox" >
+                                    <input type="checkbox">
                                     <span class="checkbox-text">I accept the <a href="#" target="_blank">Terms and Conditions.</a></span>
-                                    </label>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -289,10 +312,10 @@
                 <div class="popup-title"><span>Sank you</span></div>
                 <div class="popup-result">Dolor duis voluptate enim exercitation consequat ex. Voluptate </div>
                 <svg width="200" height="184" viewBox="0 0 200 184" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M178.566 91.6643C178.566 139.987 139.392 179.162 91.0686 179.162C42.744 179.162 3.57129 139.987 3.57129 91.6643C3.57129 43.3397 42.744 4.16699 91.0686 4.16699C139.392 4.16699 178.566 43.3397 178.566 91.6643Z" fill="rgba(255, 154, 160, 0.991703)"/>
-                        <path d="M91.6644 183.327C41.1242 183.327 0 142.205 0 91.6644C0 41.1242 41.1242 0 91.6644 0C109.23 0 126.33 5.01694 141.112 14.4908C144.02 16.3585 144.863 20.2249 143.004 23.124C141.138 26.0246 137.262 26.8745 134.371 25.0084C121.597 16.833 106.839 12.4996 91.6644 12.4996C48.0149 12.4996 12.4996 48.0149 12.4996 91.6644C12.4996 135.312 48.0149 170.828 91.6644 170.828C135.312 170.828 170.828 135.312 170.828 91.6644C170.828 89.0552 170.703 86.472 170.461 83.9315C170.129 80.4984 172.645 77.4391 176.086 77.1141C179.494 76.6731 182.569 79.2975 182.903 82.7307C183.185 85.6725 183.327 88.6478 183.327 91.6644C183.327 142.205 142.205 183.327 91.6644 183.327Z" fill="rgba(249, 73, 115, 0.991703)"/>
-                        <path d="M102.08 112.496C100.481 112.496 98.8799 111.887 97.6638 110.663L60.165 73.1643C57.7237 70.7214 57.7237 66.7634 60.165 64.3221C62.6063 61.8808 66.5643 61.8808 69.0057 64.3221L102.089 97.4052L189.327 10.1657C191.77 7.72438 195.728 7.72438 198.169 10.1657C200.61 12.607 200.61 16.5651 198.169 19.0064L106.505 110.671C105.279 111.887 103.68 112.496 102.08 112.496Z" fill="rgba(249, 73, 115, 0.991703)"/>
-                    </svg>
+                    <path d="M178.566 91.6643C178.566 139.987 139.392 179.162 91.0686 179.162C42.744 179.162 3.57129 139.987 3.57129 91.6643C3.57129 43.3397 42.744 4.16699 91.0686 4.16699C139.392 4.16699 178.566 43.3397 178.566 91.6643Z" fill="rgba(255, 154, 160, 0.991703)" />
+                    <path d="M91.6644 183.327C41.1242 183.327 0 142.205 0 91.6644C0 41.1242 41.1242 0 91.6644 0C109.23 0 126.33 5.01694 141.112 14.4908C144.02 16.3585 144.863 20.2249 143.004 23.124C141.138 26.0246 137.262 26.8745 134.371 25.0084C121.597 16.833 106.839 12.4996 91.6644 12.4996C48.0149 12.4996 12.4996 48.0149 12.4996 91.6644C12.4996 135.312 48.0149 170.828 91.6644 170.828C135.312 170.828 170.828 135.312 170.828 91.6644C170.828 89.0552 170.703 86.472 170.461 83.9315C170.129 80.4984 172.645 77.4391 176.086 77.1141C179.494 76.6731 182.569 79.2975 182.903 82.7307C183.185 85.6725 183.327 88.6478 183.327 91.6644C183.327 142.205 142.205 183.327 91.6644 183.327Z" fill="rgba(249, 73, 115, 0.991703)" />
+                    <path d="M102.08 112.496C100.481 112.496 98.8799 111.887 97.6638 110.663L60.165 73.1643C57.7237 70.7214 57.7237 66.7634 60.165 64.3221C62.6063 61.8808 66.5643 61.8808 69.0057 64.3221L102.089 97.4052L189.327 10.1657C191.77 7.72438 195.728 7.72438 198.169 10.1657C200.61 12.607 200.61 16.5651 198.169 19.0064L106.505 110.671C105.279 111.887 103.68 112.496 102.08 112.496Z" fill="rgba(249, 73, 115, 0.991703)" />
+                </svg>
                 <div class="popup-text">Dolor duis voluptate enim exercitation consequat ex. Voluptate </div>
                 <div class="popup-button_succsees">
                     <div class="btn btn-popup" data-fancybox-close>Ok</div>

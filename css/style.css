@@ -3203,3 +3203,11 @@ h2 {
     margin: auto;
     margin-bottom: 350px;
 }
+
+.btn-submit {
+    width: 100px !important;
+}
+
+.news__text {
+    overflow: hidden;
+}

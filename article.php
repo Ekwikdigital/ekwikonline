@@ -1,3 +1,24 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "ekonline";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+// echo "Connected successfully";
+$blog_id = $_GET['id'];
+
+$sql = "SELECT * FROM `blogs` WHERE blog_id='$blog_id'";
+$result = mysqli_query($conn , $sql);
+$row = mysqli_fetch_assoc($result);
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -55,20 +76,11 @@
                                         <img src="img/examples/article_mob.jpg" alt="" class="img-article-main" />
                                     </picture>
                                     <div class="news-header news-header_article">
-                                        <div class="news__date">Jun 25, 2021</div>
-                                        <div class="news__author">
-                                            <img data-src="img/examples/avatar_2.jpg" alt="" class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
-                                            <span class="news__author-title">Annette Black</span>
-                                        </div>
-                                        <a href="blog.php" class="news__category">Community</a>
+                                        <div class="news__date"> <?php echo $row['timestamp']; ?> </div>  
                                     </div>
-                                    <h1>We appreciate every client and ready to help with all the issues that they have.</h1>
-                                    <p>Pariatur cupidatat Lorem irure nisi. Velit qui irure consectetur do cupi roident id est ex sunt nostrud nisi mine consectetur do cupi roident id est ex sunt nostrud nisi minim ut. Cupidatat velit dolore consectetur
-                                        deserunt laboris magna eiusmod aliquip consectetur commodo in eiusmod aliqua cupidatat. Nostrud laboris et eu mollit qui esse dolore exercitation in dolore sint nisi eu aliqua. Sit ipsum cillum commodo enim eiusmod.
-                                        Eiusmod et anim laborum consectetur. Proident nostrud anim nisi sunt veniam. Labore amet eiusmod dolor adipisicing Lorem tempor cillum <a href="#">incididunt</a> proident consequat laborum. Velit anim minim est
-                                        consequat commodo eu reprehenderit eiusmod nisi amet quis tempor incididunt. Irure proident aute non sit adipisicing nulla sit proident dolore sunt. Aute aute Lorem sint sunt et fugiat laborum. Qui incididunt aute
-                                        pariatur aute laborum elit nulla amet magna enim.</p>
-                                    <blockquote>
+                                    <h1><?php echo $row['blog_heading']; ?> </h1>
+                                    <p><?php echo $row['blog_desc']; ?></p>
+                                    <!-- <blockquote>
                                         “As a participatory media culture, social media platforms or social networking sites are forms of mass communication that, through media technologies, allow large amounts of product and distribution of content to reach the largest audience possible. “
                                         <cite>Ralph Edwards</cite>
                                     </blockquote>
@@ -80,7 +92,7 @@
                                         <li>Allow large amounts of product and distribution of content to reach the largest audience possible. </li>
                                         <li>However, there are downsides to virtual promotions as servers, systems, and websites may crash, fail, or become overloaded with information. You also can stand risk of losing uploaded information and storage and
                                             at a use can also be effected by a number of outside variables.</li>
-                                    </ol>
+                                    </ol> -->
                                 </div>
                                 <div class="tags-article">
                                     <div class="tags-article__title">Tags:</div>
@@ -242,7 +254,7 @@
             </div>
             <div class="wrapper">
                 <div class="nav-logo">
-                    <a href="index.html" class="logo-footer">
+                    <a href="index.php" class="logo-footer">
                         <img src="img/uploaded/elogo.png" alt="Numerio">
                     </a>
                 </div>
@@ -250,7 +262,7 @@
                     <div id="mainNav" class="menu-box">
                     <div class="footer-menu">
                                 <ul class="js-menu-footer">
-                                    <a href="index.html">
+                                    <a href="index.php">
                                         <li>
                                             Home
                                         </li>
@@ -305,7 +317,7 @@
         <footer id="footer" class="footer">
             <div class="footer__bg js-lazy" data-src="img/bg/footer.svg"></div>
             <div class="wrapper">
-                <a href="index.html" class="logo-footer">
+                <a href="index.php" class="logo-footer">
                     <img src="img/uploaded/elogo.png" alt="Numerio">
                 </a>
                 <div class="socials-item footer-social">
@@ -335,7 +347,7 @@
                     <div class="copyrights">©All rights reserved. Numerio 2021</div>
                     <div class="footer-menu">
                                 <ul class="js-menu-footer">
-                                    <a href="index.html">
+                                    <a href="index.php">
                                         <li>
                                             Home
                                         </li>
