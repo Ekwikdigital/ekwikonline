@@ -46,7 +46,7 @@ $result = mysqli_query($conn,$sql);
     <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
     <link rel="preload" href="css/style.css" as="style">
-
+    <script src="./ckeditor/ckeditor.js"></script>
 
 </head>
 
@@ -58,19 +58,7 @@ $result = mysqli_query($conn,$sql);
                 <div class="wrapper">
                     <div class="screen-main">
 
-    <form action="blog_post.php" method="post">
-        <label for="">Blog heading</label>
-        <input type="text" name="blog_heading">
-        <label for="">Blog summary</label>
-        <input type="text" name="blog_summary">
-        <label for="">Blog Description</label>
-        <input type="text" name="blog_desc">
-        <label for="">Blog Date</label>
-        <input type="date" name="blog_date">
-        <button type="submit">Post</button>
-    </form>
-
-
+    
 
                         <!-- <div class="section-heading"><span>Be sure</span></div>
                         <h1 class="h1 h1-main">your success is in&nbsp;our&nbsp;hands</h1>
@@ -100,6 +88,25 @@ $result = mysqli_query($conn,$sql);
                     <button type="submit" class="btn-submit btn btn-primary"> Submit </button>
                 </form> -->
                     </div>
+                    <form  id="blog_post" action="blog_post.php" method="post" enctype="multipart/form-data">
+        <label for="">Blog heading</label>
+        <input type="text" name="blog_heading">
+        <label for="">Blog summary</label>
+        <input type="text" name="blog_summary">
+        <label for="">Blog Description</label>
+        <textarea name="blog_desc" id="blog_desc" cols="80" rows="20"></textarea>
+        <label for="">Blog Date</label>
+        <div>
+        <input type="date" name="blog_date">
+        </div>
+        <div>
+        <button id="submit"  type="submit">Post</button>
+        </div>
+    </form>
+<script>
+    CKEDITOR.replace('blog_desc');
+</script>
+
                 </div>
             </div>
             <header class="header" id="header">
@@ -341,6 +348,8 @@ $result = mysqli_query($conn,$sql);
     <script src="js/components/jquery.singlePageNav.min.js" defer></script>
     <script src="js/components/swiper.js" defer></script>
     <script src="js/custom.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
 </body>
 
 </html>

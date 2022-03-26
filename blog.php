@@ -83,7 +83,7 @@ if ($conn->connect_error) {
                                         <div class='news__title'><a href='article.php?id=".$row['blog_id']."'>
                                         ". $row['blog_heading']."
                                         </a></div>
-                                        <div class='news__text'>". $row['blog_desc']."...</div>
+                                        <div class='news__text'>". $row['blog_summary']."...</div>
                                     </div>
                                 </div>
                                     ";

@@ -1,3 +1,8 @@
+document.getElementById("body").addEventListener('load', function onload() {
+    console.log("love you");
+});
+
+
 var $win = $(window),
     $body = $('body'),
     $header = $('#header'),
@@ -259,6 +264,10 @@ $(function() {
     }
 
 });
+
+
+
+
 
 
 

@@ -2884,8 +2884,10 @@ table tr td {
 .card-container {
     width: 100%;
     height: 400px;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .c-section {
@@ -3077,12 +3079,18 @@ h2 {
     .career {
         grid-template-columns: repeat(2, 1fr);
     }
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media (max-width:450px) {
     .career {
         grid-template-columns: repeat(1, 1fr);
         padding: 20px;
+    }
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -3210,4 +3218,8 @@ h2 {
 
 .news__text {
     overflow: hidden;
+}
+
+.blog_post {
+    margin-bottom: 500px !important;
 }

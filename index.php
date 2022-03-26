@@ -12,7 +12,7 @@
     <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
     <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
     <link rel="stylesheet" type="text/css" href="css/first-screen.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="css/first-screen-inner.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/first-screen-inner.css" />
     <link rel="preload " href="fonts/AleoBold.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="home loaded">
+<body onload="onload()" id="body" class="home loaded">
     <div class="main-wrapper">
         <main class="content">
             <div class="first-screen section-screen-main">
@@ -33,7 +33,7 @@
                         <div class="section-heading"><span>Be sure</span></div>
                         <h1 class="h1 h1-main">your success is in&nbsp;our&nbsp;hands</h1>
                         <div class="screen-main__text">Agency with 12&nbsp;years of history, 15&nbsp;employees, Fortune 5000&nbsp;clients and proven results.</div>
-                        <a href="#" class="btn btn_learn">Learn more</a>
+                        <a href="courses.html" class="btn btn_learn">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -414,9 +414,17 @@ $s_name = $_POST["name"];
 $s_surname = $_POST["surname"]; 
 $s_phoneno = $_POST["phoneno"]; 
 $s_email = $_POST["email"]; 
+$st_name = $_POST["s_name"]; 
+$st_email = $_POST["s_email"]; 
+$st_message = $_POST["s_message"]; 
+$newsletter = $_POST["newsletter"]; 
 
-$sql = "INSERT INTO `students`(`s_name`, `s_surname`, `s_phoneno`, `s_email`) VALUES ('$s_name','$s_surname','$s_phoneno','$s_email')";
+$sql = "INSERT INTO `students_data`(`s_name`, `s_surname`, `s_phoneno`, `s_email`) VALUES ('$s_name','$s_surname','$s_phoneno','$s_email')";
+$sql2 = "INSERT INTO `consultation`(`s_name`, `s_email`, `s_message`) VALUES ('$st_name','$st_email','$st_message')";
+$sql3 = "INSERT INTO `newsletter`(`s_email`) VALUES ('$newsletter')";
 $result = mysqli_query($conn,$sql);
+$result2 = mysqli_query($conn,$sql2);
+$result3 = mysqli_query($conn,$sql3);
 }
 ?>
             <div class="section-consultation">
@@ -439,10 +447,10 @@ $result = mysqli_query($conn,$sql);
                                             <input type="text" placeholder="Second name" name="surname">
                                         </div>
                                         <div class="box-filed">
-                                            <input type="tel" placeholder="Enter your phone" name="phoneno">
+                                            <input type="tel" placeholder="Enter your phone" name="phoneno" maxlength="10" minlength="10">
                                         </div>
                                         <div class="box-filed">
-                                            <input type="email" placeholder="Enter your email" name="email">
+                                            <input type="email" placeholder="Enter your email" name="email" maxlength="40">
                                         </div>
                                         <div class="box-filed box-filed_btn">
                                             <input type="submit" class="btn" value="Submit">
@@ -647,10 +655,10 @@ $result = mysqli_query($conn,$sql);
                             <div class="newsletter__text">
                                 <p>Pariatur magna cupidatat magna sit incididunt non pariatur. Sint nulla commodo qui magna eiusmod quis aliqua laboris officia excepteur non eu in.</p>
                             </div>
-                            <form>
+                            <form method="POST">
                                 <div class="box-fileds-newsletter">
                                     <div class="box-filed box-filed_1">
-                                        <input type="email" placeholder="Enter your email">
+                                        <input type="email" placeholder="Enter your email" id="newsletter" name="newsletter">
                                     </div>
                                     <div class="box-filed box-filed_submit">
                                         <input type="submit" class="btn" value="Subscribe">
@@ -908,9 +916,6 @@ $result = mysqli_query($conn,$sql);
                 <li>
                     <a href="#testimonials">Testimonials</a>
                 </li>
-                <li>
-                    <a href="#blog">Blog</a>
-                </li>
             </ul>
         </div>
         <footer id="footer" class="footer footer-2">
@@ -979,16 +984,16 @@ $result = mysqli_query($conn,$sql);
                     <div class="popup-decor-top"></div>
                 </div>
                 <div class="popup-text">Culpa non ex tempor qui nulla laborum. Laboris culpa ea incididunt dolore ipsum tempor duis do ullamc.</div>
-                <form onsubmit="successSubmit();return false;">
+                <form method="POST"  >
                     <div class="popup-form">
                         <div class="box-field">
-                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Name" id="s_name" name="s_name">
                         </div>
                         <div class="box-field">
-                            <input type="email" placeholder="Email">
+                            <input type="email" placeholder="Email" id="s_email" name="s_email">
                         </div>
                         <div class="box-field">
-                            <textarea placeholder="Message"></textarea>
+                            <textarea placeholder="Message" id="s_message" name="s_message"></textarea>
                         </div>
                         <div class="box-fileds box-fileds_2">
                             <div class="box-filed box-filed_btn">
