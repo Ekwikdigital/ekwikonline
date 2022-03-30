@@ -3223,3 +3223,53 @@ h2 {
 .blog_post {
     margin-bottom: 500px !important;
 }
+
+.d-bro {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bet {
+    border-radius: 20px;
+    background-color: rgb(252, 106, 134) !important;
+    padding: 15px !important;
+    border: 2px solid black;
+}
+
+.bet:hover {
+    color: #000 !important;
+}
+
+.login-container {
+    /* border: 2px solid red; */
+    margin: auto;
+    height: 100%;
+    width: 80%;
+    padding: 100px;
+    padding-top: 200px;
+    padding-bottom: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.forms-container {
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 550px;
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(254, 140, 153);
+}
+
+.input {
+    padding: 20px;
+    border-radius: 20px;
+    border-color: white;
+    outline: none;
+    background: transparent;
+}

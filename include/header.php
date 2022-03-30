@@ -1,68 +1,12 @@
-<!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <title>404</title>
-    <meta name='description' content="" />
-    <meta name="keywords" content="" />
-    <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
-    <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
-    <link rel="stylesheet" type="text/css" href="css/first-screen.css" />
-    <link rel="stylesheet" type="text/css" href="css/first-screen-inner.css" />
-    <link rel="preload " href="fonts/AleoBold.woff2" as="font" crossorigin>
-    <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
-    <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
-    <link rel="preload" href="css/style.css" as="style">
-</head>
-
-<body class="page-404 loaded">
-    <div class="main-wrapper">
-        <main class="content">
-            <div class="wrapper">
-                <div class="errorpage">
-                    <div class="errorpage__content">
-                        <div class="section-main-screen section-main-screen_inner">
-                            <div class="main-screen main-screen_inner">
-                                <h1 class="h1-2">Oops!</h1>
-                                <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-                                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                                        <a href="#" itemprop="item"><span itemprop="name">Home</span></a>
-                                        <meta itemprop="position" content="1">
-                                    </li>
-                                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                                        <span itemprop="name">Blog</span>
-                                        <meta itemprop="position" content="2">
-                                    </li>
-                                </ul>
-                                <div class="leaf-left-decor"></div>
-                            </div>
-                            <div class="circle-decor"></div>
-                        </div>
-                        <div class="errorpage_big">404</div>
-                        <div class="errorpage__cont">
-                            <div class="errorpage__title">Page not found</div>
-                            <div class="errorpage__txt">It looks like nothing was found at this location. <br>Maybe try a search?</div>
-                        </div>
-                        <div class="errorpage__search">
-                            <form>
-                                <div class="search">
-                                    <input type="text" placeholder="Search">
-                                    <button type="submit"><span class="icon-search"></span></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="errorpage__image">
-                        <img src="img/not-found.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </main>
-        <header class="header" id="header">
+<?php
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+    $loggedin= true;
+}
+else {
+    $loggedin= false;
+}
+echo '
+<header class="header" id="header">
             <div class="header-top">
                 <div class="wrapper">
                     <div class="socials ">
@@ -82,41 +26,78 @@
                     <div class="phone-item">
                         <div class="footer-title header-title-phone">Have a question? Call us!</div>
                         <div class="footer-phone__item">
-                            <i class="icon-phone"></i><a href="tel:+15469872185">+1 546 987 21 85</a>
+                            <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="wrapper">
                 <div class="nav-logo">
-                    <a href="index.html" class="logo">
-                        <img src="img/logo.svg" alt="Ekwik Online">
+                    <a href="index.php" class="logo">
+                        <img src="img/uploaded/elogo.png" alt="Ekwik Online">
                     </a>
                 </div>
                 <div class="header-right">
                     <div id="mainNav" class="menu-box">
-                        <nav class="nav-inner">
-                            <ul class="main-menu" id="mainMenu">
+                        <div class="footer-menu">
+                            <ul class="js-menu-footer">
+                                <a href="index.php">  
+                                    <li>
+                                        Home
+                                    </li>
+                                </a>
                                 <li>
-                                    <a href="home.html#services">Services</a>
+                                    <a href="Aboutus.php">About us</a>
                                 </li>
                                 <li>
-                                    <a href="home.html#about">About</a>
+                                    <a href="Contactus.php">Contact Us</a>
                                 </li>
                                 <li>
-                                    <a href="home.html#steps">Steps</a>
+                                    <a href="courses.php">Courses</a>
                                 </li>
                                 <li>
-                                    <a href="home.html#price">Price</a>
+                                    <a href="blog.php">Our Blog</a>
+                                </li>';
+                                if(!$loggedin){
+                                    echo '
+                                <li>
+                                    <a class="" href="benefits-login.php"><i class="fa-solid fa-user-plus"></i> Sign UP</a>
                                 </li>
                                 <li>
-                                    <a href="home.html#testimonials">Testimonials</a>
+                                    <a class="" href="login.php"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+                                </li>';
+                                }
+                                if($loggedin){
+                                    echo '
+                                <li>
+                                    <a class="" href="logout.php"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                                </li>
+                                ';
+                            }
+                            echo'
+                            </ul>
+                        </div>
+                        <!-- <nav class="nav-inner">
+                            <ul class="main-menu js-menu" id="mainMenu">
+                                <a href="index.php">
+                                    <li>
+                                        Home
+                                    </li>
+                                </a>
+                                <li>
+                                    <a href="Aboutus.php">About us</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Blog</a>
+                                    <a href="Contactus.php">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="courses.php">Courses</a>
+                                </li>
+                                <li>
+                                    <a href="blog.php">Our Blog</a>
                                 </li>
                             </ul>
-                        </nav>
+                        </nav> -->
                         <div class="socials-item">
                             <div class="footer-title">Find us here:</div>
                             <div class="socials">
@@ -134,7 +115,7 @@
                         <div class="phone-item">
                             <div class="footer-title footer-title_phone">Have a question? Call us!</div>
                             <div class="footer-phone__item">
-                                <i class="icon-phone"></i><a href="tel:+15469872185">+1 546 987 21 85</a>
+                                <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
                             </div>
                         </div>
                     </div>
@@ -150,11 +131,30 @@
                 </div>
             </div>
         </header>
-        <footer id="footer" class="footer">
-            <div class="footer__bg js-lazy" data-src="img/bg/footer.svg"></div>
+        <div class="nav-sticky">
+            <ul>
+                <li>
+                    <a href="#courses">Courses</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#steps">Steps</a>
+                </li>
+                <li>
+                    <a href="#price">Price</a>
+                </li>
+                <li>
+                    <a href="#testimonials">Testimonials</a>
+                </li>
+            </ul>
+        </div>
+        <footer id="footer" class="footer footer-2">
+            <div class="footer__bg js-lazy" data-src="img/bg/footer-2.svg"></div>
             <div class="wrapper">
-                <a href="index.html" class="logo-footer">
-                    <img src="img/logo.svg" alt="Ekwik Online">
+                <a href="index.php" class="logo-footer">
+                    <img src="img/uploaded/elogo.png" alt="Ekwik Online">
                 </a>
                 <div class="socials-item footer-social">
                     <div class="footer-title">Find us here:</div>
@@ -173,7 +173,7 @@
                 <div class="phone-item footer-phone">
                     <div class="footer-title footer-title_phone">Have a question? Call us!</div>
                     <div class="footer-phone__item">
-                        <i class="icon-phone"></i><a href="tel:+15469872185">+1 546 987 21 85</a>
+                        <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
                     </div>
                 </div>
                 <a href="#formOrder" class="btn-2 btn_started js-fancybox">get started</a>
@@ -182,24 +182,23 @@
                 <div class="wrapper">
                     <div class="copyrights">©All rights reserved. Ekwik Online 2022</div>
                     <div class="footer-menu">
-                        <ul>
+                        <ul class="js-menu-footer">
+                            <a href="index.php">
+                                <li>
+                                    Home
+                                </li>
+                            </a>
                             <li>
-                                <a href="home.html#services">Services</a>
+                                <a href="Aboutus.php">About us</a>
                             </li>
                             <li>
-                                <a href="home.html#about">About</a>
+                                <a href="Contactus.php">Contact Us</a>
                             </li>
                             <li>
-                                <a href="home.html#steps">Steps</a>
+                                <a href="courses.php">Courses</a>
                             </li>
                             <li>
-                                <a href="home.html#price">Price</a>
-                            </li>
-                            <li>
-                                <a href="home.html#testimonials">Testimonials</a>
-                            </li>
-                            <li>
-                                <a href="home.html#blog">Blog</a>
+                                <a href="blog.php">Our Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -210,6 +209,43 @@
     <!-- BODY EOF   -->
     <!-- popups -->
     <div class="window-open">
+        <div class="popup" id="formOrder2" tabindex="0">
+            <div class="block-popup">
+                <div class="popup-title-wrap">
+                    <div class="popup-title">for Download</div>
+                    <div class="popup-decor-top"></div>
+                </div>
+                <div class="popup-text">Culpa non ex tempor qui nulla laborum. Laboris culpa ea incididunt dolore ipsum tempor duis do ullamc.</div>
+                <form method="POST" action="">
+                    <div class="popup-form">
+                        <div class="box-field">
+                            <input type="text" placeholder="Name" id="b_name" name="b_name" required>
+                        </div>
+                        <div class="box-field">
+                            <input type="tel" placeholder="Phone No" id="b_phone" name="b_phone" minlength="10" maxlength="10" required>
+                        </div>
+                        <div class="box-field">
+                            <input type="email" placeholder="Email" id="b_email" name="b_email" required>
+                        </div>
+                        <div class="box-fileds box-fileds_2">
+                            <div class="box-filed box-filed_btn">
+                                <button type="submit" class="btn" value="Submit">Submit</button>
+                            </div>
+                            <div class="box-filed box-field__accept">
+                                <label class="checkbox-element">
+                                    <input type="checkbox" >
+                                    <span class="checkbox-text">I accept the <a href="#" target="_blank">Terms and Conditions.</a></span>
+                                    </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="popup-decor"></div>
+        </div>
+        <div class="popup popup-succsess" id="succsesOrder2">
+    <!-- popups -->
+    <div class="window-open">
         <div class="popup" id="formOrder" tabindex="0">
             <div class="block-popup">
                 <div class="popup-title-wrap">
@@ -217,16 +253,16 @@
                     <div class="popup-decor-top"></div>
                 </div>
                 <div class="popup-text">Culpa non ex tempor qui nulla laborum. Laboris culpa ea incididunt dolore ipsum tempor duis do ullamc.</div>
-                <form onsubmit="successSubmit();return false;">
+                <form method="POST" action=""  >
                     <div class="popup-form">
                         <div class="box-field">
-                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Name" id="s_name" name="s_name" required>
                         </div>
                         <div class="box-field">
-                            <input type="email" placeholder="Email">
+                            <input type="email" placeholder="Email" id="s_email" name="s_email" required>
                         </div>
                         <div class="box-field">
-                            <textarea placeholder="Message"></textarea>
+                            <textarea placeholder="Message" id="s_message" name="s_message" required></textarea>
                         </div>
                         <div class="box-fileds box-fileds_2">
                             <div class="box-filed box-filed_btn">
@@ -260,23 +296,19 @@
             </div>
         </div>
     </div>
+
+    
     <script>
         var body = document.body;
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-            body.classList.add('ios');
+            body.classList.add("ios");
         } else {
-            body.classList.add('web')
+            body.classList.add("web")
         }
         setTimeout(function() {
             body.classList.add("content-loaded");
         }, 50)
     </script>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/inner.css" />
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/components/jquery.lazy.min.js"></script>
-    <script src="js/components/jquery.fancybox.min.js"></script>
-    <script src="js/custom.js"></script>
-</body>
-
-</html>
+    ';
+    ?>
+    

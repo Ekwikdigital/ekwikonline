@@ -1,14 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <title>Ekwik Online || Best Digital Marketing Institute</title>
+    <meta name='description' content="" />
+    <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="img/uploaded/elogo.png" href="favicon.ico" />
-    <title>Ekwik Online || Best Digital Marketing Institute</title>
-    <meta name='description' content="" />
-    <meta name="keywords" content="" />
     <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
     <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
     <link rel="stylesheet" type="text/css" href="css/first-screen.css" />
@@ -22,7 +23,6 @@
 
 
 </head>
-
 <body onload="onload()" id="body" class="home loaded">
     <div class="main-wrapper">
         <main class="content">
@@ -148,43 +148,6 @@
                     </div>
                 </div>
             </section>
-            <h2 class="padding">Ekwik Classes Course Details & Benefits</h2>
-            <section class="module-pdf">
-                <div class="sub-module-pdf content-pdf">
-                    <div>
-                        <h3>Why Ekwik Digital You Say?</h4>
-                            <ul>
-                                <h3> 1 Step process </h3>
-                                <li> Training From Industrial experts. </li>
-                                <li> Certified Training institute. </li>
-                                <li> Course available for </li>
-                                <h3> 2 Step process </h3>
-                                <li> Students </li>
-                                <li> Working Professionals </li>
-                                <li> Business Owner. </li>
-                                <h3> 3 Step process </h3>
-                                <li> Training </li>
-                                <li> Internship </li>
-                                <li> Placement </li>
-                            </ul>
-                    </div>
-                    <div>
-                        <h3>Ekwik Benefits</h4>
-                            <ul>
-                                <li> <i class="fa-solid fa-medal"></i> Rs. 72,000 Worth tools free </li>
-                                <li> <i class="fa-solid fa-medal"></i> Latest 45+ modules </li>
-                                <li> <i class="fa-solid fa-medal"></i> More than 100 hours of training </li>
-                                <li> <i class="fa-solid fa-medal"></i> 1 Month free Internship </li>
-                                <li> <i class="fa-solid fa-medal"></i> Different Trainers for different Modules </li>
-                                <li> <i class="fa-solid fa-medal"></i> 3+ Certified Certifications </li>
-                                <li> <i class="fa-solid fa-medal"></i> Custom Made courses </li>
-                                <li> <i class="fa-solid fa-medal"></i> Line Project Training</p>
-                                </li>
-                            </ul>
-                    </div>
-                </div>
-            </section>
-
             <section class="career-container">
                 <h2>Digital Marketing Course For Transforming Your Career</h2>
                 <p>Do you lack the skills you need to move ahead? Now, you can become a digital marketing specialist without leaving your job. Boost your career with the Delhi Institute of Digital Marketing. A place to learn digital marketing from Executive
@@ -240,6 +203,10 @@
                     </div>
                 </div>
             </section>
+
+            <div class="d-bro">
+                <a href="#formOrder2" class="btn-2 btn_started js-fancybox">Download Brochure</a>
+            </div>
 
             <div class="section-about" id="about">
                 <div class="wrapper">
@@ -418,13 +385,23 @@ $st_name = $_POST["s_name"];
 $st_email = $_POST["s_email"]; 
 $st_message = $_POST["s_message"]; 
 $newsletter = $_POST["newsletter"]; 
+$b_name = $_POST["b_name"]; 
+$b_email = $_POST["b_email"]; 
+$b_phoneno = $_POST["b_phone"]; 
+
+// xss attack secure 
+
+
+
 
 $sql = "INSERT INTO `students_data`(`s_name`, `s_surname`, `s_phoneno`, `s_email`) VALUES ('$s_name','$s_surname','$s_phoneno','$s_email')";
 $sql2 = "INSERT INTO `consultation`(`s_name`, `s_email`, `s_message`) VALUES ('$st_name','$st_email','$st_message')";
 $sql3 = "INSERT INTO `newsletter`(`s_email`) VALUES ('$newsletter')";
+$sql4 ="INSERT INTO `brochure`(`b_name`, `b_phoneno`, `b_email`) VALUES ('$b_name','$b_email','$b_phoneno')" ;
 $result = mysqli_query($conn,$sql);
 $result2 = mysqli_query($conn,$sql2);
 $result3 = mysqli_query($conn,$sql3);
+$result4 = mysqli_query($conn,$sql4);
 }
 ?>
             <div class="section-consultation">
@@ -438,19 +415,19 @@ $result3 = mysqli_query($conn,$sql3);
                                 <p>Dolor duis voluptate enim exercitation consequat ex. Voluptate in sunt commodo aute dolor enim dolor labore velit nul.</p>
                             </div>
                             <div class="consultation-form__form">
-                                <form onsubmit="successSubmit();return false;" method="POST">
+                                <form action="" method="POST">
                                     <div class="box-fileds">
                                         <div class="box-filed">
-                                            <input type="text" placeholder="First name" name="name">
+                                            <input type="text" placeholder="First name" name="name" required>
                                         </div>
                                         <div class="box-filed">
-                                            <input type="text" placeholder="Second name" name="surname">
+                                            <input type="text" placeholder="Second name" name="surname" required>
                                         </div>
                                         <div class="box-filed">
-                                            <input type="tel" placeholder="Enter your phone" name="phoneno" maxlength="10" minlength="10">
+                                            <input type="tel" placeholder="Enter your phone" name="phoneno" maxlength="10" minlength="10" required>
                                         </div>
                                         <div class="box-filed">
-                                            <input type="email" placeholder="Enter your email" name="email" maxlength="40">
+                                            <input type="email" placeholder="Enter your email" name="email" maxlength="40" required>
                                         </div>
                                         <div class="box-filed box-filed_btn">
                                             <input type="submit" class="btn" value="Submit">
@@ -655,10 +632,10 @@ $result3 = mysqli_query($conn,$sql3);
                             <div class="newsletter__text">
                                 <p>Pariatur magna cupidatat magna sit incididunt non pariatur. Sint nulla commodo qui magna eiusmod quis aliqua laboris officia excepteur non eu in.</p>
                             </div>
-                            <form method="POST">
+                            <form method="POST" action="">
                                 <div class="box-fileds-newsletter">
                                     <div class="box-filed box-filed_1">
-                                        <input type="email" placeholder="Enter your email" id="newsletter" name="newsletter">
+                                        <input type="email" placeholder="Enter your email" id="newsletter" name="newsletter" required>
                                     </div>
                                     <div class="box-filed box-filed_submit">
                                         <input type="submit" class="btn" value="Subscribe">
@@ -788,256 +765,9 @@ $result3 = mysqli_query($conn,$sql3);
                 </div>
             </div> -->
         </main>
-        <header class="header" id="header">
-            <div class="header-top">
-                <div class="wrapper">
-                    <div class="socials ">
-                        <div class="footer-title">Find us here:</div>
-                        <div class="socials">
-                            <div class="socials__item">
-                                <a href="#" target="_blank" class="socials__link">Fb</a>
-                            </div>
-                            <div class="socials__item">
-                                <a href="#" target="_blank" class="socials__link">Ins</a>
-                            </div>
-                            <div class="socials__item">
-                                <a href="#" target="_blank" class="socials__link">In</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="phone-item">
-                        <div class="footer-title header-title-phone">Have a question? Call us!</div>
-                        <div class="footer-phone__item">
-                            <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper">
-                <div class="nav-logo">
-                    <a href="index.php" class="logo">
-                        <img src="img/uploaded/elogo.png" alt="Numerio">
-                    </a>
-                </div>
-                <div class="header-right">
-                    <div id="mainNav" class="menu-box">
-                        <div class="footer-menu">
-                            <ul class="js-menu-footer">
-                                <a href="index.php">
-                                    <li>
-                                        Home
-                                    </li>
-                                </a>
-                                <li>
-                                    <a href="Aboutus.html">About us</a>
-                                </li>
-                                <li>
-                                    <a href="Contactus.html">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="courses.html">Courses</a>
-                                </li>
-                                <li>
-                                    <a href="blog.php">Our Blog</a>
-                                </li>
-                                <li>
-                                    <a href="blog_post.php">Post Blog</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- <nav class="nav-inner">
-                            <ul class="main-menu js-menu" id="mainMenu">
-                                <a href="index.php">
-                                    <li>
-                                        Home
-                                    </li>
-                                </a>
-                                <li>
-                                    <a href="Aboutus.html">About us</a>
-                                </li>
-                                <li>
-                                    <a href="Contactus.html">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="courses.html">Courses</a>
-                                </li>
-                                <li>
-                                    <a href="blog.html">Our Blog</a>
-                                </li>
-                            </ul>
-                        </nav> -->
-                        <div class="socials-item">
-                            <div class="footer-title">Find us here:</div>
-                            <div class="socials">
-                                <div class="socials__item">
-                                    <a href="#" target="_blank" class="socials__link">Fb</a>
-                                </div>
-                                <div class="socials__item">
-                                    <a href="#" target="_blank" class="socials__link">Ins</a>
-                                </div>
-                                <div class="socials__item">
-                                    <a href="#" target="_blank" class="socials__link">In</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="phone-item">
-                            <div class="footer-title footer-title_phone">Have a question? Call us!</div>
-                            <div class="footer-phone__item">
-                                <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#formOrder" class="btn-2 btn_started-header js-fancybox">get started</a>
-                </div>
-                <div class="bars-mob js-button-nav">
-                    <div class="hamburger">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <div class="cross">
-                        <span></span><span></span>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="nav-sticky">
-            <ul>
-                <li>
-                    <a href="#courses">Courses</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#steps">Steps</a>
-                </li>
-                <li>
-                    <a href="#price">Price</a>
-                </li>
-                <li>
-                    <a href="#testimonials">Testimonials</a>
-                </li>
-            </ul>
-        </div>
-        <footer id="footer" class="footer footer-2">
-            <div class="footer__bg js-lazy" data-src="img/bg/footer-2.svg"></div>
-            <div class="wrapper">
-                <a href="index.php" class="logo-footer">
-                    <img src="img/uploaded/elogo.png" alt="Numerio">
-                </a>
-                <div class="socials-item footer-social">
-                    <div class="footer-title">Find us here:</div>
-                    <div class="socials">
-                        <div class="socials__item">
-                            <a href="#" target="_blank" class="socials__link">Fb</a>
-                        </div>
-                        <div class="socials__item">
-                            <a href="#" target="_blank" class="socials__link">Ins</a>
-                        </div>
-                        <div class="socials__item">
-                            <a href="#" target="_blank" class="socials__link">In</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="phone-item footer-phone">
-                    <div class="footer-title footer-title_phone">Have a question? Call us!</div>
-                    <div class="footer-phone__item">
-                        <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
-                    </div>
-                </div>
-                <a href="#formOrder" class="btn-2 btn_started js-fancybox">get started</a>
-            </div>
-            <div class="footer-bottom">
-                <div class="wrapper">
-                    <div class="copyrights">©All rights reserved. Ekwik Online 2022</div>
-                    <div class="footer-menu">
-                        <ul class="js-menu-footer">
-                            <a href="index.php">
-                                <li>
-                                    Home
-                                </li>
-                            </a>
-                            <li>
-                                <a href="Aboutus.html">About us</a>
-                            </li>
-                            <li>
-                                <a href="Contactus.html">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="courses.html">Courses</a>
-                            </li>
-                            <li>
-                                <a href="blog.php">Our Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!-- BODY EOF   -->
-    <!-- popups -->
-    <div class="window-open">
-        <div class="popup" id="formOrder" tabindex="0">
-            <div class="block-popup">
-                <div class="popup-title-wrap">
-                    <div class="popup-title">Get a free consultation</div>
-                    <div class="popup-decor-top"></div>
-                </div>
-                <div class="popup-text">Culpa non ex tempor qui nulla laborum. Laboris culpa ea incididunt dolore ipsum tempor duis do ullamc.</div>
-                <form method="POST"  >
-                    <div class="popup-form">
-                        <div class="box-field">
-                            <input type="text" placeholder="Name" id="s_name" name="s_name">
-                        </div>
-                        <div class="box-field">
-                            <input type="email" placeholder="Email" id="s_email" name="s_email">
-                        </div>
-                        <div class="box-field">
-                            <textarea placeholder="Message" id="s_message" name="s_message"></textarea>
-                        </div>
-                        <div class="box-fileds box-fileds_2">
-                            <div class="box-filed box-filed_btn">
-                                <input type="submit" class="btn" value="Submit">
-                            </div>
-                            <div class="box-filed box-field__accept">
-                                <label class="checkbox-element">
-                                    <input type="checkbox" >
-                                    <span class="checkbox-text">I accept the <a href="#" target="_blank">Terms and Conditions.</a></span>
-                                    </label>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="popup-decor"></div>
-        </div>
-        <div class="popup popup-succsess" id="succsesOrder">
-            <div class="block-popup">
-                <div class="popup-title"><span>Sank you</span></div>
-                <div class="popup-result">Dolor duis voluptate enim exercitation consequat ex. Voluptate </div>
-                <svg width="200" height="184" viewBox="0 0 200 184" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M178.566 91.6643C178.566 139.987 139.392 179.162 91.0686 179.162C42.744 179.162 3.57129 139.987 3.57129 91.6643C3.57129 43.3397 42.744 4.16699 91.0686 4.16699C139.392 4.16699 178.566 43.3397 178.566 91.6643Z" fill="rgba(255, 154, 160, 0.991703)"/>
-                        <path d="M91.6644 183.327C41.1242 183.327 0 142.205 0 91.6644C0 41.1242 41.1242 0 91.6644 0C109.23 0 126.33 5.01694 141.112 14.4908C144.02 16.3585 144.863 20.2249 143.004 23.124C141.138 26.0246 137.262 26.8745 134.371 25.0084C121.597 16.833 106.839 12.4996 91.6644 12.4996C48.0149 12.4996 12.4996 48.0149 12.4996 91.6644C12.4996 135.312 48.0149 170.828 91.6644 170.828C135.312 170.828 170.828 135.312 170.828 91.6644C170.828 89.0552 170.703 86.472 170.461 83.9315C170.129 80.4984 172.645 77.4391 176.086 77.1141C179.494 76.6731 182.569 79.2975 182.903 82.7307C183.185 85.6725 183.327 88.6478 183.327 91.6644C183.327 142.205 142.205 183.327 91.6644 183.327Z" fill="rgba(249, 73, 115, 0.991703)"/>
-                        <path d="M102.08 112.496C100.481 112.496 98.8799 111.887 97.6638 110.663L60.165 73.1643C57.7237 70.7214 57.7237 66.7634 60.165 64.3221C62.6063 61.8808 66.5643 61.8808 69.0057 64.3221L102.089 97.4052L189.327 10.1657C191.77 7.72438 195.728 7.72438 198.169 10.1657C200.61 12.607 200.61 16.5651 198.169 19.0064L106.505 110.671C105.279 111.887 103.68 112.496 102.08 112.496Z" fill="rgba(249, 73, 115, 0.991703)"/>
-                    </svg>
-                <div class="popup-text">Dolor duis voluptate enim exercitation consequat ex. Voluptate </div>
-                <div class="popup-button_succsees">
-                    <div class="btn btn-popup" data-fancybox-close>Ok</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var body = document.body;
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-            body.classList.add('ios');
-        } else {
-            body.classList.add('web')
-        }
-        setTimeout(function() {
-            body.classList.add("content-loaded");
-        }, 50)
-    </script>
+        <?php
+            include("./include/header.php");
+        ?>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/jquery-3.5.1.min.js" defer></script>
     <script src="js/components/jquery.lazy.min.js" defer></script>

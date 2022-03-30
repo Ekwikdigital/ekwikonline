@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    scroll-behavior: smooth;
+    background-color: rgba(0, 0, 0, 0.932);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    width: 20%;
+    height: 100vh;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.navbar ul li:active {
+    color: orange;
+}
+
+.main-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    margin-left: 20%;
+    height: 100%;
+    width: 80%;
+}
+
+.sub-section {
+    height: max-content;
+    width: 100%;
+}
+
+.sub-section h2 {
+    text-align: center;
+}
+
+.d-card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.d-card {
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 200px;
+    width: 250px;
+    box-shadow: 0px 0px 10px black;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+}
+
+.table thead tr td {
+    width: 200px !important;
+}
+
+.sub-section h2,
+.sub-section h3 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+}
