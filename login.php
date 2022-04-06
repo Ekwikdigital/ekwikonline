@@ -1,26 +1,25 @@
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <?php
+$login = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 include('./include/db_connect.php');
 $s_username = $_POST["l_username"];
 $s_password = $_POST["l_password"];
-$exists = false ;
+$exists = false;
 
-$sql2 = "Select * from benefits_users where username='$s_username' AND password='$s_password'";
-$result2 = mysqli_query($conn, $sql2);
-$num = mysqli_num_rows($result2);
+$sql = "Select * from benefits_users where username='$s_username' AND password='$s_password'";
+$result = mysqli_query($conn, $sql);
+$num = mysqli_num_rows($result);
 if ($num == 1){
     $login = true;
     session_start();
-    $_SESSION['loggedin'] = true ; 
+    $_SESSION['loggedin'] = true; 
     $_SESSION['username'] = $s_username;
-    header("location: benefits.php"); 
-
+    header("location: benefits.php");  
 }
 else {
-    echo'<script>alert("Invalid Credentials")</script>';
+    echo'<script>alert("You are not our Member. Please Sign Up.")</script>';
 }
-
 if($login) {
     echo '<script>alert(" You are now login")</script>';
 }
@@ -57,7 +56,7 @@ if($login) {
             <!-- Login and signup -->
         <div class="forms-container">
             <h2> Login </h2>
-            <form action="" method="Post">
+            <form action="" method="POST">
                 <label for="l_username">Username</label>
                 <br>
                 <input type="text" name="l_username" id="l_username" class="input" required>

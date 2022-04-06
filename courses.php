@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -20,7 +23,11 @@
     <!-- <link rel="preload" href="css/courses.css" as="style"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
+<style>
+    body {
+        overflow-x: hidden;
+    }
+</style>
 
 </head>
 
@@ -79,16 +86,16 @@
 
                             <div id="wordpress_development" class="services__title"><abbr title="What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog. In fact, WordPress powers over 43.3% of all the websites on the Internet. Yes – more than one in four websites that you visit are likely powered by WordPress."> Wordpress Development </abbr></div>
                             <div class="services__text">What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog.</div>
-
                         </div>
                     </div>
                 </div>
             </div>
             <section class="c-section">
+                <p>Click on Above Section For more Details</p>
                 <div id="sub_c_section1" class="sub-c-section">
                     <h2>Digital Marketing</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit vero voluptatem officiis, quisquam iste tempora esse dolorum velit distinctio, suscipit a quam eius laboriosam eveniet sequi ea! Eaque dicta ratione vitae maxime
-                        molestias explicabo quam, velit asperiores praesentium architecto eligendi facere reiciendis ea quisquam doloribus itaque minima ex repellendus.</p>
+                    <p>In this digital world, we all want to be a walking digital encyclopedia. Isn’t it? But how many of us have learnt the core digital techniques which help us to be a digital expert in a short time? The answer is only a few of us. Your enrolment in our digital marketing course will enable to encash your knowledge in the future.
+Make it a mission now and know what you can learn in digital marketing to spread the wings of knowledge in a world which needs you.</p>
                     <div class="card-container">
                         <div id="card1" class="cards">
                             <img src="" alt="" srcset="">
@@ -159,12 +166,10 @@
                             <div class="tools-card">1</div>
                         </div>
                     </div>
-
                 </div>
                 <div id="sub_c_section2" class="sub-c-section">
                     <h2>Search Engine Optimization</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit vero voluptatem officiis, quisquam iste tempora esse dolorum velit distinctio, suscipit a quam eius laboriosam eveniet sequi ea! Eaque dicta ratione vitae maxime
-                        molestias explicabo quam, velit asperiores praesentium architecto eligendi facere reiciendis ea quisquam doloribus itaque minima ex repellendus.</p>
+                    <p>Search engine optimization will help you boost your rankings on Google. Increase inbound traffic from search engines constructively. It is necessary to learn SEO because every brand is fighting hard to stay at the top of Google. Our course will teach you to optimize your website in the best way. We will teach you the actionable skills that will cover all the basic knowledge and techniques to do SEO for any website. We will teach you more about the organic listings, paid search ads, site feeds, vertical search results, metasearch engines and search aggregators, algorithms change, keyword selection, keyword placement opportunities, and more. Our experts have years of experience and will teach you about ranks, indexed pages, inbound and outbound links, historical conversions, site optimization, on-page and off-page factors, and more.</p>
                     <div class="card-container">
                         <div id="card5" class="cards">
                             <img src="" alt="" srcset="">
@@ -235,12 +240,10 @@
                             <div class="tools-card">1</div>
                         </div>
                     </div>
-
                 </div>
                 <div id="sub_c_section3" class="sub-c-section">
                     <h2> Social Media Optimization</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit vero voluptatem officiis, quisquam iste tempora esse dolorum velit distinctio, suscipit a quam eius laboriosam eveniet sequi ea! Eaque dicta ratione vitae maxime
-                        molestias explicabo quam, velit asperiores praesentium architecto eligendi facere reiciendis ea quisquam doloribus itaque minima ex repellendus.</p>
+                    <p>Just imagine life without facebook likes or Instagram stories or tweets takedown. Without them, do you have anything to share socially? Of course, not. Our social media marketing tips will prepare you with tactics that can deliver amazing insights. We train people with our tried and tested techniques that will never go flat throughout your career. You can unleash your marketing potential with social media marketing, content marketing, working on paid campaigns, and taking complete charge to accelerate your career growth.</p>
                     <div class="card-container">
                         <div id="card9" class="cards">
                             <img src="" alt="" srcset="">
@@ -311,12 +314,10 @@
                             <div class="tools-card">1</div>
                         </div>
                     </div>
-
                 </div>
                 <div id="sub_c_section4" class="sub-c-section">
                     <h2>Wordpress Development</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit vero voluptatem officiis, quisquam iste tempora esse dolorum velit distinctio, suscipit a quam eius laboriosam eveniet sequi ea! Eaque dicta ratione vitae maxime
-                        molestias explicabo quam, velit asperiores praesentium architecto eligendi facere reiciendis ea quisquam doloribus itaque minima ex repellendus.</p>
+                    <p>We may have worked our socks off. The client’s brief is at hand. We have done a lot of research about the new and latest web designs. We have a complete image bank with us. But the self-doubt and the expertise to work with confidence is bubbling up. This is because we may not have good hands-on web graphic design, design authorings like standardized code, user experience design, and more.</p>
                     <div class="card-container">
                         <div id="card13" class="cards">
                             <img src="" alt="" srcset="">
@@ -387,7 +388,6 @@
                             <div class="tools-card">1</div>
                         </div>
                     </div>
-
                 </div>
             </section>
             <section class="faq">

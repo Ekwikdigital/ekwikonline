@@ -1,3 +1,6 @@
+<?php
+session_start();
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +11,7 @@
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="icon" type="img/uploaded/elogo.png" href="favicon.ico" />
     <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
     <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
@@ -18,12 +21,9 @@
     <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
     <link rel="preload " href="css/style.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body onload="onload()" id="body" class="home loaded">
+<body id="body" class="home loaded">
     <div class="main-wrapper">
         <main class="content">
             <div class="first-screen section-screen-main">
@@ -32,7 +32,7 @@
                     <div class="screen-main">
                         <div class="section-heading"><span>Be sure</span></div>
                         <h1 class="h1 h1-main">your success is in&nbsp;our&nbsp;hands</h1>
-                        <div class="screen-main__text">Agency with 12&nbsp;years of history, 15&nbsp;employees, Fortune 5000&nbsp;clients and proven results.</div>
+                        <div class="screen-main__text">Agency with 12&nbsp;years of history, 15&nbsp;employees, Fortune 5000&nbsp;clients and proven results. <br> Login for More Benefits</div>
                         <a href="courses.html" class="btn btn_learn">Learn more</a>
                     </div>
                 </div>
@@ -225,7 +225,7 @@
                             </p>
                             <div class="content-block__text">
                                 <p>Ekwik Digital was launched as a digital marketing company in 2019. Its main aim was to help startup companies to MSME grow online. These companies do not have proper resources and funds. And after the launch of Ekwik Digital,thousands
-                                    of companies have benefited. Ekwik digital provides an all-in-one digital marketing service at accessible charges. So, most startup to mid-size companies can get and grow online. </p>
+                                of companies have benefited. Ekwik digital provides an all-in-one digital marketing service at accessible charges. So, most startup to mid-size companies can get and grow online. </p>
                             </div>
                             <a href="https://youtu.be/teyfPTEyqeM" class="about__btn play-video js-fancybox">
                                 <span class="play-icon">
@@ -356,11 +356,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            
+            </div>       
 <?php
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 $servername = "localhost";
@@ -373,7 +370,7 @@ $conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+die("Connection failed: " . $conn->connect_error);
 }
 // echo "Connected successfully";
 
@@ -388,10 +385,6 @@ $newsletter = $_POST["newsletter"];
 $b_name = $_POST["b_name"]; 
 $b_email = $_POST["b_email"]; 
 $b_phoneno = $_POST["b_phone"]; 
-
-// xss attack secure 
-
-
 
 
 $sql = "INSERT INTO `students_data`(`s_name`, `s_surname`, `s_phoneno`, `s_email`) VALUES ('$s_name','$s_surname','$s_phoneno','$s_email')";
@@ -765,6 +758,25 @@ $result4 = mysqli_query($conn,$sql4);
                 </div>
             </div> -->
         </main>
+        <div class="nav-sticky">
+            <ul>
+                <li>
+                    <a href="#courses">Courses</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#steps">Steps</a>
+                </li>
+                <li>
+                    <a href="#price">Price</a>
+                </li>
+                <li>
+                    <a href="#testimonials">Testimonials</a>
+                </li>
+            </ul>
+        </div>
         <?php
             include("./include/header.php");
         ?>

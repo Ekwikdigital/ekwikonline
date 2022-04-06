@@ -1,11 +1,12 @@
+
 <?php
-if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
-    $loggedin= true;
-}
-else {
-    $loggedin= false;
-}
-echo '
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+        $loggedin = true;
+    }
+    else {
+        $loggedin = false;
+    }
+    echo '
 <header class="header" id="header">
             <div class="header-top">
                 <div class="wrapper">
@@ -57,12 +58,12 @@ echo '
                                 </li>
                                 <li>
                                     <a href="blog.php">Our Blog</a>
+                                </li>
+                                <li>
+                                    <a href="benefits.php">Benefits</a>
                                 </li>';
                                 if(!$loggedin){
                                     echo '
-                                <li>
-                                    <a class="" href="benefits-login.php"><i class="fa-solid fa-user-plus"></i> Sign UP</a>
-                                </li>
                                 <li>
                                     <a class="" href="login.php"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
                                 </li>';
@@ -131,25 +132,6 @@ echo '
                 </div>
             </div>
         </header>
-        <div class="nav-sticky">
-            <ul>
-                <li>
-                    <a href="#courses">Courses</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#steps">Steps</a>
-                </li>
-                <li>
-                    <a href="#price">Price</a>
-                </li>
-                <li>
-                    <a href="#testimonials">Testimonials</a>
-                </li>
-            </ul>
-        </div>
         <footer id="footer" class="footer footer-2">
             <div class="footer__bg js-lazy" data-src="img/bg/footer-2.svg"></div>
             <div class="wrapper">
@@ -296,8 +278,6 @@ echo '
             </div>
         </div>
     </div>
-
-    
     <script>
         var body = document.body;
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
@@ -311,4 +291,3 @@ echo '
     </script>
     ';
     ?>
-    
