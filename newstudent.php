@@ -6,6 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $showError = false;
 include('./include/db_connect.php');
 $s_id = $_POST["s_id"];
+$s_phone = $_POST["s_phone"];
 $s_username = $_POST["s_username"];
 $s_email = $_POST["s_email"];
 $s_password = $_POST["s_password"];
@@ -13,7 +14,7 @@ $s_c_password = $_POST["s_c_password"];
 // $exists = false ;
 
 //Check whether this username Exists
-$existSql = "SELECT * FROM `students` WHERE username = '$s_id'";
+$existSql = "SELECT * FROM `benefits_users` WHERE username = '$s_username'";
 $result = mysqli_query($conn, $existSql);
 $numExistRows = mysqli_num_rows($result);
 if($numExistRows > 0){
@@ -25,7 +26,8 @@ else
     // $exists = false;
     if(($s_password == $s_c_password))
         {
-            $sql = "INSERT INTO `students`(`s_id_no`, `s_id_name`, `s_id_phoneno`, `s_id_email`) VALUES ('$s_id','$s_username','$s_password','$s_email')";
+            // $sql = "INSERT INTO `students`(`s_id_no`, `s_id_name`, `s_id_phoneno`, `s_id_email`) VALUES ('$s_id','$s_username','$s_password','$s_email')";
+            $sql = "INSERT INTO `benefits_users`(`username`, `password`, `email`, `s_id`, `s_phone`) VALUES ('$s_username','$s_password','$s_email','$s_id','$s_phone')";
             $result = mysqli_query($conn, $sql);
             if ($result)
                 {
@@ -83,6 +85,10 @@ if($showAlert) {
                 <label for="s_email">Email</label>
                 <br>
                 <input type="email" name="s_email" id="s_email" class="input" required>
+                <br>
+                <label for="s_phone">Contact No</label>
+                <br>
+                <input type="tel" name="s_phone" id="s_phone" class="input" required>
                 <br>
                 <label for="s_password">Password</label>
                 <br>

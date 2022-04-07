@@ -58,13 +58,13 @@ session_start();
                 $result = mysqli_query($conn , $sql);
                 $row = mysqli_fetch_assoc($result);
 
-                if($row['s_id'] == 8 || $row['s_id'] == 789){             
+                if($row['s_id'] == 1 || $row['s_id'] == 12){             
                 echo '
                 <a href="video.php">
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
+                <h4>WordPress Design/Development</h4>
+                <p>All Content of WordPress Design & Development available here.</p>
                 </div>
                 </a>
                 ';
@@ -73,20 +73,120 @@ session_start();
                 echo '
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
+                <h4>WordPress Design/Development</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 2){             
+                echo '
+                <a href="video.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Web Design/Development</h4>
+                <p>All Content of Web Design & Development available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Web Design/Development</h4>
+                <p>You Not Enroll in this Course.</p>
                 </div>';
                 }
 
 
+
+                if($row['s_id'] == 3 ){             
+                echo '
+                <a href="video.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4> Google Ads</h4>
+                <p>All Google Ads Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Google Ads</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 4 ){             
+                echo '
+                <a href="video.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4> Facebook Ads</h4>
+                <p>All Google Ads Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Facebook Ads</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 5 ){             
+                echo '
+                <a href="video.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Social Media Marketing</h4>
+                <p>All Social Media Marketing Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Social Media Marketing</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 6 ){             
+                echo '
+                <a href="video.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Search Engine Optimization</h4>
+                <p>All Search Engine Optimization Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Search Engine Optimization</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
 
                 if($row['s_id'] == 7 ){             
                 echo '
                 <a href="video.php">
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
+                <h4>Graphics Designing</h4>
+                <p>All Graphics Designing Content Available here.</p>
                 </div>
                 </a>
                 ';
@@ -95,18 +195,18 @@ session_start();
                 echo '
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
+                <h4>Graphics Designing</h4>
+                <p>You Not Enroll in this Course.</p>
                 </div>';
                 }
 
-                if($row['s_id'] == 7 ){             
+                if($row['s_id'] == 8 ){             
                 echo '
                 <a href="video.php">
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
+                <h4>Content Marketing</h4>
+                <p>All Content Marketing Content Available here.</p>
                 </div>
                 </a>
                 ';
@@ -115,8 +215,8 @@ session_start();
                 echo '
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
+                <h4>Content Marketing</h4>
+                <p>You Not Enroll in this Course.</p>
                 </div>';
                 }
 
@@ -126,76 +226,349 @@ session_start();
         <section class="sub-container">
 
         <?php
+      
+      if($row['s_id'] == 1){             
+        echo '
+        <a href="notes.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>WordPress Design/Development</h4>
+        <p>All Content of WordPress Design & Development available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>WordPress Design/Development</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 2){             
+        echo '
+        <a href="notes.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Web Design/Development</h4>
+        <p>All Content of Web Design & Development available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Web Design/Development</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+
+
+        if($row['s_id'] == 3 ){             
+        echo '
+        <a href="notes.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4> Google Ads</h4>
+        <p>All Google Ads Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Google Ads</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 4 ){             
+        echo '
+        <a href="notes.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4> Facebook Ads</h4>
+        <p>All Google Ads Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Facebook Ads</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 5 ){             
+        echo '
+        <a href="notes.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Social Media Marketing</h4>
+        <p>All Social Media Marketing Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Social Media Marketing</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 6 ){             
+        echo '
+        <a href="notes.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Search Engine Optimization</h4>
+        <p>All Search Engine Optimization Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Search Engine Optimization</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
         if($row['s_id'] == 7 ){             
-                echo '
-                <a href="video.php">
-                <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
-                </div>
-                </a>
-                ';
-                }
-                else {
-                echo '
-                <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
-                </div>';
-                }
-        if($row['s_id'] == 7 ){             
-                echo '
-                <a href="video.php">
-                <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
-                </div>
-                </a>
-                ';
-                }
-                else {
-                echo '
-                <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
-                </div>';
-                }
-        if($row['s_id'] == 7 ){             
-                echo '
-                <a href="video.php">
-                <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
-                </div>
-                </a>
-                ';
-                }
-                else {
-                echo '
-                <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
-                </div>';
-                }
-                ?>
+        echo '
+        <a href="notes.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Graphics Designing</h4>
+        <p>All Graphics Designing Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Graphics Designing</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 8 ){             
+        echo '
+        <a href="notes.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Content Marketing</h4>
+        <p>All Content Marketing Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Content Marketing</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+   ?>
 
         </section>
         <h2> Class Recordings </h2>
         <section class="sub-container">
         <?php
+       if($row['s_id'] == 1){             
+        echo '
+        <a href="class.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>WordPress Design/Development</h4>
+        <p>All Content of WordPress Design & Development available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>WordPress Design/Development</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 2){             
+        echo '
+        <a href="class.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Web Design/Development</h4>
+        <p>All Content of Web Design & Development available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Web Design/Development</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+
+
+        if($row['s_id'] == 3 ){             
+        echo '
+        <a href="class.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4> Google Ads</h4>
+        <p>All Google Ads Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Google Ads</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 4 ){             
+        echo '
+        <a href="class.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4> Facebook Ads</h4>
+        <p>All Google Ads Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Facebook Ads</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 5 ){             
+        echo '
+        <a href="class.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Social Media Marketing</h4>
+        <p>All Social Media Marketing Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Social Media Marketing</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 6 ){             
+        echo '
+        <a href="class.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Search Engine Optimization</h4>
+        <p>All Search Engine Optimization Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Search Engine Optimization</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
         if($row['s_id'] == 7 ){             
+        echo '
+        <a href="class.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Graphics Designing</h4>
+        <p>All Graphics Designing Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Graphics Designing</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+        if($row['s_id'] == 8 ){             
+        echo '
+        <a href="class.php">
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Content Marketing</h4>
+        <p>All Content Marketing Content Available here.</p>
+        </div>
+        </a>
+        ';
+        }
+        else {
+        echo '
+        <div class="b_card">
+        <img src="./img/uploaded/1.png" alt="" srcset="">
+        <h4>Content Marketing</h4>
+        <p>You Not Enroll in this Course.</p>
+        </div>';
+        }
+
+                ?>
+
+        </section>
+        <h2> Online Assesments </h2>
+        <section class="sub-container">
+        <?php
+        if($row['s_id'] == 1){             
                 echo '
-                <a href="video.php">
+                <a href="Assesments.php">
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
+                <h4>WordPress Design/Development</h4>
+                <p>All Content of WordPress Design & Development available here.</p>
                 </div>
                 </a>
                 ';
@@ -204,17 +577,18 @@ session_start();
                 echo '
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
+                <h4>WordPress Design/Development</h4>
+                <p>You Not Enroll in this Course.</p>
                 </div>';
                 }
-        if($row['s_id'] == 7 ){             
+
+                if($row['s_id'] == 2){             
                 echo '
-                <a href="video.php">
+                <a href="Assesments.php">
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
+                <h4>Web Design/Development</h4>
+                <p>All Content of Web Design & Development available here.</p>
                 </div>
                 </a>
                 ';
@@ -223,17 +597,20 @@ session_start();
                 echo '
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
+                <h4>Web Design/Development</h4>
+                <p>You Not Enroll in this Course.</p>
                 </div>';
                 }
-        if($row['s_id'] == 7 ){             
+
+
+
+                if($row['s_id'] == 3 ){             
                 echo '
-                <a href="video.php">
+                <a href="Assesments.php">
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>heading</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.</p>
+                <h4> Google Ads</h4>
+                <p>All Google Ads Content Available here.</p>
                 </div>
                 </a>
                 ';
@@ -242,8 +619,108 @@ session_start();
                 echo '
                 <div class="b_card">
                 <img src="./img/uploaded/1.png" alt="" srcset="">
-                <h4>Not In Your Course</h4>
-                <p>Talk to Admin for access this Content.</p>
+                <h4>Google Ads</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 4 ){             
+                echo '
+                <a href="Assesments.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4> Facebook Ads</h4>
+                <p>All Google Ads Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Facebook Ads</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 5 ){             
+                echo '
+                <a href="Assesments.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Social Media Marketing</h4>
+                <p>All Social Media Marketing Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Social Media Marketing</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 6 ){             
+                echo '
+                <a href="Assesments.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Search Engine Optimization</h4>
+                <p>All Search Engine Optimization Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Search Engine Optimization</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 7 ){             
+                echo '
+                <a href="Assesments.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Graphics Designing</h4>
+                <p>All Graphics Designing Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Graphics Designing</h4>
+                <p>You Not Enroll in this Course.</p>
+                </div>';
+                }
+
+                if($row['s_id'] == 8 ){             
+                echo '
+                <a href="Assesments.php">
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Content Marketing</h4>
+                <p>All Content Marketing Content Available here.</p>
+                </div>
+                </a>
+                ';
+                }
+                else {
+                echo '
+                <div class="b_card">
+                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <h4>Content Marketing</h4>
+                <p>You Not Enroll in this Course.</p>
                 </div>';
                 }
                 ?>
