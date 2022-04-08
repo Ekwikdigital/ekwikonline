@@ -1,5 +1,15 @@
 <?php
 session_start();
+include("./include/db_connect.php");
+
+$c_name = $_POST["name"]; 
+$c_phone = $_POST["phone"]; 
+$c_email = $_POST["email"]; 
+$c_message = $_POST["message"]; 
+
+
+$sql = "INSERT INTO `contact_details`(`c_name`, `c_phone`, `c_email`, `c_message`) VALUES ('$c_name','$c_phone','$c_email','$c_message')";
+$result = mysqli_query($conn,$sql);
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -42,50 +52,43 @@ session_start();
             </div>
             <div class="section-services-main" id="course">
                 <div class="wrapper">
-                    <div id="courses" class="services">
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-1.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/digital-marketing.html">
-                                <div class="services__title"><abbr title="Any marketing that uses electronic devices and can be used by marketing specialists to convey promotional messaging and measure its impact through your customer journey. In practice, digital marketing typically refers to marketing campaigns that appear on a computer, phone, tablet, or other device. It can take many forms, including online video, display ads, search engine marketing, paid social ads and social media posts. Digital marketing is often compared to “traditional marketing” such as magazine ads, billboards, and direct mail. Oddly, television is usually lumped in with traditional marketing."> Digital Marketing </abbr></div>
-                                <div class="services__text">Any marketing that uses electronic devices and can be used by marketing specialists</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-2.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/web-designing.html">
-                                <div class="services__title"><abbr title="Web design is the art of planning and arranging content on a website so that it can be shared and accessed online with the world. A combination of aesthetic and functional elements, web design is what determines the look of a website—such as its colors, fonts, and graphics—as well as shaping the site’s structure and the users’ experience of it."> Web Designing  </abbr></div>
-                                <div class="services__text">Web design is the art of planning and arranging content on a website</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-3.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/web-development.html">
-                                <div class="services__title"><abbr title="Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript. Responsive Web Design is used in all types of modern web development."> Web Development  </abbr></div>
-                                <div class="services__text">Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript.</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-4.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/wordpress-development.html">
-                                <div class="services__title"><abbr title="What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog. In fact, WordPress powers over 43.3% of all the websites on the Internet. Yes – more than one in four websites that you visit are likely powered by WordPress."> Wordpress Development </abbr></div>
-                                <div class="services__text">What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog.</div>
-                            </a>
+    <div>
+        <section class="contact-container">
+            <div class="contact-sub-container">
+            <h1> Ekwik Classes </h1>
+            <p> So, are you ready to get web development, marketing, and SEO services in India? </p>
+            <h1> Contact us </h1> 
+            <p>  <i class="fas fa-blender-phone"></i> Office no </p>  
+            <p> 011-42175423 </p> 
+            <p> <i class="fas fa-mobile-alt"></i> Mobile no </p>  
+            <p> +91 9717666076 </p>
+            <p>  <i class="fas fa-envelope"></i> Email </p>  
+            <p> hello@ekwikdigital.com  </p>
+            <h1> Address </h1>
+            <p> A-20, First Floor, Guru Nanak Pura, Street No. 3, Laxmi Nagar, Delhi – 110092, Landmark – In Front Of V3s Mall  </p>
+            </div>
+            <div class="contact-sub-container ">
+                <form class="cuc" action="" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required >
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="">Contact Number</label>
+                    <input type="tel" name="phone" id="phone" maxlength="10" minlength="10" required>
+                    <label for="message">Short Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+
+                    <div>
+                    <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4139.671128948162!2d77.28249300892676!3d28.636323180071926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b6a48a38d9%3A0x9f0dae49642f744a!2sEkwik%20Digital!5e0!3m2!1sen!2sin!4v1634535783091!5m2!1sen!2sin" width="100%" height="500px"  style="border-radius:20px;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
-                </div>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemKpZyh-PnXA9_85AGOzvGrd8G-Gce_tDtg8K_B683q9jbHA/viewform?embedded=true" width="640" height="1967" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
             <?php
             include("./include/header.php");

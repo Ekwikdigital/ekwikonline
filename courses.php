@@ -98,22 +98,22 @@ session_start();
 Make it a mission now and know what you can learn in digital marketing to spread the wings of knowledge in a world which needs you.</p>
                     <div class="card-container">
                         <div id="card1" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card2" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card3" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card4" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
@@ -172,22 +172,22 @@ Make it a mission now and know what you can learn in digital marketing to spread
                     <p>Search engine optimization will help you boost your rankings on Google. Increase inbound traffic from search engines constructively. It is necessary to learn SEO because every brand is fighting hard to stay at the top of Google. Our course will teach you to optimize your website in the best way. We will teach you the actionable skills that will cover all the basic knowledge and techniques to do SEO for any website. We will teach you more about the organic listings, paid search ads, site feeds, vertical search results, metasearch engines and search aggregators, algorithms change, keyword selection, keyword placement opportunities, and more. Our experts have years of experience and will teach you about ranks, indexed pages, inbound and outbound links, historical conversions, site optimization, on-page and off-page factors, and more.</p>
                     <div class="card-container">
                         <div id="card5" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card6" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card7" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card8" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
@@ -246,22 +246,22 @@ Make it a mission now and know what you can learn in digital marketing to spread
                     <p>Just imagine life without facebook likes or Instagram stories or tweets takedown. Without them, do you have anything to share socially? Of course, not. Our social media marketing tips will prepare you with tactics that can deliver amazing insights. We train people with our tried and tested techniques that will never go flat throughout your career. You can unleash your marketing potential with social media marketing, content marketing, working on paid campaigns, and taking complete charge to accelerate your career growth.</p>
                     <div class="card-container">
                         <div id="card9" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card10" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card11" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card12" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
@@ -320,22 +320,22 @@ Make it a mission now and know what you can learn in digital marketing to spread
                     <p>We may have worked our socks off. The client’s brief is at hand. We have done a lot of research about the new and latest web designs. We have a complete image bank with us. But the self-doubt and the expertise to work with confidence is bubbling up. This is because we may not have good hands-on web graphic design, design authorings like standardized code, user experience design, and more.</p>
                     <div class="card-container">
                         <div id="card13" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card14" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card15" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card16" class="cards">
-                            <img src="" alt="" srcset="">
+                            <img src="./img/uploaded/1.png" alt="" srcset="">
                             <h3>card</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>

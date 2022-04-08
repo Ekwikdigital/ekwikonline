@@ -313,6 +313,38 @@
                                 ?>
                            </table>
                        </div>
+                   <div id="c-students" class="sub-section">
+                       <h2> Contact Data </h2>
+                       <h3 align="center">Who Fill the Contact Form</h3>
+                       <br />
+                       <div class="table-responsive">
+                           <table id="employee_data6" class="table table-striped table-bordered">
+                               <thead>
+                                   <tr>
+                                       <td> So.No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td> Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td>Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td>Message &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                   </tr>
+                               </thead>
+                               <?php
+                                $sql6 = "SELECT * FROM `contact_details`";
+                                $result6 = mysqli_query($conn, $sql6);
+                                while ($row = mysqli_fetch_assoc($result6)) {
+                                    echo '  
+                            <tr>  
+                            <td>' . $row["s_no"] . '</td>  
+                            <td>' . $row["c_name"] . '</td>   
+                            <td>' . $row["c_email"] . '</td>  
+                            <td>' . $row["c_phone"] . '</td>  
+                            <td>' . $row["c_message"] . '</td>  
+                            </tr>  
+                            ';
+                                }
+                                ?>
+                           </table>
+                       </div>
                    </div>
                </section>
                <script src="js/jquery-3.5.1.min.js"></script>

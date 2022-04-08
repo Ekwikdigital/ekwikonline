@@ -22,8 +22,7 @@ session_start();
     <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
     <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
@@ -44,6 +43,14 @@ session_start();
             </div>
             <div class="section-services-main" id="course">
                 <div class="wrapper">
+                    <section class="a-content">
+                        <div class="a-sub-content a-img"></div>
+                        <div class="a-sub-content">
+                            <p>In the modern world, corporate and industrial Practices have changed considerably. We did thorough market research on the education industry and found that there is a low-quality education available and high fee structure. This forced us to get into the education system where we can offer education at an economical cost and provide employment opportunities as soon as students complete these vocational courses. We believe in the highest quality teaching to deliver our professional programs that shape the career of the young generation by providing them employment opportunities. Due to the constant transformation, there is a need for continuous development in the education industry. We make sure that our students learn and work best in the business environments and deliver efficient results irrespective of change in challenging business environments. Our trainers are expert in making the learners result-oriented, decisive, flexible, and ethical managers.</p>
+                        </div>
+                    </section>
+
+
                     <div id="courses" class="services">
                         <div class="services__item">
                             <div class="services__decor"></div>
@@ -51,8 +58,8 @@ session_start();
                                 <img src="img/icons-svg/exellence-1.svg" alt="" loading="lazy">
                             </div>
                             <a href="./website-pages/digital-marketing.html">
-                                <div class="services__title"><abbr title="Any marketing that uses electronic devices and can be used by marketing specialists to convey promotional messaging and measure its impact through your customer journey. In practice, digital marketing typically refers to marketing campaigns that appear on a computer, phone, tablet, or other device. It can take many forms, including online video, display ads, search engine marketing, paid social ads and social media posts. Digital marketing is often compared to “traditional marketing” such as magazine ads, billboards, and direct mail. Oddly, television is usually lumped in with traditional marketing."> Digital Marketing </abbr></div>
-                                <div class="services__text">Any marketing that uses electronic devices and can be used by marketing specialists</div>
+                                <div class="services__title"> Our Vision </div>
+                                <div class="services__text">To be a leader in the integration of teaching and advancement of the knowledge base that accentuates the career path of students for better opportunities.</div>
                             </a>
                         </div>
                         <div class="services__item">
@@ -61,8 +68,8 @@ session_start();
                                 <img src="img/icons-svg/exellence-2.svg" alt="" loading="lazy">
                             </div>
                             <a href="./website-pages/web-designing.html">
-                                <div class="services__title"><abbr title="Web design is the art of planning and arranging content on a website so that it can be shared and accessed online with the world. A combination of aesthetic and functional elements, web design is what determines the look of a website—such as its colors, fonts, and graphics—as well as shaping the site’s structure and the users’ experience of it."> Web Designing  </abbr></div>
-                                <div class="services__text">Web design is the art of planning and arranging content on a website</div>
+                                <div class="services__title">Our Mission</div>
+                                <div class="services__text">To deepen and extend knowledge among learners so they can grow with complete utilization of education skills.</div>
                             </a>
                         </div>
                         <div class="services__item">
@@ -71,33 +78,62 @@ session_start();
                                 <img src="img/icons-svg/exellence-3.svg" alt="" loading="lazy">
                             </div>
                             <a href="./website-pages/web-development.html">
-                                <div class="services__title"><abbr title="Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript. Responsive Web Design is used in all types of modern web development."> Web Development  </abbr></div>
-                                <div class="services__text">Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript.</div>
+                                <div class="services__title"> Our Goals</div>
+                                <div class="services__text">Doubts slow us down. So, we impart quality education and teaching that leaves no room for doubts.</div>
                             </a>
                         </div>
                         <div class="services__item">
                             <div class="services__decor"></div>
                             <div class="services__icon">
-                                <img src="img/icons-svg/exellence-4.svg" alt="" loading="lazy">
+                                <img src="img/icons-svg/exellence-3.svg" alt="" loading="lazy">
                             </div>
-                            <a href="./website-pages/wordpress-development.html">
-                                <div class="services__title"><abbr title="What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog. In fact, WordPress powers over 43.3% of all the websites on the Internet. Yes – more than one in four websites that you visit are likely powered by WordPress."> Wordpress Development </abbr></div>
-                                <div class="services__text">What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog.</div>
+                            <a href="./website-pages/web-development.html">
+                                <div class="services__title"> Our Goals</div>
+                                <div class="services__text">Doubts slow us down. So, we impart quality education and teaching that leaves no room for doubts.</div>
                             </a>
                         </div>
+                        <h1 style="text-align: center;">Director Message</h1>
+                        <section class="a-content">
+                            <div class="a-sub-content">
+                                <p>In the modern world, corporate and industrial practices have changed considerably. Due to the constant transformation, there is a need for continuous development in the education industry. We make sure that our students learn and work best in the business environments and deliver efficient results irrespective of change in challenging business environments. Our trainers are expert in making the learners result-oriented, decisive, flexible, and ethical managers. We are committed to providing cost-effective and high-quality education in the field of Marketing and Technology. We align with the requirements of the global market and make sure that the right set of knowledge, skills, talents, and attitudes is the key to meet the opportunities available worldwide.
+                                    We want to expose our learners to the dynamics of corporate culture and teach them the latest skills that have competitive advantages. At Ekwik Digital, we extend our support to the young generation with customized efforts to nurture their talents and abilities which help in bridging the gap between the Indian and Global markets.
+                                    We want to shape the winning personas in the young generation so they can contribute the best into society. This is only possible by developing a passion for learning.</p>
+                            </div>
+                            <div class="a-sub-content d-img"></div>
+                        </section>
+
+                        <section>
+                            <h1>Our Instructors</h1>
+                            <div class="inst">
+                                <div class="w img"></div>
+                                <div class="w ">
+                                    <h3>Name</h3>
+                                    <h4>Designation</h4>
+                                    <p>Discription</p>
+                                </div>
+                                <div class="inst">
+                                    <div class="w ">
+                                        <h3>Name</h3>
+                                        <h4>Designation</h4>
+                                        <p>Discription</p>
+                                    </div>
+                                    <div class="w img"></div>
+                                </div>
+                        </section>
+
                     </div>
                 </div>
             </div>
             <?php
             include("./include/header.php");
-        ?>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="js/jquery-3.5.1.min.js" defer></script>
-    <script src="js/components/jquery.lazy.min.js" defer></script>
-    <script src="js/components/jquery.fancybox.min.js" defer></script>
-    <script src="js/components/jquery.singlePageNav.min.js" defer></script>
-    <script src="js/components/swiper.js" defer></script>
-    <script src="js/custom.js" defer></script>
+            ?>
+            <link rel="stylesheet" type="text/css" href="css/style.css" />
+            <script src="js/jquery-3.5.1.min.js" defer></script>
+            <script src="js/components/jquery.lazy.min.js" defer></script>
+            <script src="js/components/jquery.fancybox.min.js" defer></script>
+            <script src="js/components/jquery.singlePageNav.min.js" defer></script>
+            <script src="js/components/swiper.js" defer></script>
+            <script src="js/custom.js" defer></script>
 </body>
 
 </html>
