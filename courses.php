@@ -99,22 +99,22 @@ Make it a mission now and know what you can learn in digital marketing to spread
                     <div class="card-container">
                         <div id="card1" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Video</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card2" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Notes</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card3" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Class Recording</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card4" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Book</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                     </div>
@@ -173,22 +173,22 @@ Make it a mission now and know what you can learn in digital marketing to spread
                     <div class="card-container">
                         <div id="card5" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Video</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card6" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Notes</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card7" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Class Recording</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card8" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Book</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                     </div>
@@ -247,22 +247,22 @@ Make it a mission now and know what you can learn in digital marketing to spread
                     <div class="card-container">
                         <div id="card9" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Video</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card10" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Notes</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card11" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Class Recording</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card12" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Book</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                     </div>
@@ -321,22 +321,22 @@ Make it a mission now and know what you can learn in digital marketing to spread
                     <div class="card-container">
                         <div id="card13" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Video</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card14" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Notes</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card15" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Class Recording</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <div id="card16" class="cards">
                             <img src="./img/uploaded/1.png" alt="" srcset="">
-                            <h3>card</h3>
+                            <h3>Books</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                     </div>
