@@ -159,7 +159,7 @@ session_start();
                     </div>
                     <div class="ca">
                         <img src="./img/new/2.png" alt="" srcset="">
-                        <p>Focus On Practical Learning</p>
+                        <p>Focus On Practical Learning</p> 
                     </div>
                     <div class="ca">
                         <img src="./img/new/3.png" alt="" srcset="">

@@ -72,9 +72,7 @@ if ($conn->connect_error) {
                                     <a href='article.php?id=".$row['blog_id']."' class='news__img'>
 
                                         <picture>
-                                            <source type='image/jpeg' srcset='img/examples/blog_1.jpg' media='(min-width: 768px)' />
-                                            <source type='image/jpeg' srcset='img/examples/blog_1_mob.jpg' />
-                                            <img src='img/examples/blog_1_mob.jpg' alt='' />
+                                            <img src='";echo $row['blog_image'];echo"' alt='' />
                                         </picture>
                                     </a>
                                     <div class='news__content'>

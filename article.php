@@ -72,9 +72,7 @@ $row = mysqli_fetch_assoc($result);
                                 <div class="article">
 
                                     <picture>
-                                        <source type="image/jpeg" srcset="img/examples/article.jpg" media="(min-width: 768px)" />
-                                        <source type="image/jpeg" srcset="img/examples/article_mob.jpg" />
-                                        <img src="img/examples/article_mob.jpg" alt="" class="img-article-main" />
+                                        <img src=" <?php echo $row['blog_image']; ?> " alt="" class="img-article-main" />
                                     </picture>
                                     <div class="news-header news-header_article">
                                         <div class="news__date"> <?php echo $row['timestamp']; ?> </div>  

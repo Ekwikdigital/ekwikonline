@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: ./epanel007.php
+Disallow: ./newstudent.php
+Disallow: index.php

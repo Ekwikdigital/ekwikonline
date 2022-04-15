@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,39 +8,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/assements.css">
+    <style>
+       
+    </style>
     <script>
     </script>
 </head>
 <body>
-<h1>Assesments</h1>
-<section class="asses">
-    <a href="assesmentstest.php?id=7" >
-        <div class="card">
-            <img src="./img/uploaded/1.png" alt="" srcset="">
-            <h2>Beginner</h2>
-            <h2>Name</h2>
-            <p>This is Test.</p>
-        </div>
-        </a>
-        <a href="assesmentstest.php">
-        <div class="card">
-            <img src="./img/uploaded/1.png" alt="" srcset="">
-            <h2>Intermediate</h2>
-            <h2>Name</h2>
-            <p>This is Test.</p>
-        </div>
-        </a>
-        <a href="assesmentstest.php">
-        <div class="card">
-            <img src="./img/uploaded/1.png" alt="" srcset="">
-            <h2>Advanced</h2>
-            <h2>Name</h2>
-            <p>This is Test.</p>
-        </div>
-        </a>
-</section>
     
-   
+
+<?php
+session_start();
+            include("./include/db_connect.php");
+            $id = $_GET['id'];
+            $name = $_SESSION['username'];
+                $sql = "SELECT * FROM `benefits_users` WHERE username='$name'";
+                $sql2 = "SELECT * FROM `assesments`";
+                $result = mysqli_query($conn , $sql);
+                $result2 = mysqli_query($conn , $sql2);
+                $row = mysqli_fetch_assoc($result);
+                $row2 = mysqli_fetch_assoc($result2);
+
+                if($row['s_id'] == $id && $row2['a_id'] == $id){
+                    while($row2 = mysqli_fetch_assoc($result2)){
+                        echo'
+                        <section height="100vh">
+                        <h1>Assesments</h1>
+                            <div class="bg">
+                            '.$row2['s_code'].'
+                                </div> 
+                                </section>
+        ';
+                   
+                    }
+                 }
+                 else {
+                     echo 'not';
+                 }
+
+
+?>
+    <!-- <h1>Assesments</h1>
+    <div class="bg">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemKpZyh-PnXA9_85AGOzvGrd8G-Gce_tDtg8K_B683q9jbHA/viewform?embedded=true" width="640" height="1967" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div> -->
 </body>
 </html>
 
