@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 User-agent: *
 Disallow: ./epanel007.php
 Disallow: ./newstudent.php
 Disallow: index.php
+=======
+User-agent: *
+Disallow: ./epanel007.php
+Disallow: ./newstudent.php
+>>>>>>> 15c75d656427878c8328379825e4f90974220de7
