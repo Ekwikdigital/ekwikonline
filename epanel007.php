@@ -1,39 +1,64 @@
-           
            <?php
-//            session_start();
-// if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=ture){
-//     header("location: login.php");
-//     exit;
-// }
+            //            session_start();
+            // if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=ture){
+            //     header("location: login.php");
+            //     exit;
+            // }
 
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $database = "ekonline";
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $database);
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            // echo "Connected successfully";
+            include("./include/db_connect.php");
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $blog_heading = $_POST["blog_heading"];
                 $blog_desc = $_POST["blog_desc"];
                 $blog_date = $_POST["blog_date"];
+                $blog_file = $_FILES["file"];
                 $blog_summary = $_POST["blog_summary"];
 
-                $sql = "INSERT INTO `blogs`(`blog_heading`, `blog_desc`,`timestamp`,`blog_summary`) VALUES ('$blog_heading','$blog_desc','$blog_date','$blog_summary')";
-                $result = mysqli_query($conn, $sql);
-            }
 
+                // for image upload 
+                 $filename = $blog_file['name'];
+                 $filerror = $blog_file['error'];
+                 $filetmp = $blog_file['tmp_name'];
+
+                 $fileext = explode('.',$filename);
+                 $filecheck = strtolower(end($fileext));
+
+
+                $fileextstored = array('png', 'jpg', 'jpeg');
+
+                if(in_array($filecheck,$fileextstored)){
+                    $destinationfile ='blogimage/'.$filename;
+                    move_uploaded_file($filetmp,$destinationfile);
+
+                }
+                
+                $sql = "INSERT INTO `blogs`(`blog_heading`, `blog_desc`,`blog_image`,`timestamp`,`blog_summary`) VALUES ('$blog_heading','$blog_desc','$destinationfile','$blog_date','$blog_summary')";
+                $result = mysqli_query($conn, $sql);
+                
+                // Assesments Post
+
+                $asses_id = $_POST["asses_id"];
+                $asses_name = $_POST["asses_name"];
+                $s_code = $_POST["s_code"];
+
+                $sql2 = "INSERT INTO `assesments`(`a_id`, `a_name`, `s_code`) VALUES ('$asses_id','$asses_name','$s_code')";
+                $result2 = mysqli_query($conn, $sql2);
+
+                //Video Post
+
+                $v_id = $_POST["video_id"];
+                $v_title = $_POST["video_title"];
+                $v_desc = $_POST["video_desc"];
+                $v_code = $_POST["v_code"];
+
+                $sql3 = "INSERT INTO `video`( `b_id` , `v_title`, `v_desc`, `v_code` ) VALUES ('$v_id', '$v_title','$v_desc','$v_code')";
+                $result3 = mysqli_query($conn, $sql3);
+            }
             ?>
 
            <!DOCTYPE html>
            <html lang="en">
+
            <head>
                <meta charset="UTF-8">
                <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,6 +104,21 @@
                        <li class="pb">
                            Post Blog
                        </li>
+                       <li class="As">
+                           Assesments
+                       </li>
+                       <li class="cf">
+                           Contact Form
+                       </li>
+                       <li class="cf">
+                           Video 
+                       </li>
+                       <li class="cf">
+                           Notes 
+                       </li>
+                       <li class="cf">
+                           Ebook 
+                       </li>
 
                    </ul>
                </nav>
@@ -90,7 +130,7 @@
                            <div class="b d-card">
                                <h3> Brochure </h3>
                                <?php
-                                $sql = "SELECT * FROM `brochure`"  ;
+                                $sql = "SELECT * FROM `brochure`";
                                 $result = mysqli_query($conn, $sql);
                                 echo mysqli_num_rows($result);
                                 ?>
@@ -135,47 +175,124 @@
                                 echo mysqli_num_rows($result6);
                                 ?>
                            </div>
-                        </div>
-                    </div>
-                    <form id="blog_post" action="admin869547523.php" method="post" enctype="multipart/form-data">
-                               <div>
-                            <label for="blog_heading">Blog heading</label>
-                            <input type="text" name="blog_heading" required>
-                            </div>
-                            <div>
-                            <label for="blog_summary">Blog summary</label>
-                            <input type="text" name="blog_summary" required>
-                            </div>
-                            <div>
-                            <label for="blog_desc">Blog Description</label>
-                            <textarea name="blog_desc" id="blog_desc" cols="80" rows="20" required></textarea>
-                            </div>
-                            <div>
-                            <label for="image">Select Image</label>
-                            <input type="file" name="image" id="image" class="image" required>
-                            </div>
-                            <div>
-                                <label for="">Blog Date</label>
-                                <input type="date" name="blog_date" class="date">
-                            </div>
-                            <div>
-                            <button id="submit" type="submit" class="btn btn-primary">Post</button>
-                            </div>
-                            </form>
-                    <div id="brochure" class="sub-section">
-                        <h2> Brochure </h2>
-                        <h3 align="center">Data of who Download Brochure</h3>
-                        <br />
-                        <div class="table-responsive">
-                        <table id="employee_data" class="table table-striped table-bordered">
-                        <thead>
-                        <tr>
-                                    <td>Name &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                    <td>Phone No &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                    <td>Email &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                    </tr>
-                            </thead>
-                            <?php
+                       </div>
+                   </div>
+                   <form id="blog_post" action="" method="post" enctype="multipart/form-data">
+                       <div>
+                           <label for="blog_heading">Blog heading</label>
+                           <input type="text" name="blog_heading" required>
+                       </div>
+                       <div>
+                           <label for="blog_summary">Blog summary</label>
+                           <input type="text" name="blog_summary" required>
+                       </div>
+                       <div>
+                           <label for="blog_desc">Blog Description</label>
+                           <textarea name="blog_desc" id="blog_desc" cols="80" rows="20" required></textarea>
+                       </div>
+                       <div>
+                           <label for="image">Select Image</label>
+                           <input type="file" name="file" id="file" class="image" required>
+                       </div>
+                       <div>
+                           <label for="">Blog Date</label>
+                           <input type="date" name="blog_date" class="date">
+                       </div>
+                       <div>
+                           <button id="submit" type="submit" class="btn btn-primary">Post</button>
+                       </div>
+                   </form>
+                   <form id="assessment" action="" method="post" enctype="multipart/form-data">
+                       <div>
+                           <label for="asses_id">Assesments ID</label>
+                           <input type="number" name="asses_id" id="asses_id" required>
+                       </div>
+                       <div>
+                           <label for="asses_name">Assesments Name</label>
+                           <input type="text" name="asses_name" id="asses_name" required>
+                       </div>
+                       <div>
+                           <label for="s_code">Source Code</label>
+                           <textarea name="s_code" id="s_code" cols="30" rows="10"></textarea>
+                       </div>
+                       <div>
+                           <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                       </div>
+                   </form>
+                   <form id="video" action="" method="post" enctype="multipart/form-data">
+                       <div>
+                           <label for="video_id">Video Id</label>
+                           <input type="number" name="video_id" id="video_id" required>
+                       </div>
+                       <div>
+                           <label for="video_title">Video Title</label>
+                           <input type="text" name="video_title" id="video_title" required>
+                       </div>
+                       <div>
+                           <label for="video_desc">Video Description</label>
+                           <input type="text" name="video_desc" id="video_desc" required>
+                       </div>
+                       <div>
+                           <label for="v_code">Video Code</label>
+                           <textarea name="v_code" id="v_code" cols="30" rows="10"></textarea>
+                       </div>
+                       <div>
+                           <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                       </div>
+                   </form>
+
+                       <table>
+  <tr>
+    <th>Student Id</th>
+    <th>Courses</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Wordpress development
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Web development
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Google Ads
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Facebook Ads
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Social Media Marketing
+  <tr>
+    <td>6</td>
+    <td>Search Engine Optimization
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Graphic Designing
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Content Marketing
+  </tr>
+</table>
+                   </form>
+                   <div id="brochure" class="sub-section">
+                       <h2> Brochure </h2>
+                       <h3 align="center">Data of who Download Brochure</h3>
+                       <br />
+                       <div class="table-responsive">
+                           <table id="employee_data" class="table table-striped table-bordered">
+                               <thead>
+                                   <tr>
+                                       <td>Name &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                       <td>Phone No &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                       <td>Email &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                   </tr>
+                               </thead>
+                               <?php
                                 $sql = "SELECT * FROM `brochure`";
                                 $result = mysqli_query($conn, $sql);
                                 while ($row = mysqli_fetch_assoc($result)) {
@@ -188,10 +305,10 @@
                                 ';
                                 }
                                 ?>
-                        </table>
-                    </div>
-                </div>
-                <div id="consultation" class="sub-section">
+                           </table>
+                       </div>
+                   </div>
+                   <div id="consultation" class="sub-section">
                        <h2> Consultation </h2>
                        <h3 align="center">Data of who Want Consultation</h3>
                        <br />
@@ -279,7 +396,7 @@
                    <div id="students-reg" class="sub-section">
                        <h2> Students Data </h2>
                        <h3 align="center">Data of Students for Contact Them</h3>
-                       <a href="newstudent.php" >Add New Student</a>
+                       <a href="newstudent.php" target="blank">Add New Student</a>
                        <br />
                        <div class="table-responsive">
                            <table id="employee_data5" class="table table-striped table-bordered">
@@ -313,26 +430,26 @@
                                 ?>
                            </table>
                        </div>
-                   <div id="c-students" class="sub-section">
-                       <h2> Contact Data </h2>
-                       <h3 align="center">Who Fill the Contact Form</h3>
-                       <br />
-                       <div class="table-responsive">
-                           <table id="employee_data6" class="table table-striped table-bordered">
-                               <thead>
-                                   <tr>
-                                       <td> So.No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                       <td> Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                       <td>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                       <td>Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                       <td>Message &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                   </tr>
-                               </thead>
-                               <?php
-                                $sql6 = "SELECT * FROM `contact_details`";
-                                $result6 = mysqli_query($conn, $sql6);
-                                while ($row = mysqli_fetch_assoc($result6)) {
-                                    echo '  
+                       <div id="cf-s" class="sub-section">
+                           <h2> Contact Data </h2>
+                           <h3 align="center">Who Fill the Contact Form</h3>
+                           <br />
+                           <div class="table-responsive">
+                               <table id="employee_data6" class="table table-striped table-bordered">
+                                   <thead>
+                                       <tr>
+                                           <td> So.No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                           <td> Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                           <td>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                           <td>Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                           <td>Message &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       </tr>
+                                   </thead>
+                                   <?php
+                                    $sql6 = "SELECT * FROM `contact_details`";
+                                    $result6 = mysqli_query($conn, $sql6);
+                                    while ($row = mysqli_fetch_assoc($result6)) {
+                                        echo '  
                             <tr>  
                             <td>' . $row["s_no"] . '</td>  
                             <td>' . $row["c_name"] . '</td>   
@@ -341,11 +458,15 @@
                             <td>' . $row["c_message"] . '</td>  
                             </tr>  
                             ';
-                                }
-                                ?>
-                           </table>
+                                    }
+                                    ?>
+                               </table>
+                           </div>
                        </div>
-                   </div>
+
+                    
+
+
                </section>
                <script src="js/jquery-3.5.1.min.js"></script>
                <script src="js/admin.js"></script>
@@ -353,9 +474,9 @@
                <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
                <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
                <script src="./ckeditor/ckeditor.js"></script>
-                            <script>
-                            CKEDITOR.replace('blog_desc');
-                            </script>
+               <script>
+                   CKEDITOR.replace('blog_desc');
+               </script>
            </body>
 
            </html>

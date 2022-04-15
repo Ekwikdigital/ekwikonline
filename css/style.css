@@ -3206,6 +3206,13 @@ h2 {
     .b_card {
         padding: 20px !important;
     }
+    .a-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    .a-sub-content {
+        width: 100%;
+    }
 }
 
 .nav-sticky ul {
@@ -3458,7 +3465,7 @@ h2 {
 }
 
 .a-sub-content {
-    width: 50%;
+    width: 90%;
     margin: 20px;
     color: #000000;
 }
