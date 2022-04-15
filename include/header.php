@@ -57,6 +57,9 @@
                                     <a href="courses.php">Courses</a>
                                 </li>
                                 <li>
+                                    <a href="demo.php">Demo</a>
+                                </li>
+                                <li>
                                     <a href="blog.php">Our Blog</a>
                                 </li>
                                 <li>

@@ -1,18 +1,7 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "ekonline";
+include("./include/db_connect.php");
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-// echo "Connected successfully";
 $blog_id = $_GET['id'];
 
 $sql = "SELECT * FROM `blogs` WHERE blog_id='$blog_id'";

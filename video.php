@@ -1,4 +1,14 @@
-
+<?php
+session_start();
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+            $login = true; 
+            $loggedin = true;
+        }
+        else {
+            $loggedin = false;
+            header("location: benefits.php");  
+        }
+        ?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -22,8 +32,15 @@
     />
 
     <style>
+        .container {
+            margin-top: 150px;
+            align-items: center;
+            justify-content:center;
+            text-align: center;
+
+
+        }
         .video-container {
-            margin-top: 100px;
             display: grid;
             grid-template-columns: repeat(4,1fr);
             row-gap: 20px;
@@ -50,12 +67,19 @@
 
 <body class="home loaded">
     <div class="main-wrapper">
-        <div class="video-container">
         <?php
-        session_start();
+        $name = $_SESSION['username'];
+        ?>
+        <div class="container">
+            <div>
+                <h1>Videos For <?php echo $name ?></h1>
+            </div>
+            <div class="video-container">
+
+            
+        <?php
         include("./include/db_connect.php");
             $id = $_GET['id'];
-            $name = $_SESSION['username'];
                 // $sql = "SELECT * FROM `benefits_users` WHERE username='$name'";
                 $sql2 = "SELECT * FROM `video`WHERE b_id='$id'";
                 // $result = mysqli_query($conn , $sql);
@@ -86,6 +110,7 @@
                     //                     echo 'Nothing To display';
                     //             }
     ?>
+    </div>
     </div>
             <?php
             include("./include/header.php");

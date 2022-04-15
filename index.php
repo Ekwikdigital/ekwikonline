@@ -12,7 +12,7 @@ session_start();
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="icon" type="img/uploaded/elogo.png" href="favicon.ico" />
+    <link rel="icon" type="" href="img/uploaded/elogo.png" />
     <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
     <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
     <link rel="stylesheet" type="text/css" href="css/first-screen.css" />
@@ -758,7 +758,7 @@ $result4 = mysqli_query($conn,$sql4);
                 </div>
             </div> -->
         </main>
-        <div class="nav-sticky">
+        <!-- <div class="nav-sticky">
             <ul>
                 <li>
                     <a href="#courses">Courses</a>
@@ -776,7 +776,7 @@ $result4 = mysqli_query($conn,$sql4);
                     <a href="#testimonials">Testimonials</a>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <?php
             include("./include/header.php");
         ?>

@@ -229,7 +229,7 @@ session_start();
       
       if($row['s_id'] == 1){             
         echo '
-        <a href="notes.php">
+        <a href="notes.php?id=1">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>WordPress Design/Development</h4>
@@ -249,7 +249,7 @@ session_start();
 
         if($row['s_id'] == 2){             
         echo '
-        <a href="notes.php">
+        <a href="notes.php?id=2">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Web Design/Development</h4>
@@ -271,7 +271,7 @@ session_start();
 
         if($row['s_id'] == 3 ){             
         echo '
-        <a href="notes.php">
+        <a href="notes.php?id=3">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4> Google Ads</h4>
@@ -291,7 +291,7 @@ session_start();
 
         if($row['s_id'] == 4 ){             
         echo '
-        <a href="notes.php">
+        <a href="notes.php?id=4">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4> Facebook Ads</h4>
@@ -311,7 +311,7 @@ session_start();
 
         if($row['s_id'] == 5 ){             
         echo '
-        <a href="notes.php">
+        <a href="notes.php?id=5">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Social Media Marketing</h4>
@@ -331,7 +331,7 @@ session_start();
 
         if($row['s_id'] == 6 ){             
         echo '
-        <a href="notes.php">
+        <a href="notes.php?id=6">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Search Engine Optimization</h4>
@@ -351,7 +351,7 @@ session_start();
 
         if($row['s_id'] == 7 ){             
         echo '
-        <a href="notes.php">
+        <a href="notes.php?id=7">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Graphics Designing</h4>
@@ -371,7 +371,7 @@ session_start();
 
         if($row['s_id'] == 8 ){             
         echo '
-        <a href="notes.php">
+        <a href="notes.php?id=8">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Content Marketing</h4>
@@ -396,7 +396,7 @@ session_start();
         <?php
        if($row['s_id'] == 1){             
         echo '
-        <a href="class.php">
+        <a href="class.php?id=1">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>WordPress Design/Development</h4>
@@ -416,7 +416,7 @@ session_start();
 
         if($row['s_id'] == 2){             
         echo '
-        <a href="class.php">
+        <a href="class.php?id=2">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Web Design/Development</h4>
@@ -438,7 +438,7 @@ session_start();
 
         if($row['s_id'] == 3 ){             
         echo '
-        <a href="class.php">
+        <a href="class.php?id=3">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4> Google Ads</h4>
@@ -458,7 +458,7 @@ session_start();
 
         if($row['s_id'] == 4 ){             
         echo '
-        <a href="class.php">
+        <a href="class.php?id=4">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4> Facebook Ads</h4>
@@ -478,7 +478,7 @@ session_start();
 
         if($row['s_id'] == 5 ){             
         echo '
-        <a href="class.php">
+        <a href="class.php?id=5">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Social Media Marketing</h4>
@@ -498,7 +498,7 @@ session_start();
 
         if($row['s_id'] == 6 ){             
         echo '
-        <a href="class.php">
+        <a href="class.php?id=6">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Search Engine Optimization</h4>
@@ -518,7 +518,7 @@ session_start();
 
         if($row['s_id'] == 7 ){             
         echo '
-        <a href="class.php">
+        <a href="class.php?id=7">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Graphics Designing</h4>
@@ -538,7 +538,7 @@ session_start();
 
         if($row['s_id'] == 8 ){             
         echo '
-        <a href="class.php">
+        <a href="class.php?id=8">
         <div class="b_card">
         <img src="./img/uploaded/1.png" alt="" srcset="">
         <h4>Content Marketing</h4>
