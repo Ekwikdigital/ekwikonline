@@ -1,13 +1,5 @@
 <?php
-session_start();
-        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
-            $login = true; 
-            $loggedin = true;
-        }
-        else {
-            $loggedin = false;
-            header("location: benefits.php");  
-        }
+include("./include/authentication.php");
         ?>
 <!DOCTYPE html>
 <html lang="zxx">

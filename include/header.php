@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 <?php
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
@@ -56,23 +57,18 @@
                                 <li>
                                     <a href="courses.php">Courses</a>
                                 </li>
-                                <li>
-                                    <a href="demo.php">Demo</a>
-                                </li>
-                                <li>
-                                    <a href="blog.php">Our Blog</a>
-                                </li>
-                                <li>
-                                    <a href="benefits.php">Benefits</a>
-                                </li>';
+                                ';
                                 if(!$loggedin){
                                     echo '
                                 <li>
-                                    <a class="" href="login.php"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+                                    <a class="btn-2" style="padding:13px; padding-left:20px; padding-right:20px; color:white;" href="login.php"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
                                 </li>';
                                 }
                                 if($loggedin){
                                     echo '
+                                <li>
+                                    <a href="myaccount.php">My Account</a>
+                                </li>
                                 <li>
                                     <a class="" href="logout.php"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                                 </li>

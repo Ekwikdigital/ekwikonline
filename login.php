@@ -15,17 +15,16 @@ if ($num == 1){
     session_start();
     $_SESSION['loggedin'] = true; 
     $_SESSION['username'] = $s_username;
-    header("location: benefits.php");  
+    header("location: myaccount.php");  
 }
 else {
-    echo'<script>alert("You are not our Member. Please Sign Up.")</script>';
+    echo'<script>alert("You are not Enroll in Our Courses. Please Contact on 9717666076 to Enroll.")</script>';
 }
 if($login) {
     echo '<script>alert(" You are now login")</script>';
 }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -46,7 +45,10 @@ if($login) {
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="./css/iofrm-theme29.css">
 </head>
 
 <body class="home loaded">
@@ -54,7 +56,7 @@ if($login) {
     <div class="main-wrapper">
         <div class="login-container">
             <!-- Login and signup -->
-        <div class="forms-container">
+        <!-- <div class="forms-container">
             <h2> Login </h2>
             <form action="" method="POST">
                 <label for="l_username">Username</label>
@@ -69,6 +71,46 @@ if($login) {
                 <button class="btn" type="submit">Login</button>
             </form>
         </div>
+        </div> -->
+    <div class="form-body without-side">
+        <div class="website-logo">
+            <a href="index.html">
+                <div class="logo">
+                    <img class="logo-size" src="./img/uploaded/logo-light.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <img src="./img/uploaded/graphic3.svg" alt="">
+                </div>
+            </div>
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Login to Your Account</h3>
+                        <p>Access to the Best Quality Content Provided By Ekwik Classes.</p>
+                        <form action="" method="POST">
+                            <input class="form-control" type="text" name="l_username" id="l_username" placeholder="Student Id" required>
+                            <input class="form-control" type="password" name="l_password" id="l_password" placeholder="Password" required>
+                            <div class="form-button">
+                                <button id="submit" type="submit" class="ibtn">Login</button>
+                            </div>
+                        </form>
+                        <div class="page-links">
+                            <a href="login25.html">Join Our Courses</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
         </div>
                     <?php
             include("./include/header.php");

@@ -1,30 +1,45 @@
 
 <?php
 session_start();
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+include("./include/db_connect.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $blog_heading = $_POST["blog_heading"];
+    $blog_desc = $_POST["blog_desc"];
+    $blog_date = $_POST["blog_date"];
+    $blog_file = $_FILES["file"];
+    $blog_summary = $_POST["blog_summary"];
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "ekonline";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+    // for image upload 
+     $filename = $blog_file['name'];
+     $filerror = $blog_file['error'];
+     $filetmp = $blog_file['tmp_name'];
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+     $fileext = explode('.',$filename);
+     $filecheck = strtolower(end($fileext));
+
+
+    $fileextstored = array('png', 'jpg', 'jpeg');
+
+    if(in_array($filecheck,$fileextstored)){
+        $destinationfile ='blogimage/'.$filename;
+        move_uploaded_file($filetmp,$destinationfile);
+
+    }
+    
+    $sql = "INSERT INTO `blogs`(`blog_heading`, `blog_desc`,`blog_image`,`timestamp`,`blog_summary`) VALUES ('$blog_heading','$blog_desc','$destinationfile','$blog_date','$blog_summary')";
+    $result = mysqli_query($conn, $sql);
+    
+    // Assesments Post
+
+    $asses_id = $_POST["asses_id"];
+    $asses_name = $_POST["asses_name"];
+    $s_code = $_POST["s_code"];
+
+    $sql2 = "INSERT INTO `assesments`(`a_id`, `a_name`, `s_code`) VALUES ('$asses_id','$asses_name','$s_code')";
+    $result2 = mysqli_query($conn, $sql2);
 }
-// echo "Connected successfully";
 
-$blog_heading = $_POST["blog_heading"]; 
-$blog_desc = $_POST["blog_desc"]; 
-$blog_date = $_POST["blog_date"]; 
-$blog_summary = $_POST["blog_summary"]; 
-
-$sql = "INSERT INTO `blogs`(`blog_heading`, `blog_desc`,`timestamp`,`blog_summary`) VALUES ('$blog_heading','$blog_desc','$blog_date','$blog_summary')";
-$result = mysqli_query($conn,$sql);
-}
 ?>
 
 <!DOCTYPE html>
@@ -56,53 +71,69 @@ $result = mysqli_query($conn,$sql);
             <div class="first-screen section-screen-main">
                 <div class="section-screen-main__bg" style="background-image: url(img/main.svg);"></div>
                 <div class="wrapper">
-                    <div class="screen-main">
-
-    
-
-                        <!-- <div class="section-heading"><span>Be sure</span></div>
-                        <h1 class="h1 h1-main">your success is in&nbsp;our&nbsp;hands</h1>
-                        <div class="screen-main__text">Agency with 12&nbsp;years of history, 15&nbsp;employees, Fortune 5000&nbsp;clients and proven results.</div>
-                        <a href="#" class="btn btn_learn">Learn more</a> -->
-                        <!-- <form method="POST" action="blog_post.php">
-                    <div class="mb-3">
-                        <label for="blog_heading" class="form-label"> Blog Heading </label>
-                        <input type="text" class="form-control" id="blog_heading" name="blog_heading">
-                    </div>
-                    <div class="mb-3">
-                        <label for="blog_summary" class="form-label"> Blog summary </label>
-                        <input type="text" class="form-control" id="blog_summary" name="blog_summary"> 
-                    </div>
-                    <div class="mb-3">
-                        <label for="blog_desc" class="form-label"> Blog Description </label>
-                        <input type="text" class="form-control" id="blog_desc" name="blog_desc"> 
-                    </div>
-                    <div class="mb-3">
-                        <label for="blog_date" class="form-label"> Blog Date </label>
-                        <input type="date" class="form-control" id="blog_date" name="blog_date"> 
-                    </div>
-                    <div class="mb-3">
-                        <label for="blog_image" class="form-label"> Blog Feature Image </label>
-                        <input type="file" class="form-control" id="blog_image" name="blog_image">
-                    </div>
-                    <button type="submit" class="btn-submit btn btn-primary"> Submit </button>
-                </form> -->
-                    </div>
-                    <form  id="blog_post" action="blog_post.php" method="post" enctype="multipart/form-data">
-        <label for="">Blog heading</label>
-        <input type="text" name="blog_heading">
-        <label for="">Blog summary</label>
-        <input type="text" name="blog_summary">
-        <label for="">Blog Description</label>
-        <textarea name="blog_desc" id="blog_desc" cols="80" rows="20"></textarea>
-        <label for="">Blog Date</label>
-        <div>
-        <input type="date" name="blog_date">
-        </div>
-        <div>
-        <button id="submit"  type="submit">Post</button>
-        </div>
-    </form>
+                    <div class="sub-section">
+                   <form id="blog_post" action="" method="post" enctype="multipart/form-data">
+                       <div>
+                           <label for="blog_heading">Blog heading</label>
+                           <input type="text" name="blog_heading" required>
+                       </div>
+                       <div>
+                           <label for="blog_summary">Blog summary</label>
+                           <input type="text" name="blog_summary" required>
+                       </div>
+                       <div>
+                           <label for="blog_desc">Blog Description</label>
+                           <textarea name="blog_desc" id="blog_desc" cols="80" rows="20" required></textarea>
+                       </div>
+                       <div>
+                           <label for="image">Select Image</label>
+                           <input type="file" name="file" id="file" class="image" required>
+                       </div>
+                       <div>
+                           <label for="">Blog Date</label>
+                           <input type="date" name="blog_date" class="date">
+                       </div>
+                       <div>
+                           <button id="submit" type="submit" class="btn btn-primary">Post</button>
+                       </div>
+                   </form>
+                   </div>
+                   <div id="students-reg" class="sub-section">
+                       <h2> Blogs </h2>
+                       <br />
+                       <div class="table-responsive">
+                           <table id="employee_data5" class="table table-striped table-bordered">
+                               <thead>
+                                   <tr>
+                                       <td> So.No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td> Student Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td>Student Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td>Phone no &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td>Email &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                       <td>Joining Date &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                   </tr>
+                               </thead>
+                               <?php
+                                $sql5 = "SELECT * FROM `benefits_users`";
+                                $result5 = mysqli_query($conn, $sql5);
+                                while ($row = mysqli_fetch_assoc($result5)) {
+                                    echo '  
+                            <tr>  
+                            <td>' . $row["sno"] . '</td>  
+                            <td>' . $row["s_id"] . '</td>   
+                            <td>' . $row["username"] . '</td>  
+                            <td>' . $row["password"] . '</td>  
+                            <td>' . $row["s_phone"] . '</td>  
+                            <td>' . $row["email"] . '</td>   
+                            <td>' . $row["date"] . '</td>   
+                            </tr>  
+                            ';
+                                }
+                                ?>
+                           </table>
+                       </div>
+                   </div>
 <script>
     CKEDITOR.replace('blog_desc');
 </script>

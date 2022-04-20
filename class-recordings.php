@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+<?php
+include("./include/authentication.php");
+        ?>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -118,16 +120,5 @@
 
 </html>
 
-=======
-<?php
-session_start();
-        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
-            $login = true; 
-            $loggedin = true;
-        }
-        else {
-            $loggedin = false;
-            header("location: benefits.php"); 
-        }
-?>
->>>>>>> 15c75d656427878c8328379825e4f90974220de7
+
+
