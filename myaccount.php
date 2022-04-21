@@ -2,6 +2,7 @@
 <?php
 session_start();
 include("./include/db_connect.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +36,13 @@ include("./include/db_connect.php");
                 <div class="wrapper">
                     <section class="p-container">
                     <div class="p-div">
-                            <img src="./img/uploaded/L.png" alt="" srcset="" height="300px" width="300px">
+                    <?php
+                                $name = $_SESSION['username'];
+                                $sql = "SELECT * FROM `benefits_users` WHERE username='$name'";
+                                $result = mysqli_query($conn , $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                ?>
+                            <img src="<?php echo $row['s_image'];?>" alt="" srcset="" height="350px" width="300px">
                           
                             <div class="flex">
                             <div class="info">
@@ -44,16 +51,16 @@ include("./include/db_connect.php");
                                 <h4>Contact No</h4>
                                 <h4>Courses</h4>
                             </div>
-                            <div class="info">
-                                <h4>Name</h4>
-                                <h4>Contact No</h4>
-                                <h4>Email</h4>
-                                <h4>Courses</h4>
+                            <div class="info r">
+                                <h4><?php echo $row['username'];?></h4>
+                                <h4><?php echo $row['email'];?></h4>
+                                <h4><?php echo $row['s_phone'];?></h4>
+                                <h4><?php echo $row['course'];?></h4>
                             </div>
                             </div>
                             </div>
                     <div class="m-div">
-                            <a class="a-flex" href="">
+                            <a class="a-flex" href="benefits.php">
                                 <div class="con">
                                     <img src="./img/uploaded/eb.png" alt="" srcset="">
                                 </div>
@@ -63,7 +70,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="">
+                            <a class="a-flex" href="benefits.php">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -73,7 +80,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="">
+                            <a class="a-flex" href="benefits.php">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -83,7 +90,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="">
+                            <a class="a-flex" href="benefits.php">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -93,7 +100,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="">
+                            <a class="a-flex" href="benefits.php">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>

@@ -3158,6 +3158,10 @@ h2 {
     .b_card {
         width: 250px;
     }
+    .form-items {
+        height: 600px;
+        width: 400px;
+    }
 }
 
 @media (max-width:746px) {
@@ -3179,6 +3183,10 @@ h2 {
     .sub-container {
         margin-top: 50px;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .form-items {
+        height: 600px;
+        width: 400px;
     }
 }
 
@@ -3236,6 +3244,15 @@ h2 {
     }
     .a-sub-content {
         width: 100%;
+    }
+    .p-container {
+        flex-direction: column;
+    }
+    .a-flex {
+        width: 300px !important;
+    }
+    .con img {
+        height: 80px !important;
     }
 }
 
@@ -3565,8 +3582,17 @@ h2 {
     width: max-content;
 }
 
+.p-div img {
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+}
+
 .flex {
     display: flex;
+    margin-top: 20px;
+    /* border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black; */
 }
 
 .info {
@@ -3579,6 +3605,11 @@ h2 {
 .info h4 {
     /* border: 2px solid red; */
     margin: 5px;
+    color: #000 !important;
+}
+
+.r h4 {
+    color: rgb(251, 84, 114) !important;
 }
 
 .a-flex {
@@ -3672,4 +3703,16 @@ h2 {
 
 form input {
     color: white !important;
+}
+
+.form-body {
+    background: no-repeat center center/cover url(../img/uploaded/form19.jpg);
+}
+
+.form-s input {
+    margin-bottom: 5px !important;
+}
+
+.login-container {
+    margin-bottom: 300px;
 }

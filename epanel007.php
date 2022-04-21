@@ -224,69 +224,68 @@
     </div>
                    </div>
                    <div class="sub-section" style="display: flex; margin-top:80px !important;">
-                   <form style="margin-top: 20px;" id="video" action="" method="post" enctype="multipart/form-data">
-                       <div >
-                           <label for="video_id">Video Id</label>
-                           <input type="number" name="video_id" id="video_id" required>
-                       </div>
-                       <div>
-                           <label for="video_title">Video Title</label>
-                           <input type="text" name="video_title" id="video_title" required>
-                       </div>
-                       <div>
-                           <label for="video_desc">Video Description</label>
-                           <input type="text" name="video_desc" id="video_desc" required>
-                       </div>
-                       <div>
-                           <label for="v_code">Video Code</label>
-                           <textarea name="v_code" id="v_code" cols="30" rows="10"></textarea>
-                       </div>
-                       <div>
-                           <button id="submit" type="submit" class="btn btn-primary">Submit</button>
-                       </div>
-                   </form>
+                        <form style="margin-top: 20px;" id="video" action="" method="post" enctype="multipart/form-data">
+                            <div >
+                                <label for="video_id">Video Id</label>
+                                <input type="number" name="video_id" id="video_id" required>
+                            </div>
+                            <div>
+                                <label for="video_title">Video Title</label>
+                                <input type="text" name="video_title" id="video_title" required>
+                            </div>
+                            <div>
+                                <label for="video_desc">Video Description</label>
+                                <input type="text" name="video_desc" id="video_desc" required>
+                            </div>
+                            <div>
+                                <label for="v_code">Video Code</label>
+                                <textarea name="v_code" id="v_code" cols="30" rows="10"></textarea>
+                            </div>
+                            <div>
+                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
 
                    <div style="width: max-content; margin:auto; padding: 50px !important;">
-        <table  class="table table-striped table-bordered">
-            <tr>
-                <th>Student Id</th>
-                <th>Courses</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Wordpress development
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Web development
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Google Ads
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Facebook Ads
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Social Media Marketing
-            <tr>
-                <td>6</td>
-                <td>Search Engine Optimization
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Graphic Designing
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Youtube Marketing 
-            </tr>
-        </table>
-
-    </div>
-</div>
+                        <table  class="table table-striped table-bordered">
+                            <tr>
+                                <th>Student Id</th>
+                                <th>Courses</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Wordpress development
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Web development
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Google Ads
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Facebook Ads
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Social Media Marketing
+                            <tr>
+                                <td>6</td>
+                                <td>Search Engine Optimization
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Graphic Designing
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Youtube Marketing 
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                    <div id="brochure" class="sub-section">
                        <h2> Brochure </h2>
                        <h3 align="center">Data of who Download Brochure</h3>
@@ -434,10 +433,6 @@
                                </table>
                            </div>
                        </div>
-
-                    
-
-
                </section>
                <script src="js/jquery-3.5.1.min.js"></script>
                <script src="js/admin.js"></script>
