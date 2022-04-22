@@ -1744,8 +1744,8 @@ button.swiper-pagination-bullet {
     margin: 0 1.5rem 3rem;
     width: calc(20% - 3rem);
     background: #fff;
-    -webkit-box-shadow: 0px 1rem 2.6rem rgba(36, 73, 168, 0.15);
-    box-shadow: 0px 1rem 2.6rem rgba(36, 73, 168, 0.15);
+    /* -webkit-box-shadow: 0px 1rem 2.6rem rgba(36, 73, 168, 0.15); */
+    /* box-shadow: 0px 1rem 2.6rem rgba(36, 73, 168, 0.15); */
     -webkit-border-radius: 1rem;
     border-radius: 1rem;
     display: -webkit-box;
@@ -2841,6 +2841,10 @@ table tr td {
     margin: auto;
 }
 
+.career-container h2 {
+    font-size: 35px;
+}
+
 .career {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -3021,8 +3025,8 @@ h2 {
 }
 
 .content-container {
-    width: 80%;
-    margin: auto;
+    width: 80% !important;
+    margin: auto !important;
 }
 
 .content-container ul {
@@ -3330,6 +3334,8 @@ h2 {
 }
 
 .d-bro a {
+    margin-left: -40px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -3457,8 +3463,8 @@ h2 {
 #google-map {
     width: 1180px !important;
     border-radius: 15px;
-    border: 5px solid black;
-    box-shadow: 0px 0px 10px black;
+    /* border: 5px solid black; */
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
     margin-bottom: 220px;
 }
 
@@ -3471,8 +3477,8 @@ h2 {
     margin: 20px;
     width: 50%;
     border-radius: 15px;
-    border: 5px solid black;
-    box-shadow: 0px 0px 10px black;
+    /* border: 5px solid black; */
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
 }
 
 .cuc {
@@ -3501,7 +3507,7 @@ h2 {
     display: flex;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
     margin-bottom: 100px;
 }
 
@@ -3544,7 +3550,7 @@ h2 {
     box-shadow: 5px 5px 10px black;
     border-radius: 15px;
     padding: 40px;
-    background-color: white;
+    background-color: rgb(26, 25, 25);
     margin: auto;
     display: flex;
     width: 100%;
@@ -3602,13 +3608,13 @@ h2 {
     justify-content: space-around;
 }
 
-.info h4 {
+.info p {
     /* border: 2px solid red; */
     margin: 5px;
-    color: #000 !important;
+    color: rgb(255, 255, 255) !important;
 }
 
-.r h4 {
+.r p {
     color: rgb(251, 84, 114) !important;
 }
 
@@ -3715,4 +3721,47 @@ form input {
 
 .login-container {
     margin-bottom: 300px;
+}
+
+.qu {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    height: max-content;
+}
+
+.qu h2 {
+    font-size: 45px;
+}
+
+.q-flex {
+    position: relative;
+    z-index: 99;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.fa-person-circle-question {
+    font-size: 40px;
+}
+
+.question {
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+}
+
+.question h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.tools-card img {
+    height: 100px;
+    width: 100px;
 }

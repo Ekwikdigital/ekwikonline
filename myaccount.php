@@ -18,14 +18,13 @@ include("./include/db_connect.php");
     <meta name="keywords" content="" />
     <meta name="it-rating" content="it-rat-cd303c3f80473535b3c667d0d67a7a11" />
     <meta name="cmsmagazine" content="3f86e43372e678604d35804a67860df7" />
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" type="text/css" href="css/first-screen.css" />
     <link rel="stylesheet" type="text/css" href="css/first-screen-inner.css" />
-    <link rel="preload " href="fonts/AleoBold.woff2" as="font" crossorigin>
+    <!-- <link rel="preload " href="fonts/AleoBold.woff2" as="font" crossorigin>
     <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
-    <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin> -->
     <script src="./ckeditor/ckeditor.js"></script>
-
 </head>
 
 <body class="home loaded">
@@ -46,21 +45,21 @@ include("./include/db_connect.php");
                           
                             <div class="flex">
                             <div class="info">
-                                <h4>Name</h4>
-                                <h4>Email</h4>
-                                <h4>Contact No</h4>
-                                <h4>Courses</h4>
+                                <p>Name</p>
+                                <p>Email</p>
+                                <p>Contact No</p>
+                                <p>Courses</p>
                             </div>
                             <div class="info r">
-                                <h4><?php echo $row['username'];?></h4>
-                                <h4><?php echo $row['email'];?></h4>
-                                <h4><?php echo $row['s_phone'];?></h4>
-                                <h4><?php echo $row['course'];?></h4>
+                                <p><?php echo $row['username'];?></p>
+                                <p><?php echo $row['email'];?></p>
+                                <p><?php echo $row['s_phone'];?></p>
+                                <p><?php echo $row['course'];?></p>
                             </div>
                             </div>
                             </div>
                     <div class="m-div">
-                            <a class="a-flex" href="benefits.php">
+                            <a class="a-flex" href="bookcontent.php">
                                 <div class="con">
                                     <img src="./img/uploaded/eb.png" alt="" srcset="">
                                 </div>
@@ -70,7 +69,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="benefits.php">
+                            <a class="a-flex" href="#">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -80,7 +79,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="benefits.php">
+                            <a class="a-flex" href="#">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -90,7 +89,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="benefits.php">
+                            <a class="a-flex" href="#">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -100,7 +99,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="benefits.php">
+                            <a class="a-flex" href="#">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -112,20 +111,8 @@ include("./include/db_connect.php");
                             </a>
                             
                             </a>
-                            <a href="" class="btn" style="margin: 10px;">Join More Courses</a>
+                            <a href="tel:9717666076" class="btn" style="margin: 10px;">Join More Courses</a>
                             </div>
-                            <!-- <h2>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                Ashwani </h2>
-                            <h2>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                Ashwai@gmail.com </h2>
-                            <h2>Contact No &nbsp;&nbsp;
-                                9068973411  </h2>
-                            <h2>Hobby &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                Coding  </h2>
-                            <h2>Course 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                Web Development</h2>
-                            <h2>Course 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                               Graphics Design</h2> -->
                     </section>
                 </div>
             </div>

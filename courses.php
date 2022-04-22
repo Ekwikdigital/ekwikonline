@@ -137,7 +137,7 @@ session_start();
                             <h2>Why You Get in this Course ?</h2>
                             <ul>
                                 <li>
-                                    1
+                                   
                                 </li>
                                 <li>
                                     1
@@ -160,22 +160,7 @@ session_start();
                             </ul>
                         </div>
                     </div>
-                    <div class="tools">
-                        <h2>Tools You will Learn ?</h2>
-                        <div class="tools-grid">
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                        </div>
-                    </div>
-                </div>
+                    
                 <div id="sub_c_section2" class="sub-c-section">
                     <h2>Search Engine Optimization</h2>
                     <p>Search engine optimization will help you boost your rankings on Google. Increase inbound traffic from search engines constructively. It is necessary to learn SEO because every brand is fighting hard to stay at the top of Google. Our course will teach you to optimize your website in the best way. We will teach you the actionable skills that will cover all the basic knowledge and techniques to do SEO for any website. We will teach you more about the organic listings, paid search ads, site feeds, vertical search results, metasearch engines and search aggregators, algorithms change, keyword selection, keyword placement opportunities, and more. Our experts have years of experience and will teach you about ranks, indexed pages, inbound and outbound links, historical conversions, site optimization, on-page and off-page factors, and more.</p>
@@ -242,22 +227,6 @@ session_start();
                             </ul>
                         </div>
                     </div>
-                    <div class="tools">
-                        <h2>Tools You will Learn ?</h2>
-                        <div class="tools-grid">
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                        </div>
-                    </div>
-                </div>
                 <div id="sub_c_section3" class="sub-c-section">
                     <h2> Social Media Optimization</h2>
                     <p>Just imagine life without facebook likes or Instagram stories or tweets takedown. Without them, do you have anything to share socially? Of course, not. Our social media marketing tips will prepare you with tactics that can deliver amazing insights. We train people with our tried and tested techniques that will never go flat throughout your career. You can unleash your marketing potential with social media marketing, content marketing, working on paid campaigns, and taking complete charge to accelerate your career growth.</p>
@@ -322,22 +291,6 @@ session_start();
                             </ul>
                         </div>
                     </div>
-                    <div class="tools">
-                        <h2>Tools You will Learn ?</h2>
-                        <div class="tools-grid">
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                        </div>
-                    </div>
-                </div>
                 <div id="sub_c_section4" class="sub-c-section">
                     <h2>Wordpress Development</h2>
                     <p>We may have worked our socks off. The client’s brief is at hand. We have done a lot of research about the new and latest web designs. We have a complete image bank with us. But the self-doubt and the expertise to work with confidence is bubbling up. This is because we may not have good hands-on web graphic design, design authorings like standardized code, user experience design, and more.</p>
@@ -404,39 +357,93 @@ session_start();
                             </ul>
                         </div>
                     </div>
-                    <div class="tools">
+            </section>      
+            <div class="tools">
                         <h2>Tools You will Learn ?</h2>
                         <div class="tools-grid">
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
-                            <div class="tools-card">1</div>
+                            <div class="tools-card">
+                            <img src="./img/uploaded/icons8-digital-marketing-128.png" alt="" srcset="">
+                                    <p>Digital Marketing Overview</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-cms-system-128.png" alt="" srcset="">
+                                    <p>CMS Systems</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-seo-128.png" alt="" srcset="">
+                                    <p>Advanced SEO</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-sem-128.png" alt="" srcset="">
+                                    <p>Search Engine Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-social-media-marketing-128.png" alt="" srcset="">
+                                    <p>Social Media Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-content-marketing-128.png" alt="" srcset="">
+                                    <p>Content Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-ecommerce-128.png" alt="" srcset="">
+                                    <p>Ecommerce Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-blog-128.png" alt="" srcset="">
+                                    <p>Blog Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-google-ads-144.png" alt="" srcset="">
+                                    <p>Google Adsense</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-affiliate-marketing-128.png" alt="" srcset="">
+                                    <p>Affiliates Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-online-payment-with-a-credit-card-150.png" alt="" srcset="">
+                                    <p>Make Money Online</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-sales-funnel-128.png" alt="" srcset="">
+                                    <p>Sales Funnels</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-email-marketing-128.png" alt="" srcset="">
+                                    <p>Email Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-mobile-marketing-128.png" alt="" srcset="">
+                                    <p>Mobile Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-management-128.png" alt="" srcset="">
+                                    <p>ORM Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-freelancing-120.png" alt="" srcset="">
+                                    <p>Freelancing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-maintenance-200.png" alt="" srcset="">
+                                    <p>Digital Marketing Tools</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-business-group-200.png" alt="" srcset="">
+                                    <p>Business Strategies</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-interview-128.png" alt="" srcset="">
+                                    <p>Interview Preperation</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-certification-128.png" alt="" srcset="">
+                                    <p>Certifications</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="faq">
-                <h2>Frequently Asked Questions</h2>
-                <details>
-                    <summary>Epcot Center</summary>
-                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-                </details>
-                <details>
-                    <summary>Epcot Center</summary>
-                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-                </details>
-                <details>
-                    <summary>Epcot Center</summary>
-                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-                </details>
-            </section>
-            
+                </div>  
                     <?php
             include("./include/header.php");
         ?>

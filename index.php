@@ -149,8 +149,11 @@ session_start();
                     </div>
                 </div>
             </section>
+            <div class="d-bro">
+                <a href="#formOrder2" class="btn">Download Brochure</a>
+            </div>
             <section class="career-container">
-                <h2>Digital Marketing Course For Transforming Your Career</h2>
+                <h2>Perks of Ekwik Digital</h2>
                 <p>Do you lack the skills you need to move ahead? Now, you can become a digital marketing specialist without leaving your job. Boost your career with the Delhi Institute of Digital Marketing. A place to learn digital marketing from Executive
                     Level to Manager Level in all practical ways. The high demand for a digital marketing course is best suited for working professionals, job seekers, freelancers, students, and entrepreneurs.</p>
                 <div class="career">
@@ -205,9 +208,7 @@ session_start();
                 </div>
             </section>
 
-            <div class="d-bro">
-                <a href="#formOrder2" class="btn-2 btn_started js-fancybox">Download Brochure</a>
-            </div>
+           
 
             <div class="section-about" id="about">
                 <div class="wrapper">
@@ -352,13 +353,7 @@ session_start();
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "ekonline";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+include("./include/db_connect.php");
 
 // Check connection
 if ($conn->connect_error) {
@@ -375,6 +370,7 @@ $st_email = $_POST["s_email"];
 $st_message = $_POST["s_message"]; 
 $newsletter = $_POST["newsletter"]; 
 $b_name = $_POST["b_name"]; 
+$b_email = $_POST["b_email"]; 
 $b_email = $_POST["b_email"]; 
 $b_phoneno = $_POST["b_phone"]; 
 
@@ -603,6 +599,53 @@ $result4 = mysqli_query($conn,$sql4);
                     </div>
                 </div>
             </div>
+
+<section class="qu">
+    <h2>Top Queries For Institute</h2>
+    <p>Top Queries asked by our students.</p>
+    <div class="q-flex">
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> In Case Of Missed Classes.</h3>
+            <p>You can cover the topics in next class or in upcoming batches at 0 cost.</p>
+        </div>
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> If I could not Understand The Topic?</h3>
+            <p>You can take extra time for that during or after class.</p>
+        </div>
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> What About Placements?</h3>
+            <p>We provide 100% placement assistance. However it's upto you to clear the interview.</p>
+        </div>
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> How Much Salary I Can Expect?</h3>
+            <p>It's upto the course or feild you have selected. But at Intial stage you can expect somewhere around 10-15K/Mon.</p>
+        </div>
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> Eligibility Critirea of Joining Delhi Courses.</h3>
+            <p>If You've sucessfully completed 12th, you can join us. and incase of faluires you can call us.</p>
+        </div>
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> Do You Provide Training Material?</h3>
+            <p>Yes, we do provide training material in form of soft copies.</p>
+        </div>
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> Do You Provide Online Training Also?</h3>
+            <p>Yes, we do provide online training sessions. But you have to pay extra 35% of the course fee for online trainng sessions.</p>
+        </div>
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> If You're a Working Professional or Business Owner</h3>
+            <p>Our timings are flexible, so you need not to be worried about that. You can join us as per your convinience. however, you have to disscuss the time with our faculty.</p>
+        </div>
+        <div class="question">
+            <h3><i class="fa-solid fa-person-circle-question"></i> I'm Impressed, Where is Your Institute Located?</h3>
+            <p>Thanks for Showing interest. We're in East Delhi. Our institutes are situated in delhi-NCR. For complete Address Click Here.</p>
+        </div>
+    </div>
+
+
+
+</section>
+
             <div class="section-newsletter">
                 <div class="section-newsletter__bg js-lazy" data-src="img/bg/bg-3.svg"></div>
                 <div class="wrapper">
@@ -610,7 +653,7 @@ $result4 = mysqli_query($conn,$sql4);
                         <div class="newsletter__content">
                             <h3 class="h3">Newsletter</h3>
                             <div class="newsletter__text">
-                                <p>Pariatur magna cupidatat magna sit incididunt non pariatur. Sint nulla commodo qui magna eiusmod quis aliqua laboris officia excepteur non eu in.</p>
+                                <p>Subscribe For Newsletter.</p>
                             </div>
                             <form method="POST" action="">
                                 <div class="box-fileds-newsletter">
@@ -646,25 +689,73 @@ $result4 = mysqli_query($conn,$sql4);
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide testimonials-card">
                                         <div class="testimonials-card__text">
-                                            <p>“Dolor duis voluptate enim exercitation consequat ex. Voluptate in sunt commodo aute do. Dolor enim dolor labore velit nulla sit exercitation irure esse proident.”</p>
+                                            <p>“I run a small printing company and needed a local SEO service. Hence, I contacted Mr. Durgesh, who helped me meet my goals. I'm currently delighted with the service I got and paid for. If you also need an affordable marketing service, I suggest Ekwik Digital..”</p>
                                         </div>
                                         <div class="author">
-                                            <img class="author__img js-lazy" data-src="img/examples/avatar_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">
+                                            <!-- <img class="author__img js-lazy" data-src="img/examples/avatar_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""> -->
                                             <div class="author__details">
-                                                <div class="author__title">Kathryn Murphy</div>
-                                                <div class="author__position">Marketing Coordinator</div>
+                                                <div class="author__title">Parvati Rao</div>
+                                                <!-- <div class="author__position">Marketing Coordinator</div> -->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide testimonials-card">
                                         <div class="testimonials-card__text">
-                                            <p>“2 Dolor duis voluptate enim exercitation consequat ex. Voluptate in sunt commodo aute do. Dolor enim dolor labore velit nulla sit exercitation”</p>
+                                            <p>“It has professional and experienced digital marketers. They know how to deal with a variety of technical and search errors..”</p>
                                         </div>
                                         <div class="author">
-                                            <img class="author__img js-lazy" data-src="img/examples/avatar_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">
+                                            <!-- <img class="author__img js-lazy" data-src="img/examples/avatar_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""> -->
                                             <div class="author__details">
-                                                <div class="author__title">Kathryn Murp</div>
-                                                <div class="author__position">Marketing Coord</div>
+                                                <div class="author__title">Praveena Narang</div>
+                                                <!-- <div class="author__position">Marketing Coord</div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide testimonials-card">
+                                        <div class="testimonials-card__text">
+                                            <p>“I have excellent experience with Ekwik Digital; its team designed my eCommerce website. Now it looks fantastic, and also it loads faster than ever. Also, because of Ekwik's service, our website gets high engagement with visitors...”</p>
+                                        </div>
+                                        <div class="author">
+                                            <!-- <img class="author__img js-lazy" data-src="img/examples/avatar_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""> -->
+                                            <div class="author__details">
+                                                <div class="author__title">Chetana D'Cruze</div>
+                                                <!-- <div class="author__position">Marketing Coord</div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide testimonials-card">
+                                        <div class="testimonials-card__text">
+                                            <p>“Ekwik Digital is the best place for freshers to work and gain experience. The work culture here is fantastic and pleasant. You will love to work here and get different projects to work on...”</p>
+                                        </div>
+                                        <div class="author">
+                                            <!-- <img class="author__img js-lazy" data-src="img/examples/avatar_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""> -->
+                                            <div class="author__details">
+                                                <div class="author__title">Shivani Tamboli</div>
+                                                <!-- <div class="author__position">Marketing Coord</div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide testimonials-card">
+                                        <div class="testimonials-card__text">
+                                            <p>“I took an SEO service from this marketing agency. And within a couple of weeks, I got the first lead for my business. Now every month, we get excellent leads and convert them; hence we recommend Ekwik's digital marketing services....”</p>
+                                        </div>
+                                        <div class="author">
+                                            <!-- <img class="author__img js-lazy" data-src="img/examples/avatar_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""> -->
+                                            <div class="author__details">
+                                                <div class="author__title">Ramesh</div>
+                                                <!-- <div class="author__position">Marketing Coord</div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide testimonials-card">
+                                        <div class="testimonials-card__text">
+                                            <p>“Ekwik Digital is the best place for marketers. Here we do not get forced instead of getting polite instructions and motivations. Founders are excellent; they will support you when you work here....”</p>
+                                        </div>
+                                        <div class="author">
+                                            <!-- <img class="author__img js-lazy" data-src="img/examples/avatar_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""> -->
+                                            <div class="author__details">
+                                                <div class="author__title">Naveen Chaudhari</div>
+                                                <!-- <div class="author__position">Marketing Coord</div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -698,8 +789,6 @@ $result4 = mysqli_query($conn,$sql4);
                     handiness. Post your demand without charge and find a wonderful tutor for Digital marketing close to Laxmi Nagar. </p>
 
             </Section>
-
-
             <!-- <div class="section-main-blog" id="blog">
                 <div class="wrapper">
                     <div class="section-heading h-center"><span>news</span></div>

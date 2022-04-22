@@ -82,7 +82,7 @@
                     <div class="phone-item">
                         <div class="footer-title header-title-phone">Have a question? Call us!</div>
                         <div class="footer-phone__item">
-                            <i class="icon-phone"></i><a href="tel:+15469872185">+1 546 987 21 85</a>
+                            <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                         <div class="phone-item">
                             <div class="footer-title footer-title_phone">Have a question? Call us!</div>
                             <div class="footer-phone__item">
-                                <i class="icon-phone"></i><a href="tel:+15469872185">+1 546 987 21 85</a>
+                                <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
                             </div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
                 <div class="phone-item footer-phone">
                     <div class="footer-title footer-title_phone">Have a question? Call us!</div>
                     <div class="footer-phone__item">
-                        <i class="icon-phone"></i><a href="tel:+15469872185">+1 546 987 21 85</a>
+                        <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
                     </div>
                 </div>
                 <a href="#formOrder" class="btn-2 btn_started js-fancybox">get started</a>

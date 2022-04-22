@@ -79,47 +79,6 @@ include("./include/db_connect.php");
             </table>
         </div>
     </div>
-
-    <div style="width: max-content; margin:auto; padding: 50px !important;">
-        <table  class="table table-striped table-bordered">
-            <tr>
-                <th>Student Id</th>
-                <th>Courses</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Wordpress development
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Web development
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Google Ads
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Facebook Ads
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Social Media Marketing
-            <tr>
-                <td>6</td>
-                <td>Search Engine Optimization
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Graphic Designing
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Content Marketing
-            </tr>
-        </table>
-
-    </div>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/jquery-3.5.1.min.js" defer></script>
     <script src="js/components/jquery.lazy.min.js" defer></script>

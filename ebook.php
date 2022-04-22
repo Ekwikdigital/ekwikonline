@@ -52,6 +52,10 @@ include("./include/authentication.php");
             height: 150px;
             width: 250px;
         }
+        .img {
+            height: 250px !important;
+            width: 300px !important;
+        }
     </style>
 
 
@@ -67,19 +71,14 @@ include("./include/authentication.php");
                 <h1>E-Books For <?php echo $name ?></h1>
             </div>
             <div class="video-container">
-
+               
             
         <?php
         include("./include/db_connect.php");
             $id = $_GET['id'];
-                // $sql = "SELECT * FROM `benefits_users` WHERE username='$name'";
-                $sql2 = "SELECT * FROM `video`WHERE b_id='$id'";
-                // $result = mysqli_query($conn , $sql);
+                $sql2 = "SELECT * FROM `book`WHERE m_id='$id'";
                 $result2 = mysqli_query($conn , $sql2);
-                // $row = mysqli_fetch_assoc($result);
-                $row2 = mysqli_fetch_assoc($result2);
                 $num = mysqli_num_rows($result2);
-                // echo var_dump($num);
                 
         
                 // if($row['s_id'] === $id && $row2['b_id'] === $id)
@@ -87,13 +86,15 @@ include("./include/authentication.php");
                     
                                 while($row2 = mysqli_fetch_assoc($result2)){
                                 echo"
+                                <a href='ebookreading.php?m_id='$id'>
                                 <div class='v-card'>
                                 <div class='video'>
-                                <iframe width='250' height='150' src='".$row2['v_code']."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-                                <h2> ".$row2['v_title']."</h2>
-                                <p> ".$row2['v_desc']."</p>     
+                                <img class='img' src='".$row2['b_image']."' alt='' srcset=''>
+                                <h2> ".$row2['b_titile']."</h2>
+                                <p> ".$row2['b_desc']."</p>     
                                 </div>
                                 </div>
+                                </a>
                                     ";
                             }
                     // }

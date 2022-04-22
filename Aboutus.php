@@ -101,26 +101,6 @@ session_start();
                             </div>
                             <div class="a-sub-content d-img"></div>
                         </section>
-
-                        <section>
-                            <h1>Our Instructors</h1>
-                            <div class="inst">
-                                <div class="w img"></div>
-                                <div class="w ">
-                                    <h3>Name</h3>
-                                    <h4>Designation</h4>
-                                    <p>Discription</p>
-                                </div>
-                                <div class="inst">
-                                    <div class="w ">
-                                        <h3>Name</h3>
-                                        <h4>Designation</h4>
-                                        <p>Discription</p>
-                                    </div>
-                                    <div class="w img"></div>
-                                </div>
-                        </section>
-
                     </div>
                 </div>
             </div>

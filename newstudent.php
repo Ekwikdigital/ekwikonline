@@ -89,45 +89,45 @@ if($showAlert) {
 <body class="home loaded">
     <div class="main-wrapper">
         <div class="login-container">
-            <div class="codes">
+          <div class="codes">
             <table>
-  <tr>
-    <th>Student Id</th>
-    <th>Courses</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Wordpress development
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Web development
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Google Ads
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Facebook Ads
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Social Media Marketing
-  <tr>
-    <td>6</td>
-    <td>Search Engine Optimization
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>Graphic Designing
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>Content Marketing
-  </tr>
-</table> 
-            </div>
+              <tr>
+                  <th>Student Id</th>
+                  <th>Courses</th>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>Wordpress development
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>Web development
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>Google Ads
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>Facebook Ads
+              </tr>
+              <tr>
+                 <td>5</td>
+                 <td>Social Media Marketing
+              <tr>
+                  <td>6</td>
+                  <td>Search Engine Optimization
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td>Graphic Designing
+              </tr>
+              <tr>
+                  <td>8</td>
+                  <td>Content Marketing
+              </tr>
+            </table> 
+          </div>
             <!-- Login and signup -->
         <div class="forms-container">
             <h2> New Student </h2>
