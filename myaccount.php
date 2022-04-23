@@ -30,8 +30,8 @@ include("./include/db_connect.php");
 <body class="home loaded">
     <div class="main-wrapper">
         <main class="content">
-            <div class="first-screen section-screen-main">
-                <div class="section-screen-main__bg" ></div>
+            <div class="">
+                <!-- <div class="section-screen-main__bg" ></div> -->
                 <div class="wrapper">
                     <section class="p-container">
                     <div class="p-div">
@@ -41,7 +41,7 @@ include("./include/db_connect.php");
                                 $result = mysqli_query($conn , $sql);
                                 $row = mysqli_fetch_assoc($result);
                                 ?>
-                            <img src="<?php echo $row['s_image'];?>" alt="" srcset="" height="350px" width="300px">
+                            <img src="<?php echo $row['s_image'];?>" alt="" srcset="" height="250px" width="250px">
                           
                             <div class="flex">
                             <div class="info">
@@ -57,7 +57,9 @@ include("./include/db_connect.php");
                                 <p><?php echo $row['course'];?></p>
                             </div>
                             </div>
-                            </div>
+                        </div>
+
+                   
                     <div class="m-div">
                             <a class="a-flex" href="bookcontent.php">
                                 <div class="con">
@@ -69,7 +71,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="#">
+                            <a class="a-flex" href="videocontent.php">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -79,7 +81,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="#">
+                            <a class="a-flex" href="notescontent.php">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -89,7 +91,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="#">
+                            <a class="a-flex" href="classcontent.php">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -99,7 +101,7 @@ include("./include/db_connect.php");
                                     <i class="fa-solid fa-circle-right"></i>
                                 </div>
                             </a>
-                            <a class="a-flex" href="#">
+                            <a class="a-flex" href="assesmentscontent.php">
                                 <div class="con">
                                     <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
                                 </div>
@@ -113,7 +115,7 @@ include("./include/db_connect.php");
                             </a>
                             <a href="tel:9717666076" class="btn" style="margin: 10px;">Join More Courses</a>
                             </div>
-                    </section>
+                                    </section>
                 </div>
             </div>
             <?php
@@ -127,7 +129,6 @@ include("./include/db_connect.php");
     <script src="js/components/swiper.js" defer></script>
     <script src="js/custom.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    
 </body>
 
 </html>

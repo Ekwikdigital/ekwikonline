@@ -3025,20 +3025,25 @@ h2 {
 }
 
 .content-container {
+    width: 80%;
+    margin: auto;
+}
+
+.c-container {
     width: 80% !important;
     margin: auto !important;
 }
 
-.content-container ul {
+.c-container ul {
     margin-left: 20px;
 }
 
-.content-container h2,
+.c-container h2,
 .modules h2 {
     text-align: center;
 }
 
-.content-container p,
+.c-container p,
 .modules p {
     text-align: justify;
 }
@@ -3077,11 +3082,29 @@ h2 {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-sub-container {
+        width: 100%;
+    }
 }
 
 @media (max-width:544px) {
     .grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-sub-container {
+        width: 100%;
     }
 }
 
@@ -3101,6 +3124,21 @@ h2 {
     }
     .card-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        flex-direction: column;
+    }
+    .contact-sub-container {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    #google-map {
+        width: 100vw !important;
     }
 }
 
@@ -3166,6 +3204,9 @@ h2 {
         height: 600px;
         width: 400px;
     }
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width:746px) {
@@ -3191,6 +3232,9 @@ h2 {
     .form-items {
         height: 600px;
         width: 400px;
+    }
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -3257,6 +3301,9 @@ h2 {
     }
     .con img {
         height: 80px !important;
+    }
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -3546,11 +3593,12 @@ h2 {
 }
 
 .p-container {
-    border: 5px solid black;
-    box-shadow: 5px 5px 10px black;
+    margin-top: 150px !important;
+    /* border: 5px solid black; */
+    /* box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%); */
     border-radius: 15px;
     padding: 40px;
-    background-color: rgb(26, 25, 25);
+    /* background-color: rgb(26, 25, 25); */
     margin: auto;
     display: flex;
     width: 100%;
@@ -3590,7 +3638,8 @@ h2 {
 
 .p-div img {
     border-radius: 15px;
-    box-shadow: 5px 5px 10px black;
+    /* border: 5px solid black; */
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
 }
 
 .flex {
@@ -3611,7 +3660,8 @@ h2 {
 .info p {
     /* border: 2px solid red; */
     margin: 5px;
-    color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold;
 }
 
 .r p {
@@ -3624,13 +3674,14 @@ h2 {
     display: flex;
     /* border: 4px solid rgb(0, 0, 0); */
     border-radius: 15px;
-    box-shadow: 2px 2px 5px black;
+    background-color: white;
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
     transition: all 0.5s ease;
 }
 
 .a-flex:hover {
     transform: scale(1.02);
-    box-shadow: 5px 5px 8px black;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.397);
 }
 
 .icon {
@@ -3659,7 +3710,7 @@ h2 {
     width: 80px;
     border-radius: 5px;
     /* box-shadow: 0px 0px 10px rgb(251, 85, 115); */
-    border: 2px solid black;
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
 }
 
 #f {
@@ -3765,3 +3816,5 @@ form input {
     height: 100px;
     width: 100px;
 }
+
+.tools h2 {}

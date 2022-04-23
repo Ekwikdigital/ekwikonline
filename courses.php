@@ -137,7 +137,7 @@ session_start();
                             <h2>Why You Get in this Course ?</h2>
                             <ul>
                                 <li>
-                                   
+                                   Certification
                                 </li>
                                 <li>
                                     1

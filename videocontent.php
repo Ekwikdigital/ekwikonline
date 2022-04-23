@@ -43,7 +43,7 @@ session_start();
     ?>
         <section class="content-container">
         <h2>
-            Hello 
+            Hello. 
             <?php      
             $name = $_SESSION['username'];
             echo $name;

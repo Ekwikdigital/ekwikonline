@@ -55,17 +55,17 @@ $result = mysqli_query($conn,$sql);
     <div>
         <section class="contact-container">
             <div class="contact-sub-container">
-            <h1> Ekwik Classes </h1>
-            <p> So, are you ready to get web development, marketing, and SEO services in India? </p>
-            <h1> Contact us </h1> 
-            <p>  <i class="fas fa-blender-phone"></i> Office no </p>  
-            <p> 011-42175423 </p> 
-            <p> <i class="fas fa-mobile-alt"></i> Mobile no </p>  
-            <p> +91 9717666076 </p>
-            <p>  <i class="fas fa-envelope"></i> Email </p>  
-            <p> hello@ekwikdigital.com  </p>
-            <h1> Address </h1>
-            <p> A-20, First Floor, Guru Nanak Pura, Street No. 3, Laxmi Nagar, Delhi – 110092, Landmark – In Front Of V3s Mall  </p>
+                <h1> Ekwik Classes </h1>
+                <p> So, are you ready to get web development, marketing, and SEO services in India? </p>
+                <h1> Contact us </h1> 
+                <p>  <i class="fas fa-blender-phone"></i> Office no </p>  
+                <p> 011-42175423 </p> 
+                <p> <i class="fas fa-mobile-alt"></i> Mobile no </p>  
+                <p> +91 9717666076 </p>
+                <p>  <i class="fas fa-envelope"></i> Email </p>  
+                <p> hello@ekwikdigital.com  </p>
+                <h1> Address </h1>
+                <p> A-20, First Floor, Guru Nanak Pura, Street No. 3, Laxmi Nagar, Delhi – 110092, Landmark – In Front Of V3s Mall  </p>
             </div>
             <div class="contact-sub-container ">
                 <form class="cuc" action="" method="post">

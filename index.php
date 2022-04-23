@@ -150,7 +150,7 @@ session_start();
                 </div>
             </section>
             <div class="d-bro">
-                <a href="#formOrder2" class="btn">Download Brochure</a>
+                <a href="#formOrder2" class="btn btn_started js-fancybox">Download Brochure</a>
             </div>
             <section class="career-container">
                 <h2>Perks of Ekwik Digital</h2>
@@ -207,9 +207,6 @@ session_start();
                     </div>
                 </div>
             </section>
-
-           
-
             <div class="section-about" id="about">
                 <div class="wrapper">
                     <div class="about">
@@ -323,68 +320,44 @@ session_start();
                                 <div class="get-list__title">Live Project Training</div>
                             </div>
                         </div>
-                        <div class="get-list__item">
-                            <div class="get-list__heading">
-                                <div class="get-list__icon">
-                                    <img src="img/icons-svg/get-6.svg" alt="" loading="lazy">
-                                </div>
-                                <div class="get-list__title">Live Project Training</div>
-                            </div>
-                        </div>
-                        <div class="get-list__item">
-                            <div class="get-list__heading">
-                                <div class="get-list__icon">
-                                    <img src="img/icons-svg/get-6.svg" alt="" loading="lazy">
-                                </div>
-                                <div class="get-list__title">Live Project Training</div>
-                            </div>
-                        </div>
-                        <div class="get-list__item">
-                            <div class="get-list__heading">
-                                <div class="get-list__icon">
-                                    <img src="img/icons-svg/get-6.svg" alt="" loading="lazy">
-                                </div>
-                                <div class="get-list__title">Live Project Training</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>       
-<?php
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+        <?php
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-include("./include/db_connect.php");
+            include("./include/db_connect.php");
 
-// Check connection
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
-}
-// echo "Connected successfully";
+            // Check connection
+            if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+            }
+            // echo "Connected successfully";
 
-$s_name = $_POST["name"]; 
-$s_surname = $_POST["surname"]; 
-$s_phoneno = $_POST["phoneno"]; 
-$s_email = $_POST["email"]; 
-$st_name = $_POST["s_name"]; 
-$st_email = $_POST["s_email"]; 
-$st_message = $_POST["s_message"]; 
-$newsletter = $_POST["newsletter"]; 
-$b_name = $_POST["b_name"]; 
-$b_email = $_POST["b_email"]; 
-$b_email = $_POST["b_email"]; 
-$b_phoneno = $_POST["b_phone"]; 
+            $s_name = $_POST["name"]; 
+            $s_surname = $_POST["surname"]; 
+            $s_phoneno = $_POST["phoneno"]; 
+            $s_email = $_POST["email"]; 
+            $st_name = $_POST["s_name"]; 
+            $st_email = $_POST["s_email"]; 
+            $st_message = $_POST["s_message"]; 
+            $newsletter = $_POST["newsletter"]; 
+            $b_name = $_POST["b_name"]; 
+            $b_email = $_POST["b_email"]; 
+            $b_email = $_POST["b_email"]; 
+            $b_phoneno = $_POST["b_phone"]; 
 
 
-$sql = "INSERT INTO `students_data`(`s_name`, `s_surname`, `s_phoneno`, `s_email`) VALUES ('$s_name','$s_surname','$s_phoneno','$s_email')";
-$sql2 = "INSERT INTO `consultation`(`s_name`, `s_email`, `s_message`) VALUES ('$st_name','$st_email','$st_message')";
-$sql3 = "INSERT INTO `newsletter`(`s_email`) VALUES ('$newsletter')";
-$sql4 ="INSERT INTO `brochure`(`b_name`, `b_phoneno`, `b_email`) VALUES ('$b_name','$b_email','$b_phoneno')" ;
-$result = mysqli_query($conn,$sql);
-$result2 = mysqli_query($conn,$sql2);
-$result3 = mysqli_query($conn,$sql3);
-$result4 = mysqli_query($conn,$sql4);
-}
-?>
+            $sql = "INSERT INTO `students_data`(`s_name`, `s_surname`, `s_phoneno`, `s_email`) VALUES ('$s_name','$s_surname','$s_phoneno','$s_email')";
+            $sql2 = "INSERT INTO `consultation`(`s_name`, `s_email`, `s_message`) VALUES ('$st_name','$st_email','$st_message')";
+            $sql3 = "INSERT INTO `newsletter`(`s_email`) VALUES ('$newsletter')";
+            $sql4 ="INSERT INTO `brochure`(`b_name`, `b_phoneno`, `b_email`) VALUES ('$b_name','$b_email','$b_phoneno')" ;
+            $result = mysqli_query($conn,$sql);
+            $result2 = mysqli_query($conn,$sql2);
+            $result3 = mysqli_query($conn,$sql3);
+            $result4 = mysqli_query($conn,$sql4);
+            }
+        ?>
             <div class="section-consultation">
                 <div class="section-consultation__bg js-lazy" data-src="img/bg/bg-2.svg"></div>
                 <div class="wrapper">
@@ -481,15 +454,15 @@ $result4 = mysqli_query($conn,$sql4);
                             <div class="steps__title">Results</div>
                         </div>
                     </div>
-                    <div class="steps-text">Pariatur magna cupidatat magna sit incididunt non pariatur. Sint nulla commodo qui magna eiusmod quis aliqua laboris officia excepteur non eu in. Consequat esse in dolore laborum dolore ut duis elit deserunt minim.</div>
+                    <!-- <div class="steps-text">Pariatur magna cupidatat magna sit incididunt non pariatur. Sint nulla commodo qui magna eiusmod quis aliqua laboris officia excepteur non eu in. Consequat esse in dolore laborum dolore ut duis elit deserunt minim.</div> -->
                 </div>
-            </div>
+            </div>       
             <div class="section-prices" id="price">
                 <div class="wrapper">
                     <div class="section-heading h-center"><span>prices</span></div>
                     <div class="h-decor-2">
                         <h2 class="h2 h-center"><span>discover our price - list</span></h2>
-                        <div class="section-subtitle h-center">Dolor duis voluptate enim exercitation consequat ex.</div>
+                        <!-- <div class="section-subtitle h-center">Dolor duis voluptate enim exercitation consequat ex.</div> -->
                     </div>
                     <div class="prices">
                         <a href="#" class="prices__item">
@@ -765,7 +738,7 @@ $result4 = mysqli_query($conn,$sql4);
                     </div>
                 </div>
             </div>
-            <Section class="content-container">
+            <Section class="c-container">
                 <h2>BEST DIGITAL MARKETING COURSE IN LAXMI NAGAR </h2>
                 <p>
                     Digital Marketing is booming industry in India. Now days every business wants to explore their business in new market with the help of Digital Marketing, because with Digital Marketing we can easily target our audience. Every business needs an online

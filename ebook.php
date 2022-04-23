@@ -25,7 +25,7 @@ include("./include/authentication.php");
 
     <style>
         .container {
-            margin-top: 150px;
+            margin-top: 150px !important;
             align-items: center;
             justify-content:center;
             text-align: center;
@@ -64,7 +64,7 @@ include("./include/authentication.php");
 <body class="home loaded">
     <div class="main-wrapper">
         <?php
-        $name = $_SESSION['username'];
+            $name = $_SESSION['username'];
         ?>
         <div class="container">
             <div>
