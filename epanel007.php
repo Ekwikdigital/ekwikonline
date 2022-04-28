@@ -19,9 +19,32 @@
 
                 $sql3 = "INSERT INTO `video`( `b_id` , `v_title`, `v_desc`, `v_code` ) VALUES ('$v_id', '$v_title','$v_desc','$v_code')";
                 $result3 = mysqli_query($conn, $sql3);
+
+
+                $book_id = $_POST["book_id"];
+                $book_title = $_POST["book_title"];
+                $book_desc = $_POST["book_desc"];
+                $book = $_FILES["book"];
+                $image = $_FILES["image"];
+
+                    // for book upload 
+                    $filename = $book['name'];
+                    $filerror = $book['error'];
+                    $filetmp = $book['tmp_name'];
+                    $fileext = explode('.',$filename);
+                    $filecheck = strtolower(end($fileext));
+                    $fileextstored = array('pdf');
+                    if(in_array($filecheck,$fileextstored)){
+                        $destinationfile ='book/'.$filename;
+                        move_uploaded_file($filetmp,$destinationfile);
+                        }
+                        else{
+                        echo '<script>alert("Could Not Procced this request.. Please Contact to Developer.")</script>';
+                        }
+                $sql4 = "INSERT INTO `bookread` (`book_id`, `book_titile`, `book_desc`, `book`) VALUES ('$book_id', '$book_title', '$book_desc', '$destinationfile');";
+                $result4 = mysqli_query($conn, $sql4);
             }
             ?>
-
            <!DOCTYPE html>
            <html lang="en">
 
@@ -89,22 +112,26 @@
                            Assesments
                        </li>
                        </a>
-                       <a href="#cf-s">
+                       <!-- <a href="#cf-s">
                        <li class="cf">
                            Contact Form
                        </li>
-                       </a>
+                       </a> -->
                        <a href="#video">
                        <li class="cf">
                            Video 
                        </li>
                        </a>
+                       <a href="uploadnotes.php">
                        <li class="cf">
                            Notes 
                        </li>
-                       <li class="cf">
+                       </a>
+                       <a href="#ebook">
+                       <li>
                            Ebook 
                        </li>
+                    </a>
 
                    </ul>
                </nav>
@@ -400,7 +427,7 @@
                            </table>
                        </div>
                    </div>
-                       <div id="cf-s" class="sub-section">
+                       <!-- <div id="cf-s" class="sub-section">
                            <h2> Contact Data </h2>
                            <h3 align="center">Who Fill the Contact Form</h3>
                            <br />
@@ -432,7 +459,71 @@
                                     ?>
                                </table>
                            </div>
-                       </div>
+                       </div> -->
+
+                    <div id="ebook" class="sub-section f">
+                    
+                    <form  id="video" action="" method="post" enctype="multipart/form-data">
+                            <div >
+                                <label for="book_id">Book Id</label>
+                                <input type="number" name="book_id" id="book_id" required>
+                            </div>
+                            <div>
+                                <label for="book_title">Book Title</label>
+                                <input type="text" name="book_title" id="book_title" required>
+                            </div>
+                            <div>
+                                <label for="book_desc">Book Description</label>
+                                <input type="text" name="book_desc" id="book_desc" required>
+                            </div>
+                            <div>
+                                <label for="book">Upload Book</label>
+                                <input type="file" name="book" id="book">
+                            </div>
+                            <div>
+                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                        <table  class="table table-striped table-bordered">
+                            <tr>
+                                <th>Student Id</th>
+                                <th>Courses</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Wordpress development
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Web development
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Google Ads
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Facebook Ads
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Social Media Marketing
+                            <tr>
+                                <td>6</td>
+                                <td>Search Engine Optimization
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Graphic Designing
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Youtube Marketing 
+                            </tr>
+                        </table>
+
+                    </div>
+                   
                </section>
                <script src="js/jquery-3.5.1.min.js"></script>
                <script src="js/admin.js"></script>

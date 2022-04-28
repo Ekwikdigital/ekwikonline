@@ -25,6 +25,9 @@ include("./include/authentication.php");
     />
 
     <style>
+        body {
+            overflow-x: scroll !important;
+        }
         .container {
             margin-top: 150px;
             align-items: center;
@@ -41,17 +44,36 @@ include("./include/authentication.php");
             height: max-content;
             width: max-content;
             padding: 50px;
+            margin: auto;
         }
         .v-card {
             padding: 20px;
-            height: 400px;
+            height: 350px;
             width: 300px;
-            border: 3px solid black;
+            box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
             border-radius: 15px;
+        }
+        .v-card h2 {
+            font-size: 20px;
         }
         .video {
             height: 150px;
             width: 250px;
+        }
+        @media (max-width:450px) {
+            .video-container {
+            grid-template-columns: repeat(1,1fr);
+            }
+        }
+        @media (max-width:550px) {
+            .video-container {
+            grid-template-columns: repeat(1,1fr);
+            }
+        }
+        @media (max-width:850px) {
+            .video-container {
+            grid-template-columns: repeat(2,1fr);
+            }
         }
     </style>
 

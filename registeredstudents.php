@@ -43,6 +43,7 @@ include("./include/db_connect.php");
         <h2> Registered Students </h2>
         <h3 align="center">Data of Students </h3>
         <a href="newstudent.php" class="btn" target="blank">Add New Student</a>
+        <a href="epanel007.php" class="btn" target="blank">Go to Dashboard</a>
         <br />
         <div class="table-responsive">
             <table id="employee_data5" class="table table-striped table-bordered">

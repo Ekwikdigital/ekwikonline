@@ -34,7 +34,6 @@ session_start();
                 echo $row2['a_id'];
 
                 if($num_row>0){
-
                         echo'
                         <section height="100vh">
                         <h1>Assesments</h1>

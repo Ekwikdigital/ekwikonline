@@ -100,28 +100,28 @@ session_start();
                     <div class="card-container">
                         <a href="login.php">
                         <div id="card1" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Video</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         </a>
                         <a href="login.php">
                         <div id="card2" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Notes</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         </a>
                         <a href="login.php">
                         <div id="card3" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Class Recording</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         </a>
                         <a href="login.php">
                         <div id="card4" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Books</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
@@ -167,28 +167,28 @@ session_start();
                     <div class="card-container">
                         <a href="login.php">
                         <div id="card5" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Video</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                             </a>
                         <a href="login.php">
                         <div id="card6" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Notes</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                             </a>
                         <a href="login.php">
                         <div id="card7" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Class Recordings</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                             </a>
                         <a href="login.php">
                         <div id="card8" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Books</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
@@ -233,26 +233,26 @@ session_start();
                     <div class="card-container">
                         <a href="login.php">
                         <div id="card9" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Video</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <a href="login.php">
                         <div id="card10" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Notes</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         <a href="login.php">
                         <div id="card11" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Class Recordings</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                             </a>
                         <a href="login.php">
                         <div id="card12" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Books</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
@@ -297,28 +297,28 @@ session_start();
                     <div class="card-container">
                         <a href="login.php">
                         <div id="card13" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Video</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         </a>
                         <a href="login.php">
                         <div id="card14" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Notes</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         </a>
                         <a href="login.php">
                         <div id="card15" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Class Recordings</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>
                         </a>
                         <a href="login.php">
                         <div id="card16" class="cards">
-                            <img src="./img/uploaded/1.png" alt="" srcset="">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
                             <h3>Books</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
                         </div>

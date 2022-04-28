@@ -72,6 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="section-screen-main__bg" style="background-image: url(img/main.svg);"></div>
                 <div class="wrapper">
                     <div class="sub-section">
+                        <a href="epanel007.php" class="btn">Go to Dashboard</a>
                    <form id="blog_post" action="" method="post" enctype="multipart/form-data">
                        <div>
                            <label for="blog_heading">Blog heading</label>

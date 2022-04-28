@@ -73,14 +73,10 @@ include("./include/authentication.php");
         <?php
         include("./include/db_connect.php");
             $id = $_GET['id'];
-                // $sql = "SELECT * FROM `benefits_users` WHERE username='$name'";
                 $sql2 = "SELECT * FROM `video`WHERE b_id='$id'";
-                // $result = mysqli_query($conn , $sql);
                 $result2 = mysqli_query($conn , $sql2);
-                // $row = mysqli_fetch_assoc($result);
                 $row2 = mysqli_fetch_assoc($result2);
                 $num = mysqli_num_rows($result2);
-                // echo var_dump($num);
                 
         
                 // if($row['s_id'] === $id && $row2['b_id'] === $id)

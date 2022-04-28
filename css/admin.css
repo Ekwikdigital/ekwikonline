@@ -202,6 +202,14 @@ body {
     width: 100%;
 }
 
+.f {
+    display: flex;
+}
+
+table {
+    text-align: center;
+}
+
 .sub-section h2 {
     text-align: center;
 }
@@ -265,7 +273,7 @@ form {
     border: 5px solid black;
     width: 80%;
     margin: auto;
-    margin-top: 40px !important;
+    margin-top: 80px !important;
     padding: 20px !important;
     background-color: white;
 }

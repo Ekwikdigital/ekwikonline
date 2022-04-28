@@ -58,6 +58,9 @@ include("./include/db_connect.php");
                                 <li>
                                     <a href="courses.php">Courses</a>
                                 </li>
+                                <li>
+                                    <a href="demo.php">Demo</a>
+                                </li>
                                 ';
                                 if(!$loggedin){
                                     echo '

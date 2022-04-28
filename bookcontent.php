@@ -64,7 +64,7 @@ session_start();
                 echo '
                 <a href="ebook.php?id=1">
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/word.jpg" alt="" srcset="">
                 <h4>WordPress Design/Development</h4>
                 <p>All Content of WordPress Design & Development available here.</p>
                 </div>
@@ -74,7 +74,7 @@ session_start();
                 else {
                 echo '
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/word.jpg" alt="" srcset="">
                 <h4>WordPress Design/Development</h4>
                 <p>You Not Enroll in this Course.</p>
                 </div>';
@@ -88,7 +88,7 @@ session_start();
                 echo '
                 <a href="ebook.php?id=2">
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/web.jpg" alt="" srcset="">
                 <h4>Web Design/Development</h4>
                 <p>All Content of Web Design & Development available here.</p>
                 </div>
@@ -98,7 +98,7 @@ session_start();
                 else {
                 echo '
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/09.jpg" alt="" srcset="">
                 <h4>Web Design/Development</h4>
                 <p>You Not Enroll in this Course.</p>
                 </div>';
@@ -114,7 +114,7 @@ session_start();
                 echo '
                 <a href="ebook.php?id=3">
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/ga.jpg" alt="" srcset="">
                 <h4> Google Ads</h4>
                 <p>All Google Ads Content Available here.</p>
                 </div>
@@ -124,7 +124,7 @@ session_start();
                 else {
                 echo '
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/09.jpg" alt="" srcset="">
                 <h4>Google Ads</h4>
                 <p>You Not Enroll in this Course.</p>
                 </div>';
@@ -138,7 +138,7 @@ session_start();
                 echo '
                 <a href="ebook.php?id=4">
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/fa.jpg" alt="" srcset="">
                 <h4> Facebook Ads</h4>
                 <p>All Google Ads Content Available here.</p>
                 </div>
@@ -148,7 +148,7 @@ session_start();
                 else {
                 echo '
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/09.jpg" alt="" srcset="">
                 <h4>Facebook Ads</h4>
                 <p>You Not Enroll in this Course.</p>
                 </div>';
@@ -162,7 +162,7 @@ session_start();
                 echo '
                 <a href="ebook.php?id=5">
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/smm.jpg" alt="" srcset="">
                 <h4>Social Media Marketing</h4>
                 <p>All Social Media Marketing Content Available here.</p>
                 </div>
@@ -172,7 +172,7 @@ session_start();
                 else {
                 echo '
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/09.jpg" alt="" srcset="">
                 <h4>Social Media Marketing</h4>
                 <p>You Not Enroll in this Course.</p>
                 </div>';
@@ -186,7 +186,7 @@ session_start();
                 echo '
                 <a href="ebook.php?id=6">
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/seo.jpg" alt="" srcset="">
                 <h4>Search Engine Optimization</h4>
                 <p>All Search Engine Optimization Content Available here.</p>
                 </div>
@@ -196,7 +196,7 @@ session_start();
                 else {
                 echo '
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/09.jpg" alt="" srcset="">
                 <h4>Search Engine Optimization</h4>
                 <p>You Not Enroll in this Course.</p>
                 </div>';
@@ -210,7 +210,7 @@ session_start();
                 echo '
                 <a href="ebook.php?id=7">
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/gra.jpg" alt="" srcset="">
                 <h4>Graphics Designing</h4>
                 <p>All Graphics Designing Content Available here.</p>
                 </div>
@@ -220,7 +220,7 @@ session_start();
                 else {
                 echo '
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/09.jpg" alt="" srcset="">
                 <h4>Graphics Designing</h4>
                 <p>You Not Enroll in this Course.</p>
                 </div>';
@@ -234,7 +234,7 @@ session_start();
                 echo '
                 <a href="ebook.php?id=8">
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/youtube.jpg" alt="" srcset="">
                 <h4>Youtube Master Course</h4>
                 <p>All Youtube Master Course Content Available here.</p>
                 </div>
@@ -244,7 +244,7 @@ session_start();
                 else {
                 echo '
                 <div class="b_card">
-                <img src="./img/uploaded/1.png" alt="" srcset="">
+                <img src="./img/uploaded/09.jpg" alt="" srcset="">
                 <h4>Youtube Master Course</h4>
                 <p>You Not Enroll in this Course.</p>
                 </div>';

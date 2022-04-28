@@ -76,9 +76,9 @@ include("./include/authentication.php");
         <?php
         include("./include/db_connect.php");
             $id = $_GET['id'];
-                $sql2 = "SELECT * FROM `book`WHERE m_id='$id'";
-                $result2 = mysqli_query($conn , $sql2);
-                $num = mysqli_num_rows($result2);
+            $sql2 = "SELECT * FROM `bookread`WHERE book_id='$id'";
+            $result2 = mysqli_query($conn , $sql2);
+            $num = mysqli_num_rows($result2);
                 
         
                 // if($row['s_id'] === $id && $row2['b_id'] === $id)
@@ -86,12 +86,12 @@ include("./include/authentication.php");
                     
                                 while($row2 = mysqli_fetch_assoc($result2)){
                                 echo"
-                                <a href='ebookreading.php?m_id='$id'>
+                                <a href='ebookreading.php?id=".$row2["book_id"]."'>
                                 <div class='v-card'>
                                 <div class='video'>
-                                <img class='img' src='".$row2['b_image']."' alt='' srcset=''>
-                                <h2> ".$row2['b_titile']."</h2>
-                                <p> ".$row2['b_desc']."</p>     
+                                <img class='img' src='".$row2['book_image']."' alt='' srcset=''>
+                                <h2> ".$row2['book_titile']."</h2>
+                                <p> ".$row2['book_desc']."</p>     
                                 </div>
                                 </div>
                                 </a>

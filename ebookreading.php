@@ -29,8 +29,6 @@ include("./include/authentication.php");
             align-items: center;
             justify-content:center;
             text-align: center;
-
-
         }
         .video-container {
             display: grid;
@@ -52,6 +50,20 @@ include("./include/authentication.php");
             height: 150px;
             width: 250px;
         }
+        .b-flex {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 300px;
+            height: max-content;
+        }
+        object {
+            width: 80%;
+            height: 800px;
+        }
     </style>
 
 
@@ -66,35 +78,25 @@ include("./include/authentication.php");
             <div>
                 <h1>E-Books For <?php echo $name ?></h1>
             </div>
-            <div class="video-container">
-               
-            
+            <!-- <div class="video-container"> -->
+                <section class='b-flex'>           
         <?php
         include("./include/db_connect.php");
-            $id = $_GET['m_id'];
-                $sql2 = "SELECT * FROM `bookread`";
-                $result2 = mysqli_query($conn , $sql2);
-                $row = mysqli_fetch_assoc($result2);
+            $id = $_GET['id'];
+            $sql2 = "SELECT * FROM `bookread`WHERE book_id='$id'";
+            $result2 = mysqli_query($conn , $sql2);   
                 $num = mysqli_num_rows($result2);
-                
-        
-                if($row['m_id'] === $id && $row2['br_id'] === $id)
-                    {
-                                while($row){
-                                echo"
-                                <div class='v-card'>
-                                <img src='$row[b_image];' alt='' srcset=''>
-                                </div>
-                                    ";
-                            }
-                    }
-                                else 
+                                while($row = mysqli_fetch_assoc($result2))
                                 {
-                                        echo 'Nothing To display';
+                                echo"
+                                <object data='".$row["book"]."' type='application/pdf'></object>
+                                    ";
                                 }
-    ?>
+                                ?>
+                                </section>
     </div>
-    </div>
+<!-- </div> -->
+
             <?php
             include("./include/header.php");
         ?>

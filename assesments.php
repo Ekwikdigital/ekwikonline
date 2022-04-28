@@ -40,9 +40,7 @@ session_start();
                             <p>Timing Will be started when You enter the Assesment </p>
                                 </div> 
                                 </a>
-                                
-        ';
-                   
+                            ';   
                     }
                 }
                 //  }

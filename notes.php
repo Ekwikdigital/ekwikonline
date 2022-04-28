@@ -1,14 +1,5 @@
-
 <?php
-session_start();
-        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
-            $login = true; 
-            $loggedin = true;
-        }
-        else {
-            $loggedin = false;
-            header("location: benefits.php");  
-        }
+include("./include/authentication.php");
         ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -34,7 +25,7 @@ session_start();
 
     <style>
         .container {
-            margin-top: 150px;
+            margin-top: 150px !important;
             align-items: center;
             justify-content:center;
             text-align: center;
@@ -61,6 +52,10 @@ session_start();
             height: 150px;
             width: 250px;
         }
+        .img {
+            height: 250px !important;
+            width: 300px !important;
+        }
     </style>
 
 
@@ -69,26 +64,21 @@ session_start();
 <body class="home loaded">
     <div class="main-wrapper">
         <?php
-        $name = $_SESSION['username'];
+            $name = $_SESSION['username'];
         ?>
         <div class="container">
             <div>
                 <h1>Notes For <?php echo $name ?></h1>
             </div>
             <div class="video-container">
-
+               
             
         <?php
         include("./include/db_connect.php");
             $id = $_GET['id'];
-                // $sql = "SELECT * FROM `benefits_users` WHERE username='$name'";
-                $sql2 = "SELECT * FROM `video`WHERE b_id='$id'";
-                // $result = mysqli_query($conn , $sql);
-                $result2 = mysqli_query($conn , $sql2);
-                // $row = mysqli_fetch_assoc($result);
-                $row2 = mysqli_fetch_assoc($result2);
-                $num = mysqli_num_rows($result2);
-                // echo var_dump($num);
+            $sql2 = "SELECT * FROM `notes`WHERE notes_id='$id'";
+            $result2 = mysqli_query($conn , $sql2);
+            $num = mysqli_num_rows($result2);
                 
         
                 // if($row['s_id'] === $id && $row2['b_id'] === $id)
@@ -96,13 +86,15 @@ session_start();
                     
                                 while($row2 = mysqli_fetch_assoc($result2)){
                                 echo"
+                                <a href='notesreading.php?id=".$row2["notes_id"]."'>
                                 <div class='v-card'>
                                 <div class='video'>
-                                <iframe width='250' height='150' src='".$row2['v_code']."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-                                <h2> ".$row2['v_title']."</h2>
-                                <p> ".$row2['v_desc']."</p>     
+                                <img class='img' src='".$row2['notes_image']."' alt='' srcset=''>
+                                <h2> ".$row2['notes_titile']."</h2>
+                                <p> ".$row2['notes_desc']."</p>     
                                 </div>
                                 </div>
+                                </a>
                                     ";
                             }
                     // }

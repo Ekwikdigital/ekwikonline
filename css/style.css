@@ -2904,6 +2904,8 @@ table tr td {
 }
 
 .sub-c-section {
+    width: 90%;
+    margin: auto;
     height: max-content;
 }
 
@@ -3440,6 +3442,7 @@ h2 {
 
 .sub-container {
     display: grid;
+    padding: 60px;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-evenly;
     align-items: center;
@@ -3450,7 +3453,7 @@ h2 {
     text-align: center;
     width: 300px;
     height: 450px;
-    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
     border-radius: 20px;
     margin: 10px;
     padding: 10px;
@@ -3817,4 +3820,19 @@ form input {
     width: 100px;
 }
 
-.tools h2 {}
+.demo-container {
+    border: 2px solid red !important;
+    position: relative;
+    z-index: 9999 !important;
+    width: 80% !important;
+    height: max-content;
+    margin: auto !important;
+}
+
+.s-img {
+    margin-top: 50px !important;
+}
+
+.s-img img {
+    border-radius: 15px;
+}
