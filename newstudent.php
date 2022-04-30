@@ -8,7 +8,12 @@ $s_id = $_POST["s_id"];
 $s_phone = $_POST["s_phone"];
 $s_username = $_POST["s_username"];
 $s_email = $_POST["s_email"];
+$s_name = $_POST["s_name"];
 $course = $_POST["course"];
+$s_join = $_POST["s_join"];
+$s_com = $_POST["s_com"];
+$s_add = $_POST["s_add"];
+$s_pan = $_POST["s_pan"];
 $image = $_FILES["file"];
 $s_password = $_POST["s_password"];
 $s_c_password = $_POST["s_c_password"];
@@ -46,7 +51,7 @@ else
             else{
               echo ("error");
             }
-            $sql = "INSERT INTO `benefits_users`(`username`, `password`, `email`, `s_id`, `s_phone` , `course` , `s_image`) VALUES ('$s_username','$s_password','$s_email','$s_id','$s_phone','$course', '$destinationfile')";
+            $sql = "INSERT INTO `benefits_users`(`username`, `password`, `email`, `s_id`, `s_phone` , `course` , `s_image`, `s_join` , `s_com`, `s_add`, `s_pan`,`s_name`) VALUES ('$s_username','$s_password','$s_email','$s_id','$s_phone','$course', '$destinationfile','$s_join','$s_com','$s_add','$s_pan','$s_name')";
             $result = mysqli_query($conn, $sql);
             if ($result)
                 {
@@ -96,6 +101,10 @@ if($showAlert) {
                   <th>Courses</th>
               </tr>
               <tr>
+                  <td>0</td>
+                  <td>All Courses</td>
+              </tr>
+              <tr>
                   <td>1</td>
                   <td>Wordpress development
               </tr>
@@ -132,17 +141,39 @@ if($showAlert) {
         <div class="forms-container">
             <h2> New Student </h2>
             <form class="form-s" action="" method="post" enctype="multipart/form-data">
-                <input type="text" name="s_id" id="s_id" class="input" placeholder="Student Id" required>
-                <input type="text" name="course" id="course" class="input" placeholder="Student Course Name" required>
+                <label for="s_id"> Course Id</label>
+                <input type="text" name="s_id" id="s_id" class="input" placeholder="Course Id" required>
+                <label for="course"> Course Name</label>
+                <input type="text" name="course" id="course" class="input" placeholder=" Course Name" required>
+                <label for="s_name"> Student Name</label>
+                <input type="text" name="s_name" id="s_name" class="input" placeholder=" Student Name" required>
+                <label for="s_username"> User Name</label>
                 <input type="text" name="s_username" id="s_username" class="input" placeholder="Username" required>
+                <label for="s_mail"> User email</label>
                 <input type="email" name="s_email" id="s_email" class="input" placeholder="Student Email" required>
+                <label for="s_join">Joining Date</label>
+                <br>
+                <input type="date" name="s_join" id="s_join" class="input" placeholder="Joining Date" required>
+                <br>
+                <label for="s_join">Completion Date</label>
+                <br>
+                <input type="date" name="s_com" id="s_com" class="input" placeholder="Completion Date" required>
+                <br>
+                <label for="s_add">Aadhaar Link</label>
+                <input type="text" name="s_add" id="s_add" class="input" placeholder="Addhar Card" required>
+                <label for="s_pan">Pancard Link</label>
+                <input type="text" name="s_pan" id="s_pan" class="input" placeholder="Pan Card" >
+                <label for="s_phone">Contact No</label>
                 <input type="tel" name="s_phone" id="s_phone" class="input" placeholder="Student Contact No" required>
                 <div>
                   <label for="file"> Student Image</label>
+                  <br>
                   <input type="file" name="file" id="file" class="image" required>
                 </div>
+                <br>
                 <input type="password" name="s_password" id="s_password" class="input" placeholder="Password" required>
                 <input type="password" name="s_c_password" id="s_c_password" class="input" placeholder="Confirm Password" required>
+                <br>
                 <a href="epanel007.php" class="btn"> Go to Dashboard </a>
                 <button class="btn" type="submit">Add Student</button>
             </form>

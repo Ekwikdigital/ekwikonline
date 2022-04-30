@@ -63,7 +63,7 @@ session_start();
                 $row['s_id'] == 000
                 ) {             
                     echo '
-                    <a href="ebook.php?id=1">
+                    <a href="video.php?id=1">
                     <div class="b_card">
                     <img src="./img/uploaded/word.jpg" alt="" srcset="">
                     <h4>WordPress Design/Development</h4>
@@ -87,7 +87,7 @@ session_start();
                     $row['s_id'] == 000
                     ){             
                     echo '
-                    <a href="ebook.php?id=2">
+                    <a href="video.php?id=2">
                     <div class="b_card">
                     <img src="./img/uploaded/web.jpg" alt="" srcset="">
                     <h4>Web Design/Development</h4>
@@ -113,7 +113,7 @@ session_start();
                     $row['s_id'] == 000
                     ){             
                     echo '
-                    <a href="ebook.php?id=3">
+                    <a href="video.php?id=3">
                     <div class="b_card">
                     <img src="./img/uploaded/ga.jpg" alt="" srcset="">
                     <h4> Google Ads</h4>
@@ -137,7 +137,7 @@ session_start();
                     $row['s_id'] == 000
                     ){             
                     echo '
-                    <a href="ebook.php?id=4">
+                    <a href="video.php?id=4">
                     <div class="b_card">
                     <img src="./img/uploaded/fa.jpg" alt="" srcset="">
                     <h4> Facebook Ads</h4>
@@ -161,7 +161,7 @@ session_start();
                     $row['s_id'] == 000
                     ){             
                     echo '
-                    <a href="ebook.php?id=5">
+                    <a href="video.php?id=5">
                     <div class="b_card">
                     <img src="./img/uploaded/smm.jpg" alt="" srcset="">
                     <h4>Social Media Marketing</h4>
@@ -185,7 +185,7 @@ session_start();
                     $row['s_id'] == 000
                     ){             
                     echo '
-                    <a href="ebook.php?id=6">
+                    <a href="video.php?id=6">
                     <div class="b_card">
                     <img src="./img/uploaded/seo.jpg" alt="" srcset="">
                     <h4>Search Engine Optimization</h4>
@@ -209,7 +209,7 @@ session_start();
                     $row['s_id'] == 000
                     ){             
                     echo '
-                    <a href="ebook.php?id=7">
+                    <a href="video.php?id=7">
                     <div class="b_card">
                     <img src="./img/uploaded/gra.jpg" alt="" srcset="">
                     <h4>Graphics Designing</h4>
@@ -233,7 +233,7 @@ session_start();
                     $row['s_id'] == 000
                     ){             
                     echo '
-                    <a href="ebook.php?id=8">
+                    <a href="video.php?id=8">
                     <div class="b_card">
                     <img src="./img/uploaded/youtube.jpg" alt="" srcset="">
                     <h4>Youtube Master Course</h4>

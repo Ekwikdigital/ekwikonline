@@ -112,11 +112,6 @@
                            Assesments
                        </li>
                        </a>
-                       <!-- <a href="#cf-s">
-                       <li class="cf">
-                           Contact Form
-                       </li>
-                       </a> -->
                        <a href="#video">
                        <li class="cf">
                            Video 
@@ -279,6 +274,7 @@
                                 <th>Student Id</th>
                                 <th>Courses</th>
                             </tr>
+                            
                             <tr>
                                 <td>1</td>
                                 <td>Wordpress development
@@ -523,6 +519,7 @@
                         </table>
 
                     </div>
+                   
                    
                </section>
                <script src="js/jquery-3.5.1.min.js"></script>

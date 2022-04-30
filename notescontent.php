@@ -64,7 +64,7 @@ session_start();
         $row['s_id'] == 000
         ){             
             echo '
-            <a href="ebook.php?id=1">
+            <a href="notes.php?id=1">
             <div class="b_card">
             <img src="./img/uploaded/word.jpg" alt="" srcset="">
             <h4>WordPress Design/Development</h4>
@@ -234,7 +234,7 @@ session_start();
             $row['s_id'] == 000
             ){             
             echo '
-            <a href="ebook.php?id=8">
+            <a href="notes.php?id=8">
             <div class="b_card">
             <img src="./img/uploaded/youtube.jpg" alt="" srcset="">
             <h4>Youtube Master Course</h4>

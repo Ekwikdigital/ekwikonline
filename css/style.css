@@ -6,6 +6,19 @@ body {
     /* overflow-x: hidden; */
 }
 
+html::-webkit-scrollbar {
+    width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
 
 /* main variables */
 
@@ -3415,12 +3428,11 @@ h2 {
 
 .forms-container {
     margin: 20px;
-    border: 2px solid black;
     border-radius: 15px;
     height: max-content;
     width: 550px;
     padding: 20px;
-    background-color: rgb(254, 140, 153);
+    box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
 }
 
 .input {
@@ -3770,6 +3782,8 @@ form input {
 }
 
 .form-s input {
+    background-color: white;
+    color: #000 !important;
     margin-bottom: 5px !important;
 }
 
