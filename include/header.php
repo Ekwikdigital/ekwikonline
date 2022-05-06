@@ -1,14 +1,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
 <?php
-include("./include/db_connect.php");
+include("./include/db_connect_copy.php");
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
         $loggedin = true;
     }
     else {
         $loggedin = false;
     }
-    echo '
+?>
 <header class="header" id="header">
             <div class="header-top">
                 <div class="wrapper">
@@ -61,47 +60,28 @@ include("./include/db_connect.php");
                                 <li>
                                     <a href="demo.php">Demo</a>
                                 </li>
-                                ';
+                                <?php
                                 if(!$loggedin){
                                     echo '
-                                <li>
+                                    <li>
                                     <a class="btn-2" style="padding:13px; padding-left:20px; padding-right:20px; color:white;" href="login.php"> <i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
-                                </li>';
+                                    </li>';
                                 }
-                                if($loggedin){
-                                    echo '
-                                <li>
-                                    <a href="myaccount.php">My Account</a>
-                                </li>
-                                <li>
-                                    <a class="" href="logout.php"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
-                                </li>
-                                ';
-                            }
-                            echo'
+                                if($loggedin){                                  
+                                    $batch_id = $_SESSION["batchid"];
+                                    echo "
+                                    <li>
+                                    <a href='myaccount.php?bid=$batch_id'>My Profile
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a class='' href='logout.php'> <i class='fa-solid fa-arrow-right-from-bracket'></i> Logout</a>
+                                    </li>
+                                    ";
+                                }
+                                    ?>
                             </ul>
                         </div>
-                        <!-- <nav class="nav-inner">
-                            <ul class="main-menu js-menu" id="mainMenu">
-                                <a href="index.php">
-                                    <li>
-                                        Home
-                                    </li>
-                                </a>
-                                <li>
-                                    <a href="Aboutus.php">About us</a>
-                                </li>
-                                <li>
-                                    <a href="Contactus.php">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="courses.php">Courses</a>
-                                </li>
-                                <li>
-                                    <a href="blog.php">Our Blog</a>
-                                </li>
-                            </ul>
-                        </nav> -->
                         <div class="socials-item">
                             <div class="footer-title">Find us here:</div>
                             <div class="socials">
@@ -292,5 +272,4 @@ include("./include/db_connect.php");
             body.classList.add("content-loaded");
         }, 50)
     </script>
-    ';
-    ?>
+   

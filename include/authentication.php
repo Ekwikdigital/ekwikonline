@@ -6,6 +6,6 @@ session_start();
         }
         else {
             $loggedin = false;
-            header("location: benefits.php");  
+            header("location: login.php");  
         }
         ?>

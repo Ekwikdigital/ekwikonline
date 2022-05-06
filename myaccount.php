@@ -1,7 +1,8 @@
 
 <?php
 session_start();
-include("./include/db_connect.php");
+include("./include/authentication.php");
+include("./include/db_connect_copy.php");
 
 ?>
 
@@ -21,9 +22,6 @@ include("./include/db_connect.php");
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" type="text/css" href="css/first-screen.css" />
     <link rel="stylesheet" type="text/css" href="css/first-screen-inner.css" />
-    <!-- <link rel="preload " href="fonts/AleoBold.woff2" as="font" crossorigin>
-    <link rel="preload " href="fonts/Lato/LatoRegular.woff2" as="font" crossorigin>
-    <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin> -->
     <script src="./ckeditor/ckeditor.js"></script>
 </head>
 
@@ -33,85 +31,67 @@ include("./include/db_connect.php");
             <div class="">
                 <!-- <div class="section-screen-main__bg" ></div> -->
                 <div class="wrapper">
-                    <section class="p-container">
+                    <section class="h">
+                        <?php
+                        $batch_id = $_SESSION["batchid"];
+                        echo "
+                        <a href='myaccount.php?bid=$batch_id'>
+                            <h1>My Profile</h1>
+                            </a>
+                                ";
+                            ?>
+                        </section>
+                        <section class="p-container">
                     <div class="p-div">
-                    <?php
-                                $name = $_SESSION['username'];
-                                $sql = "SELECT * FROM `benefits_users` WHERE username='$name'";
+                     <?php
+                                $name = $_SESSION['email'];
+                                $s_batch_id = $_GET["bid"];
+                                $sql = "SELECT * FROM `students` WHERE s_email='$name'";
                                 $result = mysqli_query($conn , $sql);
                                 $row = mysqli_fetch_assoc($result);
-                                ?>
-                            <img src="<?php echo $row['s_image'];?>" alt="" srcset="" height="250px" width="250px">
+                                ?> 
+                                <?php
+                                echo "
+                            <img src='".$row['s_image']."' alt='' height='250px' width='250px'>
+                            ";
+                            ?>
                           
                             <div class="flex">
                             <div class="info">
                                 <p>Name</p>
                                 <p>Email</p>
+                                <p>Password</p>
                                 <p>Contact No</p>
                                 <p>Courses</p>
                             </div>
                             <div class="info r">
-                                <p><?php echo $row['username'];?></p>
-                                <p><?php echo $row['email'];?></p>
+                                <p><?php echo $row['s_name'];?></p>
+                                <p><?php echo $name;?></p>
+                                <p><?php echo $row['s_password'];?></p>
                                 <p><?php echo $row['s_phone'];?></p>
-                                <p><?php echo $row['course'];?></p>
+                                <p><?php echo $row['s_batch_name'];?></p>
                             </div>
                             </div>
                         </div>
-
-                   
                     <div class="m-div">
-                            <a class="a-flex" href="bookcontent.php">
-                                <div class="con">
-                                    <img src="./img/uploaded/eb.png" alt="" srcset="">
-                                </div>
-                                <div class="icon">
-                                    <h4> Book  </h4>
-                                    <p> Read Best Books  </p>
-                                    <i class="fa-solid fa-circle-right"></i>
-                                </div>
-                            </a>
-                            <a class="a-flex" href="videocontent.php">
-                                <div class="con">
-                                    <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
-                                </div>
-                                <div class="icon">
-                                    <h4> Video  </h4>
-                                    <p> Read Best Books  </p>
-                                    <i class="fa-solid fa-circle-right"></i>
-                                </div>
-                            </a>
-                            <a class="a-flex" href="notescontent.php">
-                                <div class="con">
-                                    <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
-                                </div>
-                                <div class="icon">
-                                    <h4> Notes  </h4>
-                                    <p> Read Best Books  </p>
-                                    <i class="fa-solid fa-circle-right"></i>
-                                </div>
-                            </a>
-                            <a class="a-flex" href="classcontent.php">
-                                <div class="con">
-                                    <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
-                                </div>
-                                <div class="icon">
-                                    <h4> Class Recordings  </h4>
-                                    <p> Read Best Books  </p>
-                                    <i class="fa-solid fa-circle-right"></i>
-                                </div>
-                            </a>
-                            <a class="a-flex" href="assesmentscontent.php">
-                                <div class="con">
-                                    <img src="./img/uploaded/cw.jpeg" alt="" srcset="">
-                                </div>
-                                <div class="icon">
-                                    <h4> Assesments </h4>
-                                    <p> Read Best Books  </p>
-                                    <i class="fa-solid fa-circle-right"></i>
-                                </div>
-                            </a>
-                            
+                    <?php
+                                $sql = "SELECT * FROM `content` WHERE batch_id='$s_batch_id'";
+                                $result = mysqli_query($conn , $sql);
+                                while($row = mysqli_fetch_assoc($result)){
+                                echo "
+                                <a class='a-flex' href='contentdisplay.php?batchid=$s_batch_id&contentid=".$row["content_id"]."'>
+                                    <div class='con'>
+                                        <img src='' alt='' srcset=''>
+                                    </div>
+                                    <div class='icon'>
+                                        <h4>".$row["content_name"]."</h4>
+                                        <p> ".$row["content_desc"]." </p>
+                                        <i class='fa-solid fa-circle-right'></i>
+                                    </div>
+                                </a>  
+                                ";
+                                }
+                                    ?> 
                             </a>
                             <a href="tel:9717666076" class="btn" style="margin: 10px;">Join More Courses</a>
                             </div>

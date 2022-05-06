@@ -1,0 +1,34 @@
+Batch table
+s.no   batch_id     batch_name          batch_time 
+ 1       102        Digital Marketing   6pm to 7pm 
+
+Students Table
+s.no  s_batch_id    s_name   s_phone  s_email        s_password  s_aaddhar s_pancard s_image
+ 1        102       Ashwani  9999999  dk@gmail.com   !@#$$%^&&    link        link    image
+
+content table
+s.no batch_id  content_id content_name content_desc content_image
+ 1     102      1021        Book         best_book     image
+ 2      1         1         video
+ 3      2        2002       book         
+
+
+Books
+s.no  batch_id  content_id book_id  book_name  book_pdf
+                             2
+Notes
+s.no  batch_id  content_id notes_id  notes_name  notes_pdf
+
+Videos
+s.no  batch_id  content_id video_id  video_name  video_code/drive-link
+
+Assesments
+s.no  batch_id  content_id asses_id  asses_name  asses_code
+
+Class Recordings
+s.no  batch_id  content_id book_id  book_name  book_pdf 
+
+
+ 6pm   digital marketing
+ 7pm   web development
+     

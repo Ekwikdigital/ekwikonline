@@ -2,20 +2,26 @@
 <?php
 $login = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-include('./include/db_connect.php');
-$s_username = $_POST["l_username"];
-$s_password = $_POST["l_password"];
+include('./include/db_connect_copy.php');
+$s_email = $_POST["s_email"];
+$s_password = $_POST["s_password"];
 $exists = false;
 
-$sql = "Select * from benefits_users where username='$s_username' AND password='$s_password'";
+$sql = "SELECT * FROM `students` WHERE s_email='$s_email' AND s_password='$s_password'";
 $result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+$batch_id = $row['s_batch_id'];
 $num = mysqli_num_rows($result);
 if ($num == 1){
     $login = true;
     session_start();
     $_SESSION['loggedin'] = true; 
-    $_SESSION['username'] = $s_username;
-    header("location: myaccount.php");  
+    $_SESSION['email'] = $s_email;
+    $_SESSION['batchid'] = $batch_id;
+
+    $sql_access = "INSERT INTO `loginaccess` (`Login/logout`, `email`, `timestamp`) VALUES ('Login', '$s_email', current_timestamp())";
+    $result_access = mysqli_query($conn, $sql_access);
+    header("location: myaccount.php?bid=$batch_id");  
 }
 else {
     echo'<script>alert("You are not Enroll in Our Courses. Please Contact on 9717666076 to Enroll.")</script>';
@@ -55,23 +61,6 @@ if($login) {
         
     <div class="main-wrapper">
         <div class="login-container">
-            <!-- Login and signup -->
-        <!-- <div class="forms-container">
-            <h2> Login </h2>
-            <form action="" method="POST">
-                <label for="l_username">Username</label>
-                <br>
-                <input type="text" name="l_username" id="l_username" class="input" required>
-                <br>
-                <label for="l_username">Password</label>
-                <br>
-                <input type="password" name="l_password" id="l_password" class="input" required>
-                <br>
-                <br>
-                <button class="btn" type="submit">Login</button>
-            </form>
-        </div>
-        </div> -->
     <div class="form-body without-side">
         <div class="website-logo">
             <a href="index.html">
@@ -93,8 +82,8 @@ if($login) {
                         <h3>Login to Your Account</h3>
                         <p>Access to the Best Quality Content Provided By Ekwik Classes.</p>
                         <form action="" method="POST">
-                            <input class="form-control" type="text" name="l_username" id="l_username" placeholder="Student Id" required>
-                            <input class="form-control" type="password" name="l_password" id="l_password" placeholder="Password" required>
+                            <input class="form-control" type="email" name="s_email" id="s_email" placeholder="Student Email" required>
+                            <input class="form-control" type="password" name="s_password" id="s_password" placeholder="Password" required>
                             <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn">Login</button>
                             </div>

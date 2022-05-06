@@ -3607,8 +3607,16 @@ h2 {
     align-items: center;
 }
 
-.p-container {
+.h {
     margin-top: 150px !important;
+    text-align: center;
+}
+
+.h a {
+    width: max-content;
+}
+
+.p-container {
     /* border: 5px solid black; */
     /* box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%); */
     border-radius: 15px;
