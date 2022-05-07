@@ -6,6 +6,10 @@ include("./include/db_connect_copy.php");
 $s_batch_id = $_GET["batchid"];
 $content_id = $_GET['contentid'];
 $book_id = $_GET['bookid'];
+$video_id = $_GET['videoid'];
+$notes_id = $_GET['notesid'];
+$class_id = $_GET['classid'];
+$assesment_id = $_GET['assesmentid'];
 
 $sql = "SELECT * FROM `content` WHERE batch_id='$s_batch_id' AND content_id='$content_id'";
 $result = mysqli_query($conn , $sql);
@@ -18,14 +22,17 @@ $content_list = $row['default_code'];
 $sql1 = "SELECT * FROM `books` WHERE batch_id='$s_batch_id' AND content_id='$content_id' AND book_id='$book_id'";
 $result1 = mysqli_query($conn , $sql1);
 
-$sql2 = "SELECT * FROM `videos` WHERE batch_id='$s_batch_id' AND content_id='$content_id'";
+$sql2 = "SELECT * FROM `videos` WHERE batch_id='$s_batch_id' AND content_id='$content_id' AND video_id='$video_id'";
 $result2 = mysqli_query($conn , $sql2);
 
-$sql3 = "SELECT * FROM `notes` WHERE batch_id='$s_batch_id' AND content_id='$content_id'";
+$sql3 = "SELECT * FROM `notes` WHERE batch_id='$s_batch_id' AND content_id='$content_id' AND notes_id='$notes_id'";
 $result3 = mysqli_query($conn , $sql3);
 
-// $sql4 = "SELECT * FROM `class` WHERE batch_id='$s_batch_id' AND content_id='$content_id'";
-// $result4 = mysqli_query($conn , $sql4);
+$sql4 = "SELECT * FROM `classes` WHERE batch_id='$s_batch_id' AND content_id='$content_id' AND class_id='$class_id'";
+$result4 = mysqli_query($conn , $sql4);
+
+$sql5 = "SELECT * FROM `assesment` WHERE batch_id='$s_batch_id' AND content_id='$content_id' AND assesment_id='$assesment_id'";
+$result5 = mysqli_query($conn , $sql5);
 
 ?> 
 
@@ -66,6 +73,7 @@ $result3 = mysqli_query($conn , $sql3);
             }
         </style>
 </head>
+
 <body id="body" class="home loaded">
     <div class="main-wrapper">
         <main class="content">
@@ -86,7 +94,8 @@ if($content_list==1)
         while($row1 = mysqli_fetch_assoc($result1))
                     {
                         echo "
-                        <h4>".$row1["book_pdf"]."</h4>
+                        <h4>".$row1["book_name"]."</h4>
+                        <object data='".$row1["book_pdf"]."' type='application/pdf'></object>
                         ";
                     }
     }
@@ -95,16 +104,8 @@ elseif($content_list==2)
         while($row2 = mysqli_fetch_assoc($result2))
                     {
                         echo "
-                        <a class='a-flex' href='contentdisplay.php?id=".$row2["content_id"]."'>
-                        <div class='con'>
-                        <img src='' alt='' srcset=''>
-                        </div>
-                        <div class='icon'>
                         <h4>".$row2["video_title"]."</h4>
-                        <p> ".$row2["video_code"]." </p>
-                        <i class='fa-solid fa-circle-right'></i>
-                        </div>
-                        </a>  
+                        // <iframe width='560' height='315' src='".$row2["video_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
                         ";
                     }
     }
@@ -113,15 +114,8 @@ elseif($content_list==3)
         while($row3 = mysqli_fetch_assoc($result3))
                     {
                         echo "
-                        <a class='a-flex' href='contentdisplay.php?id=".$row3["content_id"]."'>
-                        <div class='con'>
-                        <img src='' alt='' srcset=''>
-                        </div>
-                        <div class='icon'>
-                        <h4>".$row3["notes_title"]."</h4>
-                        <i class='fa-solid fa-circle-right'></i>
-                        </div>
-                        </a>  
+                        <h4>".$row3["notes_name"]."</h4>
+                        <object data='".$row3["notes_pdf"]."' type='application/pdf'></object>
                         ";
                     }
     }
@@ -130,21 +124,24 @@ elseif($content_list==4)
         while($row4 = mysqli_fetch_assoc($result4))
                     {
                         echo "
-                        <a class='a-flex' href='contentdisplay.php?id=".$row4["content_id"]."'>
-                        <div class='con'>
-                        <img src='' alt='' srcset=''>
-                        </div>
-                        <div class='icon'>
-                        <h4>".$row4["notes_title"]."</h4>
-                        <i class='fa-solid fa-circle-right'></i>
-                        </div>
-                        </a>  
+                        <h4>".$row4["notes_name"]."</h4>
+                        <iframe width='560' height='315' src='".$row4["video_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                        ";
+                    }
+    }
+elseif($content_list==5)
+    {
+        while($row5 = mysqli_fetch_assoc($result5))
+                    {
+                        echo "
+                        <h4>".$row5["notes_name"]."</h4>
+                        <iframe width='560' height='315' src='".$row5["video_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
                         ";
                     }
     }
 
-                             ?> 
-                            </a>
+        ?>
+        </a>
         </main>
         <?php
             include("./include/header.php");

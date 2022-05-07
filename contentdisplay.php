@@ -23,8 +23,11 @@ $result2 = mysqli_query($conn , $sql2);
 $sql3 = "SELECT * FROM `notes` WHERE batch_id='$s_batch_id' AND content_id='$content_id'";
 $result3 = mysqli_query($conn , $sql3);
 
-// $sql4 = "SELECT * FROM `class` WHERE batch_id='$s_batch_id' AND content_id='$content_id'";
-// $result4 = mysqli_query($conn , $sql4);
+$sql4 = "SELECT * FROM `classes` WHERE batch_id='$s_batch_id' AND content_id='$content_id'";
+$result4 = mysqli_query($conn , $sql4);
+
+$sql5 = "SELECT * FROM `assesment` WHERE batch_id='$s_batch_id' AND content_id='$content_id'";
+$result5 = mysqli_query($conn , $sql5);
 
 ?> 
 
@@ -102,13 +105,12 @@ elseif($content_list==2)
         while($row2 = mysqli_fetch_assoc($result2))
                     {
                         echo "
-                        <a class='a-flex' href='contentdisplay.php?id=".$row2["content_id"]."'>
+                        <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&videoid=".$row2["video_id"]."'>
                         <div class='con'>
                         <img src='' alt='' srcset=''>
                         </div>
                         <div class='icon'>
                         <h4>".$row2["video_title"]."</h4>
-                        <p> ".$row2["video_code"]." </p>
                         <i class='fa-solid fa-circle-right'></i>
                         </div>
                         </a>  
@@ -120,7 +122,7 @@ elseif($content_list==3)
         while($row3 = mysqli_fetch_assoc($result3))
                     {
                         echo "
-                        <a class='a-flex' href='contentdisplay.php?id=".$row3["content_id"]."'>
+                        <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&notesid=".$row3["notes_id"]."'>
                         <div class='con'>
                         <img src='' alt='' srcset=''>
                         </div>
@@ -137,20 +139,36 @@ elseif($content_list==4)
         while($row4 = mysqli_fetch_assoc($result4))
                     {
                         echo "
-                        <a class='a-flex' href='contentdisplay.php?id=".$row4["content_id"]."'>
+                        <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&classid=".$row4["class_id"]."'>
                         <div class='con'>
                         <img src='' alt='' srcset=''>
                         </div>
                         <div class='icon'>
-                        <h4>".$row4["notes_title"]."</h4>
+                        <h4>".$row4["class_title"]."</h4>
                         <i class='fa-solid fa-circle-right'></i>
                         </div>
                         </a>  
                         ";
                     }
     }
-
-                             ?> 
+elseif($content_list==5)
+    {
+        while($row5 = mysqli_fetch_assoc($result5))
+                    {
+                        echo "
+                        <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&assesmentid=".$row5["class_id"]."'>
+                        <div class='con'>
+                        <img src='' alt='' srcset=''>
+                        </div>
+                        <div class='icon'>
+                        <h4>".$row5["assesment_title"]."</h4>
+                        <i class='fa-solid fa-circle-right'></i>
+                        </div>
+                        </a>  
+                        ";
+                    }
+    }
+?>
                             </a>
                             
                         </section>

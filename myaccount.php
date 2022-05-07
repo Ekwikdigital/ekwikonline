@@ -32,6 +32,7 @@ include("./include/db_connect_copy.php");
                 <!-- <div class="section-screen-main__bg" ></div> -->
                 <div class="wrapper">
                     <section class="h">
+                        <h2>Notice :- Do Not Provide Your Login details to Others, Otherviews You will be Punished.</h2>
                         <?php
                         $batch_id = $_SESSION["batchid"];
                         echo "
@@ -43,7 +44,7 @@ include("./include/db_connect_copy.php");
                         </section>
                         <section class="p-container">
                     <div class="p-div">
-                     <?php
+                    <?php
                                 $name = $_SESSION['email'];
                                 $s_batch_id = $_GET["bid"];
                                 $sql = "SELECT * FROM `students` WHERE s_email='$name'";
@@ -55,7 +56,7 @@ include("./include/db_connect_copy.php");
                             <img src='".$row['s_image']."' alt='' height='250px' width='250px'>
                             ";
                             ?>
-                          
+                        
                             <div class="flex">
                             <div class="info">
                                 <p>Name</p>
