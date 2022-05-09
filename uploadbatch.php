@@ -46,6 +46,11 @@ else {
     <link rel="stylesheet" type="text/css" href="./css/fontawesome-all.min.css">
     <link rel="stylesheet" type="text/css" href="./css/iofrm-style.css">
     <link rel="stylesheet" type="text/css" href="./css/iofrm-theme29.css">
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
 </head>
 
 <body class="home loaded">
@@ -71,7 +76,23 @@ else {
                 <div class="form-content">
                     <div class="form-items">
                         <h3>Upload Batch Details</h3>
-                        <p>Previous Batch Id is </p>
+                        <?php              
+                    include('./include/db_connect_copy.php');
+             
+                        $sql_batch = "SELECT * FROM `batch` ORDER BY s_no DESC LIMIT 1";
+                        $result_batch = mysqli_query($conn , $sql_batch);
+
+                        if(mysqli_num_rows($result_batch) > 0)
+                        {
+                        
+                            foreach($result_batch as $row)
+                            {
+                                echo "
+                                <p> Batch Id is <span class='red'> ".$row['batch_id']." </span> and Name is <span class='red'> ".$row['batch_name']." </span>.
+                                    ";
+                            }
+                        }
+                        ?>
                         <form action="" method="POST">
                             <input class="form-control" type="number" name="batch_id" id="batch_id" placeholder="Batch Id" required>
                             <input class="form-control" type="text" name="batch_name" id="batch_name" placeholder="Batch Name" required>

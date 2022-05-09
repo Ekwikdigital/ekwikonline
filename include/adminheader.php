@@ -35,25 +35,25 @@ include("./include/db_connect_copy.php");
                                     <a href="uploadcontent.php">Content</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Book</a>
+                                    <a href="uploadbook.php">Book</a>
                                 </li>
                                 <li>
-                                    <a href="demo.php">Video</a>
+                                    <a href="uploadvideo.php">Video</a>
                                 </li>
                                 <li>
-                                    <a href="demo.php">Note</a>
+                                    <a href="uploadnote.php">Note</a>
                                 </li>
                                 <li>
-                                    <a href="demo.php">Class</a>
+                                    <a href="uploadclass.php">Class</a>
                                 </li>
                                 <li>
-                                    <a href="demo.php">Assesment</a>
+                                    <a href="uploadassesment.php">Assesment</a>
                                 </li>
                                 <li>
-                                    <a href="demo.php">Blog</a>
+                                    <a href="uploadblog.php">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="demo.php">Website Data</a>
+                                    <a href="websitedata.php">Website Data</a>
                                 </li>
                             </ul>
                         </div>

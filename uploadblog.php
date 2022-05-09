@@ -1,47 +1,36 @@
 
 <?php
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-include('./include/db_connect_copy.php');
-$batch_id = $_POST["batch_id"];
-$content_id = $_POST["content_id"];
-$content_name = $_POST["content_name"];
-$content_desc = $_POST["content_desc"];
-$content_file = $_FILES["content_image"];
-$default_code = $_POST["default_code"];
-$exists = false;
+session_start();
+include("./include/db_connect_copy.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $blog_heading = $_POST["blog_heading"];
+    $blog_desc = $_POST["blog_desc"];
+    $blog_date = $_POST["blog_date"];
+    $blog_file = $_FILES["file"];
+    $blog_summary = $_POST["blog_summary"];
+    $blog_id = $_POST["blog_id"];
 
 
+    // for image upload 
+     $filename = $blog_file['name'];
+     $filerror = $blog_file['error'];
+     $filetmp = $blog_file['tmp_name'];
 
-//Check whether this batch id Exists
-$existSql = "SELECT * FROM `content` WHERE content_id='$content_id'";
-$result = mysqli_query($conn, $existSql);
-$numExistRows = mysqli_num_rows($result);
-if($numExistRows > 0){
-    // $exists = true;
-    echo '<script>alert("Content ID Already Exists ")</script>';
-}
-else {
-    
-// for image upload 
-$filename = $content_file['name'];
-$filerror = $content_file['error'];
-$filetmp = $content_file['tmp_name'];
-
-$fileext = explode('.',$filename);
-$filecheck = strtolower(end($fileext));
+     $fileext = explode('.',$filename);
+     $filecheck = strtolower(end($fileext));
 
 
-$fileextstored = array('png', 'jpg', 'jpeg');
+    $fileextstored = array('png', 'jpg', 'jpeg');
 
-if(in_array($filecheck,$fileextstored)){
-   $destinationfile ='content_image/'.$filename;
-   move_uploaded_file($filetmp,$destinationfile);
+    if(in_array($filecheck,$fileextstored)){
+        $destinationfile ='blogimage/'.$filename;
+        move_uploaded_file($filetmp,$destinationfile);
 
-}
-    $sql = "INSERT INTO `content` (`batch_id`, `content_id`, `content_name`,`content_desc`,`content_image`,`default_code`) VALUES ('$batch_id', '$content_id', '$content_name','$content_desc','$destinationfile','$default_code')";
-    $result = mysqli_query($conn, $sql);  
-    echo '<script>alert("Sucessfully added")</script>';
-}
+    }
+    $sql = "INSERT INTO `blogs` (`blog_id`, `blog_heading`, `blog_summary`, `blog_desc`, `blog_image`, `blog_date`) VALUES ('$blog_id', '$blog_heading', '$blog_summary', '$blog_desc', '$destinationfile', '$blog_date');";
+    $result = mysqli_query($conn, $sql);
+    echo '<script>alert("Sucessfully Posted")</script>';
+
 }
 ?>
 <!DOCTYPE html>
@@ -68,6 +57,7 @@ if(in_array($filecheck,$fileextstored)){
     <link rel="stylesheet" type="text/css" href="./css/fontawesome-all.min.css">
     <link rel="stylesheet" type="text/css" href="./css/iofrm-style.css">
     <link rel="stylesheet" type="text/css" href="./css/iofrm-theme29.css">
+    <script src="./ckeditor/ckeditor.js"></script>
     <style>
         .red {
             color: red;
@@ -97,11 +87,11 @@ if(in_array($filecheck,$fileextstored)){
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
-                        <h3>Upload Content Details </h3>
+                        <h3>Upload Blog </h3>
                     <?php              
                     include('./include/db_connect_copy.php');
              
-                        $sql_batch = "SELECT * FROM `batch` ORDER BY s_no DESC LIMIT 1";
+                        $sql_batch = "SELECT * FROM `blogs` ORDER BY s_no DESC LIMIT 1";
                         $result_batch = mysqli_query($conn , $sql_batch);
 
                         if(mysqli_num_rows($result_batch) > 0)
@@ -110,33 +100,21 @@ if(in_array($filecheck,$fileextstored)){
                             foreach($result_batch as $row)
                             {
                                 echo "
-                                <p> Batch Id is <span class='red'> ".$row['batch_id']." </span> and Name is <span class='red'> ".$row['batch_name']." </span>.
+                                <p> Last Blog Id is <span class='red'> ".$row['blog_id']." </span> and Heading is <span class='red'> ".$row['blog_heading']." </span>.
                                     ";
                             }
                         }
                         ?>
-                        
-                            <br> <br> 
-                            &#9734; Default Code for Content is Given Below
-                            <br> <br>
-                            Book = 1
-                            <br> <br>
-                            Video = 2
-                            <br> <br>
-                            Note = 3
-                            <br> <br>
-                            Class = 4
-                            <br> <br>
-                            Assesment = 5
                         </p>
                         <form action="" method="POST" enctype="multipart/form-data">
-                            <input class="form-control" type="number" name="batch_id" id="batch_id" placeholder="Batch Id" required>
-                            <input class="form-control" type="text" name="content_id" id="content_id" placeholder="Content Id" required>
-                            <input class="form-control" type="text" name="content_name" id="content_name" placeholder="Content Name" required>
-                            <input class="form-control" type="text" name="content_desc" id="content_desc" placeholder="Content Description" required>
-                            <label for="content_image"> Content Image</label>
-                            <input class="form-control" type="file" name="content_image" id="content_image" required>
-                            <input class="form-control" type="number" name="default_code" id="default_code" placeholder="Default Code For Content" required>
+                            <input class="form-control" type="number" name="blog_id" id="blog_id" placeholder="Blog Id" required>
+                            <input class="form-control" type="text" name="blog_heading" id="blog_heading" placeholder="Blog Heading" required>
+                            <input class="form-control" type="text" name="blog_summary" id="blog_summary" placeholder="Blog Summary" required>
+                            <label for="image">Blog Description</label>
+                            <textarea class="form-control" name="blog_desc" id="blog_desc" cols="80" rows="20" required></textarea>                            
+                            <label for="file"> Blog Image</label>
+                            <input class="form-control" type="file" name="file" id="file" required>
+                            <input class="form-control" type="date" name="blog_date" id="blog_date" required>
                             <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn">Submit</button>
                             </div>
@@ -146,6 +124,9 @@ if(in_array($filecheck,$fileextstored)){
             </div>
         </div>
     </div>
+    <script>
+    CKEDITOR.replace('blog_desc');
+</script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -161,6 +142,7 @@ if(in_array($filecheck,$fileextstored)){
     <script src="js/components/jquery.singlePageNav.min.js" defer></script>
     <script src="js/components/swiper.js" defer></script>
     <script src="js/custom.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 
 </html>

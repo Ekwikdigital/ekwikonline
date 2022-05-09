@@ -23,6 +23,11 @@ session_start();
     <link rel="preload " href="fonts/Lato/LatoBold.woff2" as="font" crossorigin>
     <link rel="preload " href="css/style.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        .section-logos {
+            margin-top: 150px !important;
+        }
+    </style>
 </head>
 <body id="body" class="home loaded">
     <div class="main-wrapper">
@@ -34,7 +39,7 @@ session_start();
                         <div class="section-heading"><span>Be sure</span></div>
                         <h1 class="h1 h1-main">your success is in&nbsp;our&nbsp;hands</h1>
                         <div class="screen-main__text">Agency with 12&nbsp;years of history, 15&nbsp;employees, Fortune 5000&nbsp;clients and proven results. <br> Login for More Benefits</div>
-                        <a href="courses.html" class="btn btn_learn">Learn more</a>
+                        <a href="#formOrder" class="btn btn_started-header js-fancybox">get started</a>
                     </div>
                 </div>
             </div>
@@ -323,42 +328,7 @@ session_start();
                     </div>
                 </div>
             </div>       
-        <?php
-            if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-            include("./include/db_connect.php");
-
-            // Check connection
-            if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-            }
-            // echo "Connected successfully";
-
-            $s_name = $_POST["name"]; 
-            $s_surname = $_POST["surname"]; 
-            $s_phoneno = $_POST["phoneno"]; 
-            $s_email = $_POST["email"]; 
-            $st_name = $_POST["s_name"]; 
-            $st_email = $_POST["s_email"]; 
-            $st_message = $_POST["s_message"]; 
-            $newsletter = $_POST["newsletter"]; 
-            $b_name = $_POST["b_name"]; 
-            $b_email = $_POST["b_email"]; 
-            $b_email = $_POST["b_email"]; 
-            $b_phoneno = $_POST["b_phone"]; 
-
-
-            $sql = "INSERT INTO `students_data`(`s_name`, `s_surname`, `s_phoneno`, `s_email`) VALUES ('$s_name','$s_surname','$s_phoneno','$s_email')";
-            $sql2 = "INSERT INTO `consultation`(`s_name`, `s_email`, `s_message`) VALUES ('$st_name','$st_email','$st_message')";
-            $sql3 = "INSERT INTO `newsletter`(`s_email`) VALUES ('$newsletter')";
-            $sql4 ="INSERT INTO `brochure`(`b_name`, `b_phoneno`, `b_email`) VALUES ('$b_name','$b_email','$b_phoneno')" ;
-            $result = mysqli_query($conn,$sql);
-            $result2 = mysqli_query($conn,$sql2);
-            $result3 = mysqli_query($conn,$sql3);
-            $result4 = mysqli_query($conn,$sql4);
-            }
-        ?>
-            <div class="section-consultation">
+            <!-- <div class="section-consultation">
                 <div class="section-consultation__bg js-lazy" data-src="img/bg/bg-2.svg"></div>
                 <div class="wrapper">
                     <div class="consultation-form-wrap">
@@ -401,7 +371,7 @@ session_start();
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="section-logos">
                 <div class="wrapper">
                     <div class="logos">
@@ -806,6 +776,8 @@ session_start();
                     </div>
                 </div>
             </div> -->
+
+            
         </main>
         <?php
             include("./include/header.php");

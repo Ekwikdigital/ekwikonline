@@ -156,12 +156,12 @@ elseif($content_list==5)
         while($row5 = mysqli_fetch_assoc($result5))
                     {
                         echo "
-                        <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&assesmentid=".$row5["class_id"]."'>
+                        <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&assesmentid=".$row5["assesment_id"]."'>
                         <div class='con'>
                         <img src='' alt='' srcset=''>
                         </div>
                         <div class='icon'>
-                        <h4>".$row5["assesment_title"]."</h4>
+                        <h4>".$row5["assesment_name"]."</h4>
                         <i class='fa-solid fa-circle-right'></i>
                         </div>
                         </a>  
@@ -169,8 +169,7 @@ elseif($content_list==5)
                     }
     }
 ?>
-                            </a>
-                            
+                        </a>  
                         </section>
                         <section class="flex">
                         <a href="tel:9717666076" class="btn">Join More Courses</a>

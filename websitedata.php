@@ -48,15 +48,15 @@ include("./include/db_connect_copy.php");
         <main class="content">
             <section class="margin">
                 <div id="" class="sub-section">
-                    <h2 class="btn"> Who login to Website</h2>
+                    <h2 class="btn"> Get Started Data</h2>
                         <div class="table-responsive">
                             <table id="employee_data" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <td> So.No. </td>
-                                        <td> Status </td>
-                                        <td> User </td>
-                                        <td> Timing (YY-MM-DD Time) </td>
+                                        <td> Name </td>
+                                        <td> Email </td>
+                                        <td> Message </td>
                                         <td> Manage </td>
                                     </tr> 
                                 </thead>

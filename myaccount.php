@@ -82,7 +82,7 @@ include("./include/db_connect_copy.php");
                                 echo "
                                 <a class='a-flex' href='contentdisplay.php?batchid=$s_batch_id&contentid=".$row["content_id"]."'>
                                     <div class='con'>
-                                        <img src='' alt='' srcset=''>
+                                        <img src='".$row["content_image"]."' alt='' srcset=''>
                                     </div>
                                     <div class='icon'>
                                         <h4>".$row["content_name"]."</h4>

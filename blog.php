@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-include("./include/db_connect.php");
+include("./include/db_connect_copy.php");
 ?>
 
 
@@ -66,7 +66,7 @@ include("./include/db_connect.php");
                                     </a>
                                     <div class='news__content'>
                                         <div class='news-header'>
-                                            <div class='news__date'>". $row['timestamp']."</div>
+                                            <div class='news__date'>". $row['blog_date']."</div>
                                         </div>
                                         <div class='news__title'><a href='article.php?id=".$row['blog_id']."'>
                                         ". $row['blog_heading']."

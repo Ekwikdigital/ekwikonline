@@ -173,6 +173,22 @@ include("./include/db_connect_copy.php");
     </div>
     <!-- BODY EOF   -->
     <!-- popups -->
+
+    <?php
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+        include('./db_connect_copy.php');
+        $s_name = $_POST["s_name"];
+        $s_email = $_POST["s_email"];
+        $s_phone = $_POST["s_phone"];
+        $b_name = $_POST["b_name"];
+        $b_email = $_POST["b_email"];
+        $b_phone = $_POST["b_phone"];
+        $s_message = $_POST["s_message"];
+        $sql2 = "INSERT INTO `consultation` (`s_name`, `s_email`,`s_phone`, `s_message`) VALUES ('$s_name', '$s_email','$s_phone','$s_message')";
+        $result2 = mysqli_query($conn, $sql2);
+        echo '<script>alert("Successfully Submitied ")</script>';
+            }
+            ?>
     <div class="window-open">
         <div class="popup" id="formOrder2" tabindex="0">
             <div class="block-popup">
@@ -217,8 +233,8 @@ include("./include/db_connect_copy.php");
                     <div class="popup-title">Get a free consultation</div>
                     <div class="popup-decor-top"></div>
                 </div>
-                <div class="popup-text">Culpa non ex tempor qui nulla laborum. Laboris culpa ea incididunt dolore ipsum tempor duis do ullamc.</div>
-                <form method="POST" action=""  >
+                <!-- <div class="popup-text">Culpa non ex tempor qui nulla laborum. Laboris culpa ea incididunt dolore ipsum tempor duis do ullamc.</div> -->
+                <form method="POST" >
                     <div class="popup-form">
                         <div class="box-field">
                             <input type="text" placeholder="Name" id="s_name" name="s_name" required>
@@ -227,17 +243,14 @@ include("./include/db_connect_copy.php");
                             <input type="email" placeholder="Email" id="s_email" name="s_email" required>
                         </div>
                         <div class="box-field">
+                            <input type="tel" placeholder="Contact Number" id="s_phone" name="s_phone" required>
+                        </div>
+                        <div class="box-field">
                             <textarea placeholder="Message" id="s_message" name="s_message" required></textarea>
                         </div>
                         <div class="box-fileds box-fileds_2">
                             <div class="box-filed box-filed_btn">
                                 <input type="submit" class="btn" value="Submit">
-                            </div>
-                            <div class="box-filed box-field__accept">
-                                <label class="checkbox-element">
-                                    <input type="checkbox" >
-                                    <span class="checkbox-text">I accept the <a href="#" target="_blank">Terms and Conditions.</a></span>
-                                    </label>
                             </div>
                         </div>
                     </div>
