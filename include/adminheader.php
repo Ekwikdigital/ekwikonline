@@ -29,6 +29,9 @@ include("./include/db_connect_copy.php");
                                     </li>
                                 </a>
                                 <li>
+                                    <a href="addstudent.php">Add Student</a>
+                                </li>
+                                <li>
                                     <a href="uploadbatch.php">Batch</a>
                                 </li>
                                 <li>

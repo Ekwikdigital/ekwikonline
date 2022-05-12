@@ -49,15 +49,6 @@ include("./include/db_connect_copy.php");
                                     </li>
                                 </a>
                                 <li>
-                                    <a href="Aboutus.php">About us</a>
-                                </li>
-                                <li>
-                                    <a href="Contactus.php">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="courses.php">Courses</a>
-                                </li>
-                                <li>
                                     <a href="demo.php">Demo</a>
                                 </li>
                                 <?php
@@ -101,9 +92,9 @@ include("./include/db_connect_copy.php");
                             <div class="footer-phone__item">
                                 <i class="icon-phone"></i><a href="tel:9717666076">+91-9717666076</a>
                             </div>
-                        </div>
+                        </div> 
                     </div>
-                    <a href="#formOrder" class="btn-2 btn_started-header js-fancybox">get started</a>
+                    <a href="" class="btn-2 btn_started-header js-fancybox">EMI</a>
                 </div>
                 <div class="bars-mob js-button-nav">
                     <div class="hamburger">
@@ -184,8 +175,13 @@ include("./include/db_connect_copy.php");
         $b_email = $_POST["b_email"];
         $b_phone = $_POST["b_phone"];
         $s_message = $_POST["s_message"];
+        $newsletter = $_POST["newsletter"];
+        $sql1 = "INSERT INTO `brochure` (`b_name`, `b_email`, `b_phone`) VALUES ('$b_name', '$b_email', '$b_phone');";
+        $result1 = mysqli_query($conn, $sql1);
         $sql2 = "INSERT INTO `consultation` (`s_name`, `s_email`,`s_phone`, `s_message`) VALUES ('$s_name', '$s_email','$s_phone','$s_message')";
         $result2 = mysqli_query($conn, $sql2);
+        $sql3 = "INSERT INTO `newsletter` (`newsletter`) VALUES ('$newsletter')";
+        $result3 = mysqli_query($conn, $sql3);
         echo '<script>alert("Successfully Submitied ")</script>';
             }
             ?>

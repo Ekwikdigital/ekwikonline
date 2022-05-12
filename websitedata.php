@@ -37,17 +37,14 @@ include("./include/db_connect_copy.php");
     table thead tr td {
         font-weight: bold;
     }
-    .btn-2 {
-        padding: 10px;
-        margin: 5px;
-    }
+    
 </style>
 
 <body id="body" class="home loaded">
     <div class="main-wrapper">
         <main class="content">
             <section class="margin">
-                <div id="" class="sub-section">
+                <div id="consultation" class="sub-section">
                     <h2 class="btn"> Get Started Data</h2>
                         <div class="table-responsive">
                             <table id="employee_data" class="table table-striped table-bordered">
@@ -56,33 +53,33 @@ include("./include/db_connect_copy.php");
                                         <td> So.No. </td>
                                         <td> Name </td>
                                         <td> Email </td>
+                                        <td> Phone </td>
                                         <td> Message </td>
                                         <td> Manage </td>
                                     </tr> 
                                 </thead>
                             <?php                           
-                                $sql = "SELECT * FROM `loginaccess` ORDER BY s_no DESC LIMIT 1";
+                                $sql = "SELECT * FROM `consultation`";
                                 $result = mysqli_query($conn , $sql);
-
-                                if(mysqli_num_rows($result) > 0)
-                                {
-                                
-                                    foreach($result as $row)
-                                    {
+                                        $c=1;
+                                        while ($row = mysqli_fetch_assoc($result)) {
                                         echo "
                                             <tr>  
-                                            <td>" . $row['s_no'] . "</td>  
-                                            <td>" . $row['Login/logout'] . "</td>   
-                                            <td>" . $row['email'] . "</td>   
-                                            <td>" . $row['timestamp'] . "</td>   
-                                            <td>
-                                            <a href='' class='btn-2'> Edit </a>
-                                            <a href='' class='btn-2'> Delete </a>
-                                            </td>   
+                                            <td>$c</td>  
+                                            <td>" . $row['s_name'] . "</td>   
+                                            <td>" . $row['s_email'] . "</td>   
+                                            <td>" . $row['s_phone'] . "</td>   
+                                            <td>" . $row['s_message'] . "</td>   
+                                            <td> <form action='delete.php' method='post'>
+                                           <input type='hidden' name='deleteconsultation_s_no' value='" . $row['s_no'] . "'>
+                                           <input type='submit' name='deleteconsultation' value='Delete' class='btn-2' onclick = 'return confirmdelete()' >
+                                           </form>
+                                       </td>     
                                             </tr>  
                                             ";
+                                            $c++;
                                     }
-                                }
+                                
                             ?>
                             </table>    
                         </div>
@@ -90,35 +87,38 @@ include("./include/db_connect_copy.php");
 
 
 
-                <div id="" class="sub-section">
-                    <h2 class="btn"> Batch Details</h2>
+                <div id="brochure" class="sub-section">
+                    <h2 class="btn"> Brochure Details</h2>
                         <div class="table-responsive">
                             <table id="employee_data1" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <td> So.No. </td>
-                                        <td> Batch Id </td>
-                                        <td> Batch Name </td>
-                                        <td>Batch Timings </td>
+                                        <td> Name </td>
+                                        <td> Email </td>
+                                        <td> Phone </td>
                                         <td> Manage </td>
                                     </tr> 
                                 </thead>
                             <?php
-                            $sql_batch = "SELECT * FROM `batch`";
+                            $sql_batch = "SELECT * FROM `brochure`";
                             $result_batch = mysqli_query($conn, $sql_batch);
+                            $b=1;
                             while ($row = mysqli_fetch_assoc($result_batch)) {
                                 echo "  
                                        <tr>  
-                                       <td>" . $row["s_no"] . "</td>  
-                                       <td>" . $row["batch_id"] . "</td>   
-                                       <td>" . $row["batch_name"] . "</td>   
-                                       <td>" . $row["batch_time"] . "</td>  
-                                        <td>
-                                            <a href='' class='btn-2'> Edit </a>
-                                            <a href='' class='btn-2'> Delete </a>
-                                            </td>    
+                                       <td>$b</td>  
+                                       <td>" . $row["b_name"] . "</td>   
+                                       <td>" . $row["b_email"] . "</td>   
+                                       <td>" . $row["b_phone"] . "</td>  
+                                       <td> <form action='delete.php' method='post'>
+                                           <input type='hidden' name='deletebrochure_s_no' value='" . $row['s_no'] . "'>
+                                           <input type='submit' name='deletebrochure' value='Delete' class='btn-2' onclick = 'return confirmdelete()' >
+                                           </form>
+                                       </td>         
                                         </tr>  
                                     ";
+                                    $b++;
                             }
                             ?>
                             </table>
@@ -127,246 +127,39 @@ include("./include/db_connect_copy.php");
 
 
 
-                <div id="" class="sub-section">
-                    <h2 class="btn"> Content Details</h2>
+                <div id="newsletter" class="sub-section">
+                    <h2 class="btn"> Newsletter Details</h2>
                         <div class="table-responsive">
                             <table id="employee_data2" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <td> So.No. </td>
-                                        <td> Batch Id </td>
-                                        <td> Content Id </td>
-                                        <td> Content Name</td>
-                                        <td> Content Description</td>
-                                        <td> Default Code</td>
+                                        <td> Email </td>
                                         <td> Manage </td>
                                     </tr> 
                                 </thead>
                             <?php
-                            $sql_content = "SELECT * FROM `content`";
+                            $sql_content = "SELECT * FROM `newsletter`";
                             $result_content = mysqli_query($conn, $sql_content);
+                            $n=1;
                             while ($row = mysqli_fetch_assoc($result_content)) {
                                 echo  " 
                                     <tr>  
-                                        <td>" . $row["s_no"] . "</td>  
-                                        <td>" . $row["batch_id"] . "</td>   
-                                        <td>" . $row["content_id"] . "</td>   
-                                        <td>" . $row["content_name"] . "</td>   
-                                        <td>" . $row["content_desc"] . "</td>   
-                                        <td>" . $row["default_code"] . "</td>  
-                                        <td>
-                                            <a href='' class='btn-2'> Edit </a>
-                                            <a href='' class='btn-2'> Delete </a>
-                                            </td>    
+                                        <td>$n</td>  
+                                        <td>" . $row["newsletter"] . "</td>   
+                                        <td> <form action='delete.php' method='post'>
+                                           <input type='hidden' name='deletenewsletter_s_no' value='" . $row['s_no'] . "'>
+                                           <input type='submit' name='deletenewsletter' value='Delete' class='btn-2' onclick = 'return confirmdelete()' >
+                                           </form>
+                                       </td>         
                                         </tr>  
                                     ";
+                                    $n++;
                             }
                             ?>
                             </table>
                         </div>
                 </div>
-
-
-
-                <div id="" class="sub-section">
-                    <h2 class="btn"> Batch Material Details of Book</h2>
-                        <div class="table-responsive">
-                            <table id="employee_data2" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <td> So.No. </td>
-                                        <td> Batch Id </td>
-                                        <td> Content Id </td>
-                                        <td> Book Id</td>
-                                        <td> Book Name</td>
-                                         <td> Manage </td>
-                                    </tr> 
-                                </thead>
-                            <?php
-                            $sql_books = "SELECT * FROM `books`";
-                            $result_books = mysqli_query($conn, $sql_books);
-                            while ($row = mysqli_fetch_assoc($result_books)) {
-                                echo "  
-                                        <tr>  
-                                        <td>" . $row["s_no"] . "</td>  
-                                        <td>" . $row["batch_id"] . "</td>   
-                                        <td>" . $row["content_id"] . "</td>   
-                                        <td>" . $row["book_id"] . "</td>   
-                                        <td>" . $row["book_name"] . "</td>   
-                                        <td>
-                                            <a href='' class='btn-2'> Edit </a>
-                                            <a href='' class='btn-2'> Delete </a>
-                                            </td>   
-                                        </tr>  
-                                        ";
-                            }
-                            ?>
-                            </table>
-                        </div>
-                </div>
-
-
-
-                <div id="" class="sub-section">
-                    <h2 class="btn"> Batch Material Details of Videos</h2>
-                        <div class="table-responsive">
-                            <table id="employee_data2" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <td> So.No. </td>
-                                        <td> Batch Id </td>
-                                        <td> Content Id </td>
-                                        <td> Video Id</td>
-                                        <td> Video Title</td>
-                                        <td> Manage </td>
-                                    </tr> 
-                                </thead>
-                            <?php
-                            $sql_videos = "SELECT * FROM `videos`";
-                            $result_videos = mysqli_query($conn, $sql_videos);
-                            while ($row = mysqli_fetch_assoc($result_videos)) {
-                                echo "  
-                                        <tr>  
-                                        <td>" . $row["s_no"] . "</td>  
-                                        <td>" . $row["batch_id"] . "</td>   
-                                        <td>" . $row["content_id"] . "</td>   
-                                        <td>" . $row["video_id"] . "</td>   
-                                        <td>" . $row["video_title"] . "</td>  
-                                        <td>
-                                            <a href='' class='btn-2'> Edit </a>
-                                            <a href='' class='btn-2'> Delete </a>
-                                            </td>    
-                                        </tr>  
-                                        ";
-                            }
-                            ?>
-                            </table>
-                        </div>
-                </div>
-
-
-                <div id="" class="sub-section">
-                    <h2 class="btn"> Batch Material Details of Notes</h2>
-                        <div class="table-responsive">
-                            <table id="employee_data2" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <td> So.No. </td>
-                                        <td> Batch Id </td>
-                                        <td> Content Id </td>
-                                        <td> Notes Id</td>
-                                        <td> Notes Title</td>
-                                        <td> Manage </td>
-                                    </tr> 
-                                </thead>
-                            <?php
-                            $sql_notes = "SELECT * FROM `notes`";
-                            $result_notes = mysqli_query($conn, $sql_notes);
-                            while ($row = mysqli_fetch_assoc($result_notes)) {
-                                echo "  
-                                        <tr>  
-                                        <td>" . $row["s_no"] . "</td>  
-                                        <td>" . $row["batch_id"] . "</td>   
-                                        <td>" . $row["content_id"] . "</td>   
-                                        <td>" . $row["notes_id"] . "</td>   
-                                        <td>" . $row["notes_title"] . "</td>  
-                                        <td>
-                                            <a href='' class='btn-2'> Edit </a>
-                                            <a href='' class='btn-2'> Delete </a>
-                                            </td>    
-                                        </tr>  
-                                        ";
-                            }
-                            ?>
-                            </table>
-                        </div>
-                </div>
-
-
-
-
-                <div id="" class="sub-section">
-                    <h2 class="btn"> Batch Material Details of Classes</h2>
-                        <div class="table-responsive">
-                            <table id="employee_data2" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <td> So.No. </td>
-                                        <td> Batch Id </td>
-                                        <td> Content Id </td>
-                                        <td> Class Id</td>
-                                        <td> Class Title</td>
-                                        <td> Manage </td>
-                                    </tr> 
-                                </thead>
-                            <?php
-                            $sql_classes = "SELECT * FROM `classes`";
-                            $result_classes = mysqli_query($conn, $sql_classes);
-                            while ($row = mysqli_fetch_assoc($result_classes)) {
-                                echo "  
-                                        <tr>  
-                                        <td>" . $row["s_no"] . "</td>  
-                                        <td>" . $row["batch_id"] . "</td>   
-                                        <td>" . $row["content_id"] . "</td>   
-                                        <td>" . $row["class_id"] . "</td>   
-                                        <td>" . $row["class_title"] . "</td> 
-                                        <td>
-                                            <a href='' class='btn-2'> Edit </a>
-                                            <a href='' class='btn-2'> Delete </a>
-                                            </td>     
-                                        </tr>  
-                                        ";
-                            }
-                            ?>
-                            </table>
-                        </div>
-                </div>
-
-
-
-
-
-
-                <div id="" class="sub-section">
-                    <h2 class="btn"> Batch Material Details of Assesments</h2>
-                        <div class="table-responsive">
-                            <table id="employee_data2" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <td> So.No. </td>
-                                        <td> Batch Id </td>
-                                        <td> Content Id </td>
-                                        <td> Assesment Id</td>
-                                        <td> Assesment Title</td>
-                                        <td> Manage </td>
-                                    </tr> 
-                                </thead>
-                            <?php
-                            $sql_assesment = "SELECT * FROM `assesment`";
-                            $result_assesment = mysqli_query($conn, $sql_assesment);
-                            while ($row = mysqli_fetch_assoc($result_assesment)) {
-                                echo "  
-                                        <tr>  
-                                        <td>" . $row["s_no"] . "</td>  
-                                        <td>" . $row["batch_id"] . "</td>   
-                                        <td>" . $row["content_id"] . "</td>   
-                                        <td>" . $row["assesment_id"] . "</td>   
-                                        <td>" . $row["assesment_name"] . "</td> 
-                                        <td>
-                                            <a href='' class='btn-2'> Edit </a>
-                                            <a href='' class='btn-2'> Delete </a>
-                                            </td>     
-                                        </tr>  
-                                        ";
-                            }
-                            ?>
-                            </table>
-                        </div>
-                </div>
-
-
-
-
             </section>
     </div>
         </main>
@@ -384,6 +177,11 @@ include("./include/db_connect_copy.php");
     <script src="js/custom.js" defer></script>
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        function confirmdelete() {
+            return confirm('Are you sure... You want to Delete this Record ???');
+        }
+    </script>
     <script>
         $(document).ready(function() {
     $('#employee_data').DataTable();

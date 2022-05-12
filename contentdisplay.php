@@ -66,6 +66,22 @@ $result5 = mysqli_query($conn , $sql5);
                 justify-content: center;
                 align-items: center;
             }
+            .object {
+                height: 80px;
+                width: 80px;
+            }           
+            .object::-webkit-scrollbar {
+                width: 1vw;
+            }
+            
+            .object::-webkit-scrollbar-thumb {
+                background-color: rgb(0, 0, 0);
+                border-radius: 20px;
+            }
+            
+            .object::-webkit-scrollbar-track {
+                background-color: #ffffff;
+            }
         </style>
 </head>
 <body id="body" class="home loaded">
@@ -81,6 +97,32 @@ $result5 = mysqli_query($conn , $sql5);
                                 ";
                             ?>
                         </section>
+<?php
+if($content_list==1)
+{
+    echo' <h2> Book  </h2>';
+}
+elseif($content_list==2)
+{
+        echo' <h2> Video  </h2>';
+}
+elseif($content_list==3)
+{
+        echo' <h2> Notes </h2>';
+}
+elseif($content_list==4)
+{
+        echo' <h2> Class  </h2>';
+}
+elseif($content_list==5)
+{
+        echo' <h2> Assessments </h2>';
+}
+
+?>
+
+
+
                         <section class="c-grid">
 <?php
 if($content_list==1)
@@ -90,8 +132,7 @@ if($content_list==1)
                         echo "
                         <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&bookid=".$row1["book_id"]."'>
                         <div class='con'>
-                        <img src='' alt='' srcset=''>
-                        </div>
+                        <img src='./img/uploaded/1.png' alt='' srcset=''>                        </div>
                         <div class='icon'>
                         <h4>".$row1["book_name"]."</h4>
                         <i class='fa-solid fa-circle-right'></i>
@@ -107,7 +148,7 @@ elseif($content_list==2)
                         echo "
                         <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&videoid=".$row2["video_id"]."'>
                         <div class='con'>
-                        <img src='' alt='' srcset=''>
+                        <img src='./img/uploaded/1.png' alt='' srcset=''>
                         </div>
                         <div class='icon'>
                         <h4>".$row2["video_title"]."</h4>
@@ -124,7 +165,7 @@ elseif($content_list==3)
                         echo "
                         <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&notesid=".$row3["notes_id"]."'>
                         <div class='con'>
-                        <img src='' alt='' srcset=''>
+                        <img src='./img/uploaded/1.png' alt='' srcset=''>
                         </div>
                         <div class='icon'>
                         <h4>".$row3["notes_title"]."</h4>
@@ -141,7 +182,7 @@ elseif($content_list==4)
                         echo "
                         <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&classid=".$row4["class_id"]."'>
                         <div class='con'>
-                        <img src='' alt='' srcset=''>
+                        <img src='./img/uploaded/1.png' alt='' srcset=''>
                         </div>
                         <div class='icon'>
                         <h4>".$row4["class_title"]."</h4>
@@ -158,7 +199,7 @@ elseif($content_list==5)
                         echo "
                         <a class='a-flex' href='studymaterial.php?batchid=$s_batch_id&contentid=$content_id&assesmentid=".$row5["assesment_id"]."'>
                         <div class='con'>
-                        <img src='' alt='' srcset=''>
+                        <img src='./img/uploaded/1.png' alt='' srcset=''>
                         </div>
                         <div class='icon'>
                         <h4>".$row5["assesment_name"]."</h4>

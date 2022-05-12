@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+
 ?> 
 
 <!DOCTYPE html>
@@ -27,25 +28,39 @@ session_start();
         .section-logos {
             margin-top: 150px !important;
         }
+        .bg {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0%;
+            top: -5%;
+            z-index: 99;
+        }
+        
     </style>
 </head>
 <body id="body" class="home loaded">
     <div class="main-wrapper">
         <main class="content">
             <div class="first-screen section-screen-main">
-                <div class="section-screen-main__bg" style="background-image: url(img/main.svg);"></div>
+            <video class="bg" width="320" height="240" autoplay loop muted>
+            <source src="./img/video/v.webm" type="video/webm">
+            </video>
+                <!-- <div class="bg" style="background: no-repeat center center/cover url(img/uploaded/b.jpg);"></div> -->
                 <div class="wrapper">
                     <div class="screen-main">
-                        <div class="section-heading"><span>Be sure</span></div>
-                        <h1 class="h1 h1-main">your success is in&nbsp;our&nbsp;hands</h1>
-                        <div class="screen-main__text">Agency with 12&nbsp;years of history, 15&nbsp;employees, Fortune 5000&nbsp;clients and proven results. <br> Login for More Benefits</div>
-                        <a href="#formOrder" class="btn btn_started-header js-fancybox">get started</a>
+                        <div class="get">
+                        <div class="section-heading"><span>Are You Ready for</span></div>
+                        <h1 class="h1 h1-main">Diploma in Digital Marketing</h1>
+                        <div class="screen-main__text">Agency with 7&nbsp;years of history, 15&nbsp;employees, Fortune 2000&nbsp;clients and proven results. <br> Login for More Benefits</div>
+                        <a href="#formOrder" class="btn btn_started-header js-fancybox ">get started</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="section-services-main" id="course">
                 <div class="wrapper">
-                    <div id="courses" class="services">
+                    <!-- <div id="courses" class="services">
                         <div class="services__item">
                             <div class="services__decor"></div>
                             <div class="services__icon">
@@ -86,7 +101,7 @@ session_start();
                                 <div class="services__text">What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog.</div>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <section class="modules">
@@ -223,14 +238,12 @@ session_start();
                         <div class="about__content">
                             <div class="section-heading"><span>the history</span></div>
                             <div class="h2">Our way to succesful future</div>
-                            <div class="section-subtitle">Ekwik Digital Pvt Ltd is a private limited company registered under MSME. It is one of the leading and best digital marketing companies in Delhi, India. It was founded by founder Mr. Durgesh Kumar on 19 December 2019. </div>
-                            <p>
-                                This digital marketing company has been running successfully for the last two years.
-                            </p>
+                            <div class="section-subtitle">Ekwik Digital is a Digital Marketing training institute registered under ISO:9001 & MSME. It is one of the leading and best digital marketing training institutes in Delhi, India. </div>
+                           
                             <div class="content-block__text">
-                                <p>Ekwik Digital was launched as a digital marketing company in 2019. Its main aim was to help startup companies to MSME grow online. These companies do not have proper resources and funds. And after the launch of Ekwik Digital,thousands
-                                of companies have benefited. Ekwik digital provides an all-in-one digital marketing service at accessible charges. So, most startup to mid-size companies can get and grow online. </p>
-                            </div>
+                                <p>Do you want to explore career opportunities and secure your future through online promotion  with Digital Marketing Training Institute in Laxmi Nagar Delhi? Are you concerned about your career that you simply aren’t getting desired job with good salary? If your answer is affirmative, you’re at the right place. Learn Advanced SEO, SMO, PPC Course from Best Digital Marketing Training Institute in Laxmi Nagar Delhi, India and become an expert in the industry.
+                                    Ekwik Classes provides you 100% practical based classes of Digital Marketing Modules which includes SEO Course , SMO Course, PPC Course, Affiliate marketing course up to 45+ Modules in Basic to Advanced educational program . Get 12+ certificates in 3 months course duration and 1 months internship.
+                                </p></div>
                             <a href="https://youtu.be/teyfPTEyqeM" class="about__btn play-video js-fancybox">
                                 <span class="play-icon">
                                     <i class="icon-play"></i>
@@ -244,23 +257,23 @@ session_start();
                     </div>
                     <div class="about-details">
                         <div class="about-details__item">
-                            <div class="about-details__val">$ 35k<span class="about-details__val_plus">+</span></div>
-                            <div class="about-details__text">Clients revenue</div>
+                            <div class="about-details__val">1000<span class="about-details__val_plus">+</span></div>
+                            <div class="about-details__text">Students</div>
                             <div class="about-details__decor"></div>
                         </div>
                         <div class="about-details__item">
-                            <div class="about-details__val">16k<span class="about-details__val_plus">+</span></div>
-                            <div class="about-details__text">Leads for clients</div>
+                            <div class="about-details__val">10<span class="about-details__val_plus">+</span></div>
+                            <div class="about-details__text">Regular Batches</div>
                             <div class="about-details__decor"></div>
                         </div>
                         <div class="about-details__item">
-                            <div class="about-details__val">6.7k<span class="about-details__val_plus">+</span></div>
-                            <div class="about-details__text">Phone calls</div>
+                            <div class="about-details__val">100<span class="about-details__val_plus">+</span></div>
+                            <div class="about-details__text">Placement Agencies</div>
                             <div class="about-details__decor"></div>
                         </div>
                         <div class="about-details__item">
-                            <div class="about-details__val">254<span class="about-details__val_plus">+</span></div>
-                            <div class="about-details__text">Successful projects</div>
+                            <div class="about-details__val">100<span class="about-details__val_plus">%</span></div>
+                            <div class="about-details__text">Job Assistance</div>
                             <div class="about-details__decor"></div>
                         </div>
                     </div>
@@ -708,30 +721,249 @@ session_start();
                     </div>
                 </div>
             </div>
-            <Section class="c-container">
-                <h2>BEST DIGITAL MARKETING COURSE IN LAXMI NAGAR </h2>
-                <p>
-                    Digital Marketing is booming industry in India. Now days every business wants to explore their business in new market with the help of Digital Marketing, because with Digital Marketing we can easily target our audience. Every business needs an online
-                    promotion to get maximum exposure, that’s why there is demand of internet marketing. We here at Ekwik IT Training Course, provide Digital Marketing Training covering each and every aspects needed in today’s era.
-                </p>
-                <h4>Why choose Ekwik Digital</h4>
-                <ul>
-                    <li> Smart courses to make your digital marketing experts </li>
-                    <li> Smart courses to make your digital marketing experts </li>
-                    <li> Time and money investment for a better career </li>
-                    <li> Learn from the industry experts </li>
-                    <li> Learn while you work on live projects, lifetime consultancy from the trainers </li>
-                </ul>
-                <h4>Make Money Online/Affiliate Marketing </h4>
-                <p>Now a days to make money online, there are thousands of online business ideas.It is not a rocket science, and the best way to start making money online is to start with whatever you are already working. To make money online you need to
-                    craete something that people need. Digital Marketing is the best platform to make money online and Ekwik IT Training is helping more than 100+ students to earning 5k rupees per month just by putting 2 hours everyday. After completing
-                    the course of Digital Marketing, you can earn more than 10k by sitting at home. This course is very useful for housewives and studenst as well, who stay at home and are in distance learning having approx 3 to 4 hours.</p>
-                <h4>Digital Marketing Tutors in Laxmi Nagar, Delhi</h4>
-                <p>Search for Digital marketing tutors in Laxmi Nagar. we've a big range of experienced lecturers in EAST DELHI, Ekwik IT TRAINING will assist you taking categories and lessons for Digital marketing. each one to at least one and tiny cluster
-                    tuition categories ar offered close to your house or on-line. read the profiles of the lecturers and trainers particularization their subject experience, teaching designs, past experiences, past reviews, feedbacks, hourly rates and
-                    handiness. Post your demand without charge and find a wonderful tutor for Digital marketing close to Laxmi Nagar. </p>
 
-            </Section>
+            
+      <!-- Course Section       -->
+      <h6>Course</h6>
+              <section>
+              <div id="sub_c_section1" class="sub-c-section">
+                    <h2>Digital Marketing</h2>
+                    <p>In this digital world, we all want to be a walking digital encyclopedia. Isn’t it? But how many of us have learnt the core digital techniques which help us to be a digital expert in a short time? The answer is only a few of us. Your enrolment in our digital marketing course will enable to encash your knowledge in the future.
+                        Make it a mission now and know what you can learn in digital marketing to spread the wings of knowledge in a world which needs you.</p>
+                    <div class="card-container">
+                        <a href="login.php">
+                        <div id="card1" class="cards">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
+                            <h3>Video</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
+                        </div>
+                        </a>
+                        <a href="login.php">
+                        <div id="card2" class="cards">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
+                            <h3>Notes</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
+                        </div>
+                        </a>
+                        <a href="login.php">
+                        <div id="card3" class="cards">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
+                            <h3>Class Recording</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
+                        </div>
+                        </a>
+                        <a href="login.php">
+                        <div id="card4" class="cards">
+                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
+                            <h3>Books</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="price">
+                        <div class="sub-price">
+                            <h2>Course Pricing</h2>
+                            <p>Rs. 48490/- + 8728/- (18% GST) = Rs 57218/- <br> In 2 Easy Instalments... <br> 51490/- + 9268/- (18% GST) = Rs 60758/-</p>
+                        </div>
+                    </div>
+                    <div class="tools">
+                        <h2>Tools You will Learn ?</h2>
+                        <div class="tools-grid">
+                            <div class="tools-card">
+                            <img src="./img/uploaded/icons8-digital-marketing-128.png" alt="" srcset="">
+                                    <p>Digital Marketing Overview</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-cms-system-128.png" alt="" srcset="">
+                                    <p>CMS Systems</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-seo-128.png" alt="" srcset="">
+                                    <p>Advanced SEO</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-sem-128.png" alt="" srcset="">
+                                    <p>Search Engine Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-social-media-marketing-128.png" alt="" srcset="">
+                                    <p>Social Media Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-content-marketing-128.png" alt="" srcset="">
+                                    <p>Content Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-ecommerce-128.png" alt="" srcset="">
+                                    <p>Ecommerce Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-blog-128.png" alt="" srcset="">
+                                    <p>Blog Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-google-ads-144.png" alt="" srcset="">
+                                    <p>Google Adsense</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-affiliate-marketing-128.png" alt="" srcset="">
+                                    <p>Affiliates Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-online-payment-with-a-credit-card-150.png" alt="" srcset="">
+                                    <p>Make Money Online</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-sales-funnel-128.png" alt="" srcset="">
+                                    <p>Sales Funnels</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-email-marketing-128.png" alt="" srcset="">
+                                    <p>Email Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-mobile-marketing-128.png" alt="" srcset="">
+                                    <p>Mobile Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-management-128.png" alt="" srcset="">
+                                    <p>ORM Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-freelancing-120.png" alt="" srcset="">
+                                    <p>Freelancing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-maintenance-200.png" alt="" srcset="">
+                                    <p>Digital Marketing Tools</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-business-group-200.png" alt="" srcset="">
+                                    <p>Business Strategies</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-interview-128.png" alt="" srcset="">
+                                    <p>Interview Preperation</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-certification-128.png" alt="" srcset="">
+                                    <p>Certifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                </section>
+                
+<!-- About section  -->
+
+<h6>About US</h6>
+<section class="about">
+
+                    <section class="a-content">
+                        <div class="a-sub-content a-img"></div>
+                        <div class="a-sub-content">
+                            <p>In the modern world, corporate and industrial Practices have changed considerably. We did thorough market research on the education industry and found that there is a low-quality education available and high fee structure. This forced us to get into the education system where we can offer education at an economical cost and provide employment opportunities as soon as students complete these vocational courses. We believe in the highest quality teaching to deliver our professional programs that shape the career of the young generation by providing them employment opportunities. Due to the constant transformation, there is a need for continuous development in the education industry. We make sure that our students learn and work best in the business environments and deliver efficient results irrespective of change in challenging business environments. Our trainers are expert in making the learners result-oriented, decisive, flexible, and ethical managers.</p>
+                        </div>
+                    </section>
+
+
+                    <div id="courses" class="services">
+                        <div class="services__item">
+                            <div class="services__decor"></div>
+                            <div class="services__icon">
+                                <img src="img/icons-svg/exellence-1.svg" alt="" loading="lazy">
+                            </div>
+                            <a href="./website-pages/digital-marketing.html">
+                                <div class="services__title"> Our Vision </div>
+                                <div class="services__text">To be a leader in the integration of teaching and advancement of the knowledge base that accentuates the career path of students for better opportunities.</div>
+                            </a>
+                        </div>
+                        <div class="services__item">
+                            <div class="services__decor"></div>
+                            <div class="services__icon">
+                                <img src="img/icons-svg/exellence-2.svg" alt="" loading="lazy">
+                            </div>
+                            <a href="./website-pages/web-designing.html">
+                                <div class="services__title">Our Mission</div>
+                                <div class="services__text">To deepen and extend knowledge among learners so they can grow with complete utilization of education skills.</div>
+                            </a>
+                        </div>
+                        <div class="services__item">
+                            <div class="services__decor"></div>
+                            <div class="services__icon">
+                                <img src="img/icons-svg/exellence-3.svg" alt="" loading="lazy">
+                            </div>
+                            <a href="./website-pages/web-development.html">
+                                <div class="services__title"> Our Goals</div>
+                                <div class="services__text">Doubts slow us down. So, we impart quality education and teaching that leaves no room for doubts.</div>
+                            </a>
+                        </div>
+                        <div class="services__item">
+                            <div class="services__decor"></div>
+                            <div class="services__icon">
+                                <img src="img/icons-svg/exellence-3.svg" alt="" loading="lazy">
+                            </div>
+                            <a href="./website-pages/web-development.html">
+                                <div class="services__title"> Our Goals</div>
+                                <div class="services__text">Doubts slow us down. So, we impart quality education and teaching that leaves no room for doubts.</div>
+                            </a>
+                        </div>
+                        <h1 style="text-align: center;">Director Message</h1>
+                        <section class="a-content">
+                            <div class="a-sub-content">
+                                <p>In the modern world, corporate and industrial practices have changed considerably. Due to the constant transformation, there is a need for continuous development in the education industry. We make sure that our students learn and work best in the business environments and deliver efficient results irrespective of change in challenging business environments. Our trainers are expert in making the learners result-oriented, decisive, flexible, and ethical managers. We are committed to providing cost-effective and high-quality education in the field of Marketing and Technology. We align with the requirements of the global market and make sure that the right set of knowledge, skills, talents, and attitudes is the key to meet the opportunities available worldwide.
+                                    We want to expose our learners to the dynamics of corporate culture and teach them the latest skills that have competitive advantages. At Ekwik Digital, we extend our support to the young generation with customized efforts to nurture their talents and abilities which help in bridging the gap between the Indian and Global markets.
+                                    We want to shape the winning personas in the young generation so they can contribute the best into society. This is only possible by developing a passion for learning.</p>
+                            </div>
+                            <div class="a-sub-content d-img"></div>
+                        </section>
+                    </div>
+
+                    </section>
+
+<!-- Contact section  -->
+
+<h6>Contact US</h6>                
+
+  <section class="about">
+        <section class="contact-container">
+            <div class="contact-sub-container">
+                <h1> Ekwik Classes </h1>
+                <p> So, are you ready to get web development, marketing, and SEO services in India? </p>
+                <h1> Contact us </h1> 
+                <p>  <i class="fas fa-blender-phone"></i> Office no </p>  
+                <p> 011-42175423 </p> 
+                <p> <i class="fas fa-mobile-alt"></i> Mobile no </p>  
+                <p> +91 9717666076 </p>
+                <p>  <i class="fas fa-envelope"></i> Email </p>  
+                <p> hello@ekwikdigital.com  </p>
+                <h1> Address </h1>
+                <p> A-20, First Floor, Guru Nanak Pura, Street No. 3, Laxmi Nagar, Delhi – 110092, Landmark – In Front Of V3s Mall  </p>
+            </div>
+            <div class="contact-sub-container ">
+                <form class="cuc" action="" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required >
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="">Contact Number</label>
+                    <input type="tel" name="phone" id="phone" maxlength="10" minlength="10" required>
+                    <label for="message">Short Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+
+                    <div class="about">
+                    <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4139.671128948162!2d77.28249300892676!3d28.636323180071926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b6a48a38d9%3A0x9f0dae49642f744a!2sEkwik%20Digital!5e0!3m2!1sen!2sin!4v1634535783091!5m2!1sen!2sin" width="100%" height="500px"  style="border-radius:20px;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+ 
             <!-- <div class="section-main-blog" id="blog">
                 <div class="wrapper">
                     <div class="section-heading h-center"><span>news</span></div>

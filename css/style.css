@@ -3858,3 +3858,22 @@ form input {
 .s-img img {
     border-radius: 15px;
 }
+
+.about {
+    width: 80%;
+    margin: auto;
+}
+
+h6 {
+    color: rgb(27, 43, 124);
+    width: max-content;
+    margin: auto;
+    /* margin-left: 20px; */
+    margin-bottom: 30px;
+    padding: 25px;
+    font-size: 35px;
+    /* box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%); */
+    /* border: 3px solid black; */
+    /* border-top-left-radius: 30px; */
+    /* border-bottom-right-radius: 30px; */
+}

@@ -71,6 +71,43 @@ $result5 = mysqli_query($conn , $sql5);
                 justify-content: center;
                 align-items: center;
             }
+            .study {
+                width: 80%;
+                height: 100vh;
+                margin: auto;
+                
+            }
+            .study h4 {
+                text-align: center;
+            }
+            .study object {
+                height: 100%;
+                width: 100%;
+
+            }
+           .c {
+               height: max-content;
+               width: max-content;
+               padding: 25px;
+               box-shadow: 0px 1rem 2.6rem rgba(36, 73, 168, 0.15);
+               border-radius: 15px; 
+               text-align: center;
+            }
+            .gr {
+                padding: 10px;
+               display: grid;
+               grid-template-columns: repeat(4,1fr);
+               row-gap: 20px;
+               column-gap: 20px;
+            }
+            iframe {
+               border-radius: 15px; 
+           }
+           .as{
+               text-align: center;
+               width: 80%;
+               margin: auto;
+           }
         </style>
 </head>
 
@@ -86,17 +123,43 @@ $result5 = mysqli_query($conn , $sql5);
                             </a>
                                 ";
                             ?>
-                        </section>
-                        <section class="c-grid">
+        </section>
+        <?php
+if($content_list==1)
+{
+    echo' <h2> Book  </h2>';
+}
+elseif($content_list==2)
+{
+        echo' <h2> Video  </h2>';
+}
+elseif($content_list==3)
+{
+        echo' <h2> Notes </h2>';
+}
+elseif($content_list==4)
+{
+        echo' <h2> Class  </h2>';
+}
+elseif($content_list==5)
+{
+        echo' <h2> Assessments </h2>';
+}
+
+?>
+        
+        
 <?php
 if($content_list==1)
     {
+       
         while($row1 = mysqli_fetch_assoc($result1))
                     {
                         echo "
+                        <section class='study'>
                         <h4>".$row1["book_name"]."</h4>
                         <object data='".$row1["book_pdf"]."' type='application/pdf'></object>
-                        ";
+                        </section>                        ";
                     }
     }
 elseif($content_list==2)
@@ -104,8 +167,12 @@ elseif($content_list==2)
         while($row2 = mysqli_fetch_assoc($result2))
                     {
                         echo "
+                        <section class='gr'>
+                        <div class='c'>
+                        <iframe width='280' height='200' src='".$row2["video_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
                         <h4>".$row2["video_title"]."</h4>
-                        // <iframe width='560' height='315' src='".$row2["video_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                        </div>
+                        </section>
                         ";
                     }
     }
@@ -114,8 +181,10 @@ elseif($content_list==3)
         while($row3 = mysqli_fetch_assoc($result3))
                     {
                         echo "
-                        <h4>".$row3["notes_name"]."</h4>
+                        <section class='study'>
+                        <h4>".$row3["notes_title"]."</h4>
                         <object data='".$row3["notes_pdf"]."' type='application/pdf'></object>
+                        </section>
                         ";
                     }
     }
@@ -124,8 +193,12 @@ elseif($content_list==4)
         while($row4 = mysqli_fetch_assoc($result4))
                     {
                         echo "
-                        <h4>".$row4["notes_name"]."</h4>
-                        <iframe width='560' height='315' src='".$row4["video_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                        <section class='gr'>
+                        <div class='c'>
+                        <iframe width='280' height='200' src='".$row4["class_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                        <h4>".$row4["class_title"]."</h4>
+                        </div>
+                        </section>
                         ";
                     }
     }
@@ -134,14 +207,15 @@ elseif($content_list==5)
         while($row5 = mysqli_fetch_assoc($result5))
                     {
                         echo "
-                        <h4>".$row5["notes_name"]."</h4>
-                        <iframe width='560' height='315' src='".$row5["video_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                        <section class='as'>
+                        <h4>".$row5["assesment_name"]."</h4>
+                        <iframe width='860' height='800' src='".$row5["assesment_code"]."' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                        </section>
                         ";
                     }
     }
 
         ?>
-        </a>
         </main>
         <?php
             include("./include/header.php");
