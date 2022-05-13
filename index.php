@@ -6,7 +6,6 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Ekwik Online || Best Digital Marketing Institute</title>
     <meta name='description' content="" />
@@ -31,10 +30,38 @@ session_start();
         .bg {
             height: 100%;
             width: 100%;
-            position: absolute;
+            position: relative;
             left: 0%;
-            top: -5%;
+            top: -12%;
             z-index: 99;
+        }
+        .all-modules {
+            width: max-content;
+            margin: 20px;
+            /* border: 2px solid black; */
+            border-radius: 15px;
+            box-shadow: 0px 1rem 2.6rem rgba(36, 73, 168, 0.15);
+        }
+        .all-modules .fa-medal{
+            color: rgb(250,80,119);
+        }
+        .about__content {
+            width: 100% !important;
+        }
+        .fa-person-circle-question {
+            color: rgb(250,80,119);
+        }
+        object {
+            height: 180px;
+            width: 230px;
+        }
+        .first-screen,.section-screen-main{
+            margin-top: -120px;
+        }
+        .all-content {
+            width: 100%;
+            /* border: 2px solid black; */
+            margin: 0;
         }
         
     </style>
@@ -43,23 +70,24 @@ session_start();
     <div class="main-wrapper">
         <main class="content">
             <div class="first-screen section-screen-main">
-            <video class="bg" width="320" height="240" autoplay loop muted>
-            <source src="./img/video/v.webm" type="video/webm">
-            </video>
+        <video class="bg" autoplay muted loop>
+            <source src="./img/video/diplom.mp4" type="video/mp4">
+        </video>
+                
                 <!-- <div class="bg" style="background: no-repeat center center/cover url(img/uploaded/b.jpg);"></div> -->
-                <div class="wrapper">
-                    <div class="screen-main">
+               
+                    <!-- <div class="screen-main">
                         <div class="get">
-                        <div class="section-heading"><span>Are You Ready for</span></div>
-                        <h1 class="h1 h1-main">Diploma in Digital Marketing</h1>
-                        <div class="screen-main__text">Agency with 7&nbsp;years of history, 15&nbsp;employees, Fortune 2000&nbsp;clients and proven results. <br> Login for More Benefits</div>
-                        <a href="#formOrder" class="btn btn_started-header js-fancybox ">get started</a>
+                            <div class="section-heading"><span>Are You Ready for</span></div>
+                                <h1 class="h1 h1-main">Diploma in Digital Marketing</h1>
+                                    <div class="screen-main__text">Agency with 7&nbsp;years of history, 15&nbsp;employees, Fortune 2000&nbsp;clients and proven results. <br> Login for More Benefits</div>
+                                        <a href="#formOrder" class="btn btn_started-header js-fancybox ">get started</a>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-services-main" id="course">
-                <div class="wrapper">
+                    </div> -->
+            <!-- <div class="section-services-main" id="course">
+                <div class="wrapper"> -->
                     <!-- <div id="courses" class="services">
                         <div class="services__item">
                             <div class="services__decor"></div>
@@ -102,8 +130,143 @@ session_start();
                             </a>
                         </div>
                     </div> -->
-                </div>
-            </div>
+                <!-- </div>
+            </div> -->
+
+            <!-- <div class="wrapper"> -->
+            <section class="all-content">
+<!-- Course section Starts here -->
+<h6>Course</h6>
+              <section>
+              <div id="sub_c_section1" class="sub-c-section">
+                    <h2>Digital Marketing</h2>
+                    <p>In this digital world, we all want to be a walking digital encyclopedia. Isn’t it? But how many of us have learnt the core digital techniques which help us to be a digital expert in a short time? The answer is only a few of us. Your enrolment in our digital marketing course will enable to encash your knowledge in the future.
+                        Make it a mission now and know what you can learn in digital marketing to spread the wings of knowledge in a world which needs you.</p>
+                    <div class="card-container">
+                        <a href="login.php">
+                        <div id="card1" class="cards">
+                        <iframe width='230' height='180' src='https://www.youtube.com/embed/MqdPNXRFRXs' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                            <h3>Video</h3>
+                            <p>Ekwik Digital provides best video content for boost up you learning and achieve your goals.</p>
+                        </div>
+                        </a>
+                        <a href="login.php">
+                        <div id="card2" class="cards">
+                        <object data='./note/EKWIK Digital  BROCHURE (website).pdf' type='application/pdf'></object>
+                            <h3>Notes</h3>
+                            <p>Ekwik Digital provides best Notes content for clearing your basic knowledge for Advanced courses.</p>
+                        </div>
+                        </a>
+                        <a href="login.php">
+                        <div id="card3" class="cards">
+                        <iframe width='230' height='180' src='https://www.youtube.com/embed/teyfPTEyqeM' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                            <h3>Class Recording</h3>
+                            <p>Ekwik Digital provides Class recordings so, you don't miss any class and stay up to date.</p>
+                        </div>
+                        </a>
+                        <a href="login.php">
+                        <div id="card4" class="cards">
+                        <object data='./note/EKWIK Digital  BROCHURE (website).pdf' type='application/pdf'></object>
+                            <h3>Books</h3>
+                            <p>Ekwik Digital provides best book to study all topics in a Advanced manner for boost up you learning and achieve your goals.</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="price">
+                        <div class="sub-price">
+                            <h2>Course Pricing</h2>
+                            <p>Rs. 57,999/- + 10,439/- (18% GST) = Rs 68,438/- <br> In 6 Easy Instalments Per Month... <br> 9,666/- + 1,739/- (18% GST) = Rs 60,430/-</p>
+                        </div>
+                    </div>
+                    <div class="tools">
+                        <h2>Tools You will Learn ?</h2>
+                        <div class="tools-grid">
+                            <div class="tools-card">
+                            <img src="./img/uploaded/icons8-digital-marketing-128.png" alt="" srcset="">
+                                    <p>Digital Marketing Overview</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-cms-system-128.png" alt="" srcset="">
+                                    <p>CMS Systems</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-seo-128.png" alt="" srcset="">
+                                    <p>Advanced SEO</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-sem-128.png" alt="" srcset="">
+                                    <p>Search Engine Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-social-media-marketing-128.png" alt="" srcset="">
+                                    <p>Social Media Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-content-marketing-128.png" alt="" srcset="">
+                                    <p>Content Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-ecommerce-128.png" alt="" srcset="">
+                                    <p>Ecommerce Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-blog-128.png" alt="" srcset="">
+                                    <p>Blog Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-google-ads-144.png" alt="" srcset="">
+                                    <p>Google Adsense</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-affiliate-marketing-128.png" alt="" srcset="">
+                                    <p>Affiliates Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-online-payment-with-a-credit-card-150.png" alt="" srcset="">
+                                    <p>Make Money Online</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-sales-funnel-128.png" alt="" srcset="">
+                                    <p>Sales Funnels</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-email-marketing-128.png" alt="" srcset="">
+                                    <p>Email Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-mobile-marketing-128.png" alt="" srcset="">
+                                    <p>Mobile Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-management-128.png" alt="" srcset="">
+                                    <p>ORM Marketing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-freelancing-120.png" alt="" srcset="">
+                                    <p>Freelancing</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-maintenance-200.png" alt="" srcset="">
+                                    <p>Digital Marketing Tools</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-business-group-200.png" alt="" srcset="">
+                                    <p>Business Strategies</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-interview-128.png" alt="" srcset="">
+                                    <p>Interview Preperation</p>
+                            </div>
+                            <div class="tools-card">
+                                 <img src="./img/uploaded/icons8-certification-128.png" alt="" srcset="">
+                                    <p>Certifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                </section>
+<!-- Course section ends here -->
+
             <section class="modules">
                 <h2>Covers 45+ Modules in Advanced Digital Marketing Program </h2>
                 <div class="modules-container">
@@ -121,10 +284,6 @@ session_start();
                             <li> <i class="fa-solid fa-medal"></i> Advanced SMO Course </li>
                             <li> <i class="fa-solid fa-medal"></i> Facebook Marketing </li>
                             <li> <i class="fa-solid fa-medal"></i> Instagram Marketing </li>
-                            <li> <i class="fa-solid fa-medal"></i> LinkedIn Marketing </li>
-                            <li> <i class="fa-solid fa-medal"></i> Twitter Marketing </li>
-                            <li> <i class="fa-solid fa-medal"></i> Viral Marketing </li>
-                            <li> <i class="fa-solid fa-medal"></i> True Caller Marketing </li>
                         </ul>
                     </div>
                     <div class="all-modules">
@@ -141,10 +300,7 @@ session_start();
                             <li> <i class="fa-solid fa-medal"></i> PPC with Yahoo ads </li>
                             <li> <i class="fa-solid fa-medal"></i> YouTube Marketing </li>
                             <li> <i class="fa-solid fa-medal"></i> Mobile Marketing </li>
-                            <li> <i class="fa-solid fa-medal"></i> Inbound Marketing </li>
-                            <li> <i class="fa-solid fa-medal"></i> Leads and Traffic Generation </li>
-                            <li> <i class="fa-solid fa-medal"></i> Affiliate Marketing </li>
-                            <li> <i class="fa-solid fa-medal"></i> Google Analytics </li>
+                            
                         </ul>
                     </div>
                     <div class="all-modules">
@@ -161,10 +317,23 @@ session_start();
                             <li> <i class="fa-solid fa-medal"></i> Ecommerce Marketing </li>
                             <li> <i class="fa-solid fa-medal"></i> Influencer Marketing </li>
                             <li> <i class="fa-solid fa-medal"></i> Canva Editing </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="all-modules">
+                        <ul>
+                        <li> <i class="fa-solid fa-medal"></i> LinkedIn Marketing </li>
+                            <li> <i class="fa-solid fa-medal"></i> Twitter Marketing </li>
+                            <li> <i class="fa-solid fa-medal"></i> Viral Marketing </li>
+                            <li> <i class="fa-solid fa-medal"></i> True Caller Marketing </li>
                             <li> <i class="fa-solid fa-medal"></i> Marketing Place Selling </li>
                             <li> <i class="fa-solid fa-medal"></i> Blogging </li>
                             <li> <i class="fa-solid fa-medal"></i> Online Earning Secretes </li>
                             <li> <i class="fa-solid fa-medal"></i> Interview Preparation </li>
+                            <li> <i class="fa-solid fa-medal"></i> Inbound Marketing </li>
+                            <li> <i class="fa-solid fa-medal"></i> Leads and Traffic Generation </li>
+                            <li> <i class="fa-solid fa-medal"></i> Affiliate Marketing </li>
+                            <li> <i class="fa-solid fa-medal"></i> Google Analytics </li>
                         </ul>
                     </div>
                 </div>
@@ -440,12 +609,12 @@ session_start();
                     <!-- <div class="steps-text">Pariatur magna cupidatat magna sit incididunt non pariatur. Sint nulla commodo qui magna eiusmod quis aliqua laboris officia excepteur non eu in. Consequat esse in dolore laborum dolore ut duis elit deserunt minim.</div> -->
                 </div>
             </div>       
-            <div class="section-prices" id="price">
+            <!-- <div class="section-prices" id="price">
                 <div class="wrapper">
                     <div class="section-heading h-center"><span>prices</span></div>
                     <div class="h-decor-2">
                         <h2 class="h2 h-center"><span>discover our price - list</span></h2>
-                        <!-- <div class="section-subtitle h-center">Dolor duis voluptate enim exercitation consequat ex.</div> -->
+                        <div class="section-subtitle h-center">Dolor duis voluptate enim exercitation consequat ex.</div>
                     </div>
                     <div class="prices">
                         <a href="#" class="prices__item">
@@ -554,7 +723,7 @@ session_start();
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 <section class="qu">
     <h2>Top Queries For Institute</h2>
@@ -722,138 +891,7 @@ session_start();
                 </div>
             </div>
 
-            
-      <!-- Course Section       -->
-      <h6>Course</h6>
-              <section>
-              <div id="sub_c_section1" class="sub-c-section">
-                    <h2>Digital Marketing</h2>
-                    <p>In this digital world, we all want to be a walking digital encyclopedia. Isn’t it? But how many of us have learnt the core digital techniques which help us to be a digital expert in a short time? The answer is only a few of us. Your enrolment in our digital marketing course will enable to encash your knowledge in the future.
-                        Make it a mission now and know what you can learn in digital marketing to spread the wings of knowledge in a world which needs you.</p>
-                    <div class="card-container">
-                        <a href="login.php">
-                        <div id="card1" class="cards">
-                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
-                            <h3>Video</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
-                        </div>
-                        </a>
-                        <a href="login.php">
-                        <div id="card2" class="cards">
-                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
-                            <h3>Notes</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
-                        </div>
-                        </a>
-                        <a href="login.php">
-                        <div id="card3" class="cards">
-                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
-                            <h3>Class Recording</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
-                        </div>
-                        </a>
-                        <a href="login.php">
-                        <div id="card4" class="cards">
-                            <img src="./img/uploaded/09.jpg" alt="" srcset="">
-                            <h3>Books</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni!</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="price">
-                        <div class="sub-price">
-                            <h2>Course Pricing</h2>
-                            <p>Rs. 48490/- + 8728/- (18% GST) = Rs 57218/- <br> In 2 Easy Instalments... <br> 51490/- + 9268/- (18% GST) = Rs 60758/-</p>
-                        </div>
-                    </div>
-                    <div class="tools">
-                        <h2>Tools You will Learn ?</h2>
-                        <div class="tools-grid">
-                            <div class="tools-card">
-                            <img src="./img/uploaded/icons8-digital-marketing-128.png" alt="" srcset="">
-                                    <p>Digital Marketing Overview</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-cms-system-128.png" alt="" srcset="">
-                                    <p>CMS Systems</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-seo-128.png" alt="" srcset="">
-                                    <p>Advanced SEO</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-sem-128.png" alt="" srcset="">
-                                    <p>Search Engine Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-social-media-marketing-128.png" alt="" srcset="">
-                                    <p>Social Media Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-content-marketing-128.png" alt="" srcset="">
-                                    <p>Content Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-ecommerce-128.png" alt="" srcset="">
-                                    <p>Ecommerce Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-blog-128.png" alt="" srcset="">
-                                    <p>Blog Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-google-ads-144.png" alt="" srcset="">
-                                    <p>Google Adsense</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-affiliate-marketing-128.png" alt="" srcset="">
-                                    <p>Affiliates Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-online-payment-with-a-credit-card-150.png" alt="" srcset="">
-                                    <p>Make Money Online</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-sales-funnel-128.png" alt="" srcset="">
-                                    <p>Sales Funnels</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-email-marketing-128.png" alt="" srcset="">
-                                    <p>Email Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-mobile-marketing-128.png" alt="" srcset="">
-                                    <p>Mobile Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-management-128.png" alt="" srcset="">
-                                    <p>ORM Marketing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-freelancing-120.png" alt="" srcset="">
-                                    <p>Freelancing</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-maintenance-200.png" alt="" srcset="">
-                                    <p>Digital Marketing Tools</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-business-group-200.png" alt="" srcset="">
-                                    <p>Business Strategies</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-interview-128.png" alt="" srcset="">
-                                    <p>Interview Preperation</p>
-                            </div>
-                            <div class="tools-card">
-                                 <img src="./img/uploaded/icons8-certification-128.png" alt="" srcset="">
-                                    <p>Certifications</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-                </section>
-                
+                 
 <!-- About section  -->
 
 <h6>About US</h6>
@@ -915,7 +953,7 @@ session_start();
                                     We want to expose our learners to the dynamics of corporate culture and teach them the latest skills that have competitive advantages. At Ekwik Digital, we extend our support to the young generation with customized efforts to nurture their talents and abilities which help in bridging the gap between the Indian and Global markets.
                                     We want to shape the winning personas in the young generation so they can contribute the best into society. This is only possible by developing a passion for learning.</p>
                             </div>
-                            <div class="a-sub-content d-img"></div>
+                            <div class="a-sub-content a-img"></div>
                         </section>
                     </div>
 
@@ -1008,7 +1046,8 @@ session_start();
                     </div>
                 </div>
             </div> -->
-
+            </section>
+           
             
         </main>
         <?php

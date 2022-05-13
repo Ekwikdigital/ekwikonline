@@ -92,7 +92,7 @@ $row = mysqli_fetch_assoc($result);
                                     </div>
                                 </div>
                                 <div class="article-author">
-                                    <div class="article-author__img">
+                                    <!-- <div class="article-author__img">
                                         <img data-src="img/examples/author.jpg" alt="" class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
                                     </div>
                                     <div class="article-author__info">
@@ -111,7 +111,7 @@ $row = mysqli_fetch_assoc($result);
                                                 <a href="#" target="_blank" class="socials__link">In</a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </article>
                             <div class="article-form">

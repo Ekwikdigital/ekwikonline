@@ -7,7 +7,7 @@ body {
 }
 
 html::-webkit-scrollbar {
-    width: 1vw;
+    width: .2vw;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -808,6 +808,10 @@ html::-webkit-scrollbar-track {
 }
 
 @media screen and (max-width: 479px) {
+    .first-screen,
+    .section-screen-main {
+        margin-top: -10px;
+    }
     .fancybox-close-small {
         width: 4rem;
         top: .8rem;
@@ -2368,6 +2372,10 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 767px) {
+    .first-screen,
+    .section-screen-main {
+        margin-top: -10px;
+    }
     .section-about {
         margin-top: 5rem;
     }
@@ -3019,7 +3027,8 @@ h2 {
 }
 
 .all-modules ul {
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    padding: 30px;
 }
 
 .all-modules ul li {
@@ -3035,8 +3044,8 @@ h2 {
 
 .modules-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-left: 180px;
+    grid-template-columns: repeat(4, 1fr);
+    /* padding-left: 180px; */
 }
 
 .content-container {
@@ -3093,11 +3102,14 @@ h2 {
     }
 }
 
+@media (max-width:800px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
 @media (max-width:874px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .tools-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .contact-container {
@@ -3128,7 +3140,14 @@ h2 {
         grid-template-columns: repeat(2, 1fr);
     }
     .card-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        height: max-content;
+    }
+}
+
+@media (max-width:813px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -3139,9 +3158,11 @@ h2 {
     }
     .card-container {
         grid-template-columns: repeat(1, 1fr);
+        height: max-content;
+        padding: 30px;
     }
     .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
     }
     .contact-container {
         padding: 0 !important;
@@ -3187,9 +3208,12 @@ h2 {
 }
 
 @media (max-width:552px) {
+    .d-bro a {
+        margin-left: 5px !important;
+    }
     .modules-container {
         grid-template-columns: repeat(1, 1fr);
-        padding-left: 80px;
+        padding-left: 10px;
     }
     .sub-module-pdf {
         padding: 20px;
@@ -3371,6 +3395,12 @@ h2 {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 1rem 2.6rem rgba(36, 73, 168, 0.15);
+    transition: all 0.3s ease;
+}
+
+.tools-card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
 }
 
 .faq {
@@ -3876,4 +3906,25 @@ h6 {
     /* border: 3px solid black; */
     /* border-top-left-radius: 30px; */
     /* border-bottom-right-radius: 30px; */
+}
+
+@media (max-width:850px) {
+    .q-flex {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:460px) {
+    .q-flex {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .career {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:662px) {
+    .career {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
