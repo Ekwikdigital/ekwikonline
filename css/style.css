@@ -3573,6 +3573,11 @@ h2 {
     box-shadow: 0px 1rem 2.6rem rgb(36 73 168 / 15%);
 }
 
+.c2 {
+    background-color: rgb(248, 91, 124);
+    color: rgb(0, 0, 0);
+}
+
 .cuc {
     height: 100%;
     display: flex;

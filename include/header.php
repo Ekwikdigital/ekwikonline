@@ -8,6 +8,8 @@ include("./include/db_connect_copy.php");
         $loggedin = false;
     }
 ?>
+
+</script>
 <header class="header" id="header">
             <div class="header-top">
                 <div class="wrapper">
@@ -281,4 +283,6 @@ include("./include/db_connect_copy.php");
             body.classList.add("content-loaded");
         }, 50)
     </script>
+
+
    

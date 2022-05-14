@@ -74,66 +74,7 @@ session_start();
             <source src="./img/video/diplom.mp4" type="video/mp4">
         </video>
                 
-                <!-- <div class="bg" style="background: no-repeat center center/cover url(img/uploaded/b.jpg);"></div> -->
-               
-                    <!-- <div class="screen-main">
-                        <div class="get">
-                            <div class="section-heading"><span>Are You Ready for</span></div>
-                                <h1 class="h1 h1-main">Diploma in Digital Marketing</h1>
-                                    <div class="screen-main__text">Agency with 7&nbsp;years of history, 15&nbsp;employees, Fortune 2000&nbsp;clients and proven results. <br> Login for More Benefits</div>
-                                        <a href="#formOrder" class="btn btn_started-header js-fancybox ">get started</a>
-                                    </div>
-                            </div>
-                        </div>
-                    </div> -->
-            <!-- <div class="section-services-main" id="course">
-                <div class="wrapper"> -->
-                    <!-- <div id="courses" class="services">
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-1.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/digital-marketing.html">
-                                <div class="services__title"><abbr title="Any marketing that uses electronic devices and can be used by marketing specialists to convey promotional messaging and measure its impact through your customer journey. In practice, digital marketing typically refers to marketing campaigns that appear on a computer, phone, tablet, or other device. It can take many forms, including online video, display ads, search engine marketing, paid social ads and social media posts. Digital marketing is often compared to “traditional marketing” such as magazine ads, billboards, and direct mail. Oddly, television is usually lumped in with traditional marketing."> Digital Marketing </abbr></div>
-                                <div class="services__text">Any marketing that uses electronic devices and can be used by marketing specialists</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-2.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/web-designing.html">
-                                <div class="services__title"><abbr title="Web design is the art of planning and arranging content on a website so that it can be shared and accessed online with the world. A combination of aesthetic and functional elements, web design is what determines the look of a website—such as its colors, fonts, and graphics—as well as shaping the site’s structure and the users’ experience of it."> Web Designing  </abbr></div>
-                                <div class="services__text">Web design is the art of planning and arranging content on a website</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-3.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/web-development.html">
-                                <div class="services__title"><abbr title="Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript. Responsive Web Design is used in all types of modern web development."> Web Development  </abbr></div>
-                                <div class="services__text">Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript.</div>
-                            </a>
-                        </div>
-                        <div class="services__item">
-                            <div class="services__decor"></div>
-                            <div class="services__icon">
-                                <img src="img/icons-svg/exellence-4.svg" alt="" loading="lazy">
-                            </div>
-                            <a href="./website-pages/wordpress-development.html">
-                                <div class="services__title"><abbr title="What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog. In fact, WordPress powers over 43.3% of all the websites on the Internet. Yes – more than one in four websites that you visit are likely powered by WordPress."> Wordpress Development </abbr></div>
-                                <div class="services__text">What is WordPress? At its core, WordPress is the simplest, most popular way to create your own website or blog.</div>
-                            </a>
-                        </div>
-                    </div> -->
-                <!-- </div>
-            </div> -->
-
-            <!-- <div class="wrapper"> -->
+              
             <section class="all-content">
 <!-- Course section Starts here -->
 <h6>Course</h6>
@@ -510,50 +451,7 @@ session_start();
                     </div>
                 </div>
             </div>       
-            <!-- <div class="section-consultation">
-                <div class="section-consultation__bg js-lazy" data-src="img/bg/bg-2.svg"></div>
-                <div class="wrapper">
-                    <div class="consultation-form-wrap">
-                        <div class="consultation-form">
-                            <div class="section-heading"><span>get started</span></div>
-                            <h2 class="h2">get a free consultation</h2>
-                            <div class="content-block__text">
-                                <p>Get A Free Counselling Session to know more about in Your future in Digital Marketing.</p>
-                            </div>
-                            <div class="consultation-form__form">
-                                <form action="" method="POST">
-                                    <div class="box-fileds">
-                                        <div class="box-filed">
-                                            <input type="text" placeholder="First name" name="name" required>
-                                        </div>
-                                        <div class="box-filed">
-                                            <input type="text" placeholder="Second name" name="surname" required>
-                                        </div>
-                                        <div class="box-filed">
-                                            <input type="tel" placeholder="Enter your phone" name="phoneno" maxlength="10" minlength="10" required>
-                                        </div>
-                                        <div class="box-filed">
-                                            <input type="email" placeholder="Enter your email" name="email" maxlength="40" required>
-                                        </div>
-                                        <div class="box-filed box-filed_btn">
-                                            <input type="submit" class="btn" value="Submit">
-                                        </div>
-                                        <div class="box-filed box-field__accept">
-                                            <label class="checkbox-element">
-                                                <input type="checkbox" >
-                                                <span class="checkbox-text">I accept the <a href="#" target="_blank">Terms and Conditions.</a></span>
-                                                </label>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="consultation-img">
-                            <img data-src="img/consultation.svg" alt="" class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+       
             <div class="section-logos">
                 <div class="wrapper">
                     <div class="logos">
@@ -609,122 +507,7 @@ session_start();
                     <!-- <div class="steps-text">Pariatur magna cupidatat magna sit incididunt non pariatur. Sint nulla commodo qui magna eiusmod quis aliqua laboris officia excepteur non eu in. Consequat esse in dolore laborum dolore ut duis elit deserunt minim.</div> -->
                 </div>
             </div>       
-            <!-- <div class="section-prices" id="price">
-                <div class="wrapper">
-                    <div class="section-heading h-center"><span>prices</span></div>
-                    <div class="h-decor-2">
-                        <h2 class="h2 h-center"><span>discover our price - list</span></h2>
-                        <div class="section-subtitle h-center">Dolor duis voluptate enim exercitation consequat ex.</div>
-                    </div>
-                    <div class="prices">
-                        <a href="#" class="prices__item">
-                            <div class="prices__head">
-                                <div class="prices__decor"><span></span></div>
-                                <div class="prices__inner">
-                                    <div class="prices__category">Master</div>
-                                    <div class="prices__title">Basic Plan</div>
-                                    <div class="prices__cost">INR<span class="prices__cost-val">35000</span>only</div>
-                                </div>
-                            </div>
-                            <div class="prices__content">
-                                <ul class="prices__list">
-                                    <li> <i class="fa-solid fa-check"></i> 45+ Modules (500+ Hrs Training) </li>
-                                    <li> <i class="fa-solid fa-check"></i> E-Notes </li>
-                                    <li> <i class="fa-solid fa-check"></i> Internship / Placement </li>
-                                    <li> <i class="fa-solid fa-check"></i> Iive Project </li>
-                                    <li> <i class="fa-solid fa-check"></i> 10+ Globally Recognised (Certifications) </li>
-                                    <li> <i class="fa-solid fa-check"></i> Live Q/A Forum </li>
-                                    <li> <i class="fa-solid fa-check"></i> Experience Certification </li>
-                                    <li> <i class="fa-solid fa-check"></i> On Board Training (2 Months) </li>
-                                    <li> <i class="fa-solid fa-check"></i> WordPress Theme Membership </li>
-                                    <li> <i class="fa-solid fa-check"></i> Tools & Software </li>
-                                    <li> <i class="fa-solid fa-check"></i> LMS Recorded </li>
-                                    <li> <i class="fa-solid fa-check"></i> E-Books </li>
-                                    <li> <i class="fa-solid fa-check"></i> Case Studies & Capstone Projects </li>
-                                    <li> <i class="fa-solid fa-check"></i> Graphic Design Course <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Elementary Module) </li>
-                                    <li> <i class="fa-solid fa-check"></i> Creative Content Writing <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Fundamentals Module) </li>
-                                    <li> <i class="fa-solid fa-check"></i> NSDC ( Skill India ) Certification </li>
-                                </ul>
-                                <div class="prices__btn">
-                                    <span class="btn btn-2 btn-3 btn_buy">buy now</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="prices__item prices__item-recomendation">
-                            <div class="prices__head">
-                                <div class="prices__decor"><span></span></div>
-                                <div class="prices__inner">
-                                    <div class="prices__category">Advanced</div>
-                                    <div class="prices__title">Standard Plan</div>
-                                    <div class="prices__cost">INR<span class="prices__cost-val">25000</span> Only</div>
-                                </div>
-                            </div>
-                            <div class="prices__content">
-                                <ul class="prices__list">
-                                    <li> <i class="fa-solid fa-check"></i> 45+ Modules (500+ Hrs Training) </li>
-                                    <li> <i class="fa-solid fa-check"></i> E-Notes </li>
-                                    <li> <i class="fa-solid fa-check"></i> Internship / Placement </li>
-                                    <li> <i class="fa-solid fa-check"></i> Tools & Software </li>
-                                    <li> <i class="fa-solid fa-check"></i> Case Studies & Capstone Projects </li>
-                                    <li> <i class="fa-solid fa-check"></i> Graphic Design Course <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Elementary Module) </li>
-                                    <li> <i class="fa-solid fa-check"></i> Creative Content Writing <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Fundamentals Module) </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> NSDC ( Skill India ) Certification </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Live Project </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> 10+ Globally Recognised (Certifications) </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> LMS Recorded </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> E-Books </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Live Q/A Forum </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Experience Certification </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> On Board Training (2 Months) </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> WordPress Theme Membership </li>
-                                </ul>
-                                <div class="prices__btn">
-                                    <span class="btn btn-2 btn-3 btn_buy">buy now</span>
-                                </div>
-                                <div class="prices__rec">
-                                    <div class="checkbox-element ">
-                                        <span class="checkbox-text">Recommended</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="prices__item">
-                            <div class="prices__head">
-                                <div class="prices__decor"><span></span></div>
-                                <div class="prices__inner">
-                                    <div class="prices__category">Customized</div>
-                                    <div class="prices__title">power Plan</div>
-                                    <div class="prices__cost">INR<span class="prices__cost-val">15000</span>only</div>
-                                </div>
-                            </div>
-                            <div class="prices__content">
-                                <ul class="prices__list">
-                                    <li> <i class="fa-solid fa-check"></i> 45+ Modules (500+ Hrs Training) </li>
-                                    <li> <i class="fa-solid fa-check"></i> E-Notes </li>
-                                    <li> <i class="fa-solid fa-check"></i> Internship / Placement </li>
-                                    <li> <i class="fa-solid fa-check"></i> Iive Project </li>
-                                    <li> <i class="fa-solid fa-check"></i> 10+ Globally Recognised (Certifications) </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Case Studies & Capstone Projects </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Live Q/A Forum </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Experience Certification </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> On Board Training (2 Months) </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> WordPress Theme Membership </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Tools & Software </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> LMS Recorded </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> E-Books </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Graphic Design Course <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Elementary Module) </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> Creative Content Writing <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Fundamentals Module) </li>
-                                    <li> <i class="fa-solid fa-xmark"></i> NSDC ( Skill India ) Certification </li>
-                                </ul>
-                                <div class="prices__btn">
-                                    <span class="btn btn-2 btn-3 btn_buy">buy now</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-
+          
 <section class="qu">
     <h2>Top Queries For Institute</h2>
     <p>Top Queries asked by our students.</p>
@@ -978,7 +761,8 @@ session_start();
                 <h1> Address </h1>
                 <p> A-20, First Floor, Guru Nanak Pura, Street No. 3, Laxmi Nagar, Delhi – 110092, Landmark – In Front Of V3s Mall  </p>
             </div>
-            <div class="contact-sub-container ">
+            
+            <div class="contact-sub-container c2">
                 <form class="cuc" action="" method="post">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" required >
@@ -1001,51 +785,6 @@ session_start();
                     <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4139.671128948162!2d77.28249300892676!3d28.636323180071926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b6a48a38d9%3A0x9f0dae49642f744a!2sEkwik%20Digital!5e0!3m2!1sen!2sin!4v1634535783091!5m2!1sen!2sin" width="100%" height="500px"  style="border-radius:20px;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
- 
-            <!-- <div class="section-main-blog" id="blog">
-                <div class="wrapper">
-                    <div class="section-heading h-center"><span>news</span></div>
-                    <h2 class="h2 h-center">read our blog</h2>
-                    <div class="section-subtitle h-center">Dolor duis voluptate enim exercitation consequat ex. </div>
-                    <div class="blog-more">
-                        <a href="./blog.php" class="btn">view all</a>
-                    </div>
-                    <div class="news">
-                        <div class="news__item">
-                            <a href="./article.php" class="news__img">
-                                <img data-src="img/examples/news_1.jpg" alt="" class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
-                            </a>
-                            <div class="news__content">
-                                <div class="news-header">
-                                    <div class="news__date">Jun 25, 2021</div>
-                                    <div class="news__author">
-                                        <img data-src="img/examples/avatar_2.jpg" alt="" class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
-                                        <span class="news__author-title">Annette Black</span>
-                                    </div>
-                                    <a href="./blog.php" class="news__category">Community</a>
-                                </div>
-                                <div class="news__title"><a href="./article.php">Dolor duis voluptate enim exercitation consequat ex. Voluptate in sunt </a></div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <a href="./article.php" class="news__img">
-                                <img data-src="img/examples/news_2.jpg" alt="" class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
-                            </a>
-                            <div class="news__content">
-                                <div class="news-header">
-                                    <div class="news__date">Jun 25, 2021</div>
-                                    <div class="news__author">
-                                        <img data-src="img/examples/avatar_3.jpg" alt="" class="js-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
-                                        <span class="news__author-title">Dianne Russell</span>
-                                    </div>
-                                    <a href="./blog.php" class="news__category">Community</a>
-                                </div>
-                                <div class="news__title"><a href="./article.php">Dolor duis voluptate enim exercitation consequat ex. Voluptate in sunt </a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             </section>
            
             
